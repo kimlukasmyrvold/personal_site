@@ -1,0 +1,116 @@
+﻿@use '../base' as *;
+
+.footer {
+    --_inline-spacing: 5em;
+
+    margin-top: 5em;
+    padding-inline-end: var(--_inline-spacing);
+    transition: padding .3s ease;
+
+    @media only screen and (width <= 1300px) {
+        --_inline-spacing: 2.5em;
+    }
+    @media only screen and (width <= 800px) {
+        --_inline-spacing: 1.25em;
+    }
+    @media only screen and (width <= 600px) {
+        --_inline-spacing: 0.625em;
+    }
+
+    &__container {
+        padding-block: 2.5em;
+        padding-inline: calc(var(--_inline-spacing) * 2) var(--_inline-spacing);
+        transition: padding .3s ease;
+
+        border-top-right-radius: 20px;
+        background-color: var(--text5);
+        box-shadow: 0 0 10px hsl(0 0% 0% / .5);
+
+        display: flex;
+        gap: 2.5em 2.5em;
+        overflow-x: auto;
+
+        @media only screen and (width <= 970px) {
+            flex-direction: column;
+        }
+
+        &__right {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5em;
+            
+            &__brand {
+                margin-bottom: .5rem;
+            }
+            
+            &__contact {
+                margin-bottom: 1.5rem;
+            }
+            
+            &__notice {
+                display: grid;
+                gap: .5em;
+                margin-top: auto;
+
+                &__note,
+                &__copyright,
+                &__license,
+                &__codeBehind,
+                &__version {
+                    margin: 0;
+                    font-size: $p;
+                }
+
+                &__note {
+                    font-size: calc($p * .85);
+                    font-style: italic;
+                    margin-bottom: .5rem;
+
+                    span.marked {
+                        background-color: var(--text5);
+                        padding: .1rem .2rem;
+                        border-radius: 5px;
+                        word-break: keep-all;
+                        white-space: nowrap;
+                        line-height: 1.75;
+                    }
+                }
+
+                &__version {
+                    font-size: calc($p * .85);
+                    margin-top: .5rem;
+                }
+            }
+        }
+
+        &__left {
+            display: flex;
+            gap: 10em;
+            flex: 1;
+            justify-content: flex-end;
+            flex-wrap: wrap;
+            transition: gap .3s ease;
+
+            @media only screen and (width <= 1100px) {
+                gap: 2.5em 5em;
+            }
+            
+            &__location {
+                width: 100%;
+                max-width: 700px;
+                min-width: 400px;
+
+                @media only screen and (width <= 970px) {
+                    max-width: unset;
+                    min-width: unset;
+                }
+                
+                &__title {
+                    font-size: $h4;
+                    font-weight: 600;
+                    margin: 0 0 1rem;
+                }
+            }
+        }
+    }
+}

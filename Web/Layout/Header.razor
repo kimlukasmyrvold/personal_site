@@ -1,0 +1,25 @@
+﻿@inject NavigationManager NavigationManager
+
+<header class="navbar">
+    <div class="navbar__brand">
+        <a class="navbar__brand__link" href="">
+            <span class="navbar__brand__link__name">
+                <span>Kim Lukas</span>
+                <span class="hide_on_mobile">Myrvold</span>
+            </span>
+        </a>
+    </div>
+    <div class="navbar__links">
+        <nav class="navbar__links__content">
+            <NavLink class="navbar__links__content__link" href="" Match="NavLinkMatch.All">
+                Home
+            </NavLink>
+            <NavLink class="navbar__links__content__link" href="Counter" Match="NavLinkMatch.All">
+                Counter
+            </NavLink>
+            <NavLink class="navbar__links__content__link" href="Weather" Match="NavLinkMatch.All">
+                Weather
+            </NavLink>
+        </nav>
+    </div>
+</header>

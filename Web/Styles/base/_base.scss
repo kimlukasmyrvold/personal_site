@@ -1,0 +1,141 @@
+﻿@use "typography" as *;
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+html {
+    --scrollbarBG: var(--text10);
+    --thumbBG: var(--text25);
+
+    scroll-padding-top: 60px;
+    scroll-behavior: smooth;
+    scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+
+    &::-webkit-scrollbar-track,
+    body::-webkit-scrollbar-track {
+        background: var(--scrollbarBG);
+    }
+
+    &::-webkit-scrollbar-thumb,
+    body::-webkit-scrollbar-thumb {
+        background-color: var(--thumbBG);
+    }
+}
+
+html, body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: $fm;
+    font-size: $p;
+    margin: 0;
+}
+
+img, svg {
+    font-style: italic;
+    shape-margin: 1rem;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+svg {
+    width: 1.75em;
+}
+
+a {
+    color: var(--text);
+    text-decoration-color: var(--accent);
+    text-underline-offset: 3px;
+    text-decoration-line: none;
+    transition: opacity .3s ease;
+
+    &:hover {
+        opacity: .6;
+    }
+
+    &[target="_blank"] {
+        display: inline-flex;
+        align-items: center;
+        gap: .1rem;
+        
+        svg {
+            align-self: flex-start;
+            width: 12px;
+        }
+    }
+}
+
+
+.visually_hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.hide_on_mobile {
+    @media only screen and (width <= 767px) {
+        display: none;
+    }
+}
+
+.hide_on_tablet {
+    @media (width <= 1024px) {
+        display: none;
+    }
+}
+
+.hide_on_desktop {
+    display: none;
+
+    @media (width <= 767px) {
+        display: initial;
+    }
+}
+
+
+.information {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    background-color: var(--text5);
+    border-radius: 25px;
+    padding: 1.5rem 2.5rem;
+    border-left: 5px solid var(--accent);
+    
+    .title {
+        font-size: $h4;
+        margin: 0;
+    }
+
+    .heading {
+        font-size: $h5;
+        margin: 0;
+    }
+
+    .buttons {
+        place-self: center;
+        margin-top: 1em;
+    }
+}
+
+.not_found {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .title {
+        margin-bottom: .25em;
+    }
+
+    .heading {
+        font-size: $h5;
+        margin-bottom: 1.5em;
+    }
+}

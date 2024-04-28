@@ -1,0 +1,39 @@
+{
+    "name": "personal_site",
+    "version": "2.0.0",
+    "description": "Kim Lukas Myrvold's Personal Website",
+    "main": "",
+    "scripts": {
+        "publish": "cd Web && dotnet publish",
+        "watch": "cd Web && dotnet watch",
+        "sass": "sass -w Web/Styles/:Web/wwwroot/Assets/CSS/ --style=compressed",
+        "start": "concurrently --raw --kill-others \"npm run watch\" \"npm run sass\""
+    },
+    "keywords": [
+        "personal",
+        "website",
+        "site",
+        "cv",
+        "curriculum",
+        "vitae",
+        "blazor",
+        "wasm",
+        "blazorwasm",
+        "static",
+        "standalone",
+        "app",
+        "web",
+        "assembly",
+        "kim",
+        "lukas",
+        "myrvold",
+        "norway",
+        "norwegian"
+    ],
+    "author": "Kim Lukas Myrvold",
+    "license": "GPL-3.0-only",
+    "dependencies": {
+        "concurrently": "^8.2.2",
+        "sass": "^1.75.0"
+    }
+}

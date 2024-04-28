@@ -1,0 +1,30 @@
+﻿<div class="bio__about_me">
+    <p class="bio__about_me__text bio__about_me__title">
+        @if (IsLink)
+        {
+            <a href="">Kim Lukas Myrvold</a>
+        }
+        else
+        {
+            <span>Kim Lukas Myrvold</span>
+        }
+    </p>
+    <p class="bio__about_me__text bio__about_me__me">
+        I am a responsible, tidy, and kind @(Age)-year-old lad. I learn quickly and do my best. I think things through thoroughly, and I am quite independent.
+    </p>
+</div>
+
+@code {
+
+    [Parameter] public bool IsLink { get; set; }
+
+    private int Age { get; set; }
+
+    protected override void OnInitialized()
+    {
+        var today = DateTime.Now.ToString("yyyyMMdd");
+        var birth = new DateTime(2006, 5, 21).ToString("yyyyMMdd");
+        Age = (int.Parse(today) - int.Parse(birth)) / 10000;
+    }
+
+}

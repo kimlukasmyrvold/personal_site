@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="google" content="notranslate">
+    <meta name="author" content="Kim Lukas Myrvold">
+    <meta name="keywords"
+          content="personal, website, site, cv, curriculum, vitae, blazor, wasm, blazorwasm, static, standalone, app, web, assembly, kim, lukas, myrvold, norway, norwegian">
+    <meta name="description" content="Kim Lukas Myrvold's Personal Website">
+    <meta property="og:image" content="https://kimlukasmyrvold.github.io/assets/images/persons/kimlukas300x300.webp">
+    
+    <title>Page Not Found</title>
+
+    <base href="/"/>
+
+    <link rel="shortcut icon" href="Assets/Images/Favicons/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="Assets/CSS/Main.css"/>
+</head>
+<body>
+<div id="app">
+    <div style="position:fixed;inset:0;display:grid;place-items:center;z-index:999;background:#0005;backdrop-filter:blur(2px);transition:all .3s ease">
+        <svg style="width: 5em;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+            <radialGradient id="loadingGradient" cx=".66" fx=".66" cy=".3125" fy=".3125" gradientTransform="scale(1.5)">
+                <stop offset="0" stop-color="#9cacdf"></stop>
+                <stop offset=".3" stop-color="#9cacdf" stop-opacity=".9"></stop>
+                <stop offset=".6" stop-color="#9cacdf" stop-opacity=".6"></stop>
+                <stop offset=".8" stop-color="#9cacdf" stop-opacity=".3"></stop>
+                <stop offset="1" stop-color="#9cacdf" stop-opacity="0"></stop>
+            </radialGradient>
+            <circle transform-origin="center" fill="none" stroke="url(#loadingGradient)" stroke-width="20"
+                    stroke-linecap="round"
+                    stroke-dasharray="200 1000" stroke-dashoffset="0" cx="100" cy="100" r="70">
+                <animateTransform type="rotate" attributeName="transform" calcMode="spline" dur="2" values="360;0"
+                                  keyTimes="0;1" keySplines="0 0 1 1" repeatCount="indefinite">
+                </animateTransform>
+            </circle>
+            <circle transform-origin="center" fill="none" opacity=".2" stroke="#9cacdf" stroke-width="20"
+                    stroke-linecap="round" cx="100" cy="100" r="70">
+            </circle>
+        </svg>
+    </div>
+
+    <div class="not_found">
+        <div class="container">
+            <h1 class="title">404</h1>
+            <p class="heading" role="alert">Sorry, there's nothing at this address.</p>
+
+            <div class="buttons">
+                <button onclick="window.history.back()">Go Back</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="blazor-error-ui">
+    <div class="blazor_error_ui">
+        <div class="blazor_error_ui__main">
+            <p>
+                An unhandled exception has occurred. See browser dev tools for details.
+                <a href="" class="reload">Reload</a>
+            </p>
+        </div>
+
+        <div class="blazor_error_ui__dismiss">
+            <button class="dismiss button-nofancy">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <title>close</title>
+                    <path fill="currentColor"
+                          d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+</div>
+<script src="_framework/blazor.webassembly.js"></script>
+</body>
+</html>

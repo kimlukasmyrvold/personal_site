@@ -1,0 +1,100 @@
+﻿
+.dropdown {
+    position: relative;
+
+    &__display {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: .75em;
+        
+        min-width: min-content;
+        
+        padding: .5em 1em;
+        border-radius: 10px;
+        border: 1px solid var(--text10);
+        
+        cursor: pointer;
+        user-select: none;
+        transition: color .3s ease;
+
+        &:hover {
+            color: var(--text75);
+        }
+
+        &::after {
+            $size: 7px;
+
+            content: '';
+            position: relative;
+            right: 0;
+
+            display: block;
+            width: 0;
+            height: 0;
+
+            border-left: $size solid transparent;
+            border-right: $size solid transparent;
+            border-top: $size solid var(--text);
+
+            translate: 0 25%;
+            transition: rotate .3s ease;
+        }
+    }
+
+    &__options {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: calc(100% + 2px);
+        left: 0;
+        min-width: 100%;
+        z-index: 997;
+        background-color: var(--bg50);
+        backdrop-filter: blur(50px);
+        border-radius: 10px;
+        overflow: hidden;
+
+        max-height: 0;
+        transition: max-height .2s ease;
+
+        &__option {
+            background-color: var(--text5);
+            padding: .75em 1.5em .75em 1em;
+            text-align: left;
+            cursor: pointer;
+
+            border-bottom: 1px solid var(--text10);
+            border-radius: 0;
+            color: var(--text);
+
+            &:last-child {
+                border: none;
+            }
+
+            &[data-active="True"] {
+                background-color: var(--text25);
+            }
+
+            &:hover {
+                background-color: var(--text50);
+                box-shadow: none;
+                translate: none;
+            }
+
+        }
+    }
+
+    &[data-active="True"] {
+        .dropdown__display::after {
+            rotate: -180deg;
+        }
+
+        .dropdown__options {
+            z-index: 998;
+            visibility: visible;
+            opacity: 1;
+            max-height: 500px;
+        }
+    }
+}

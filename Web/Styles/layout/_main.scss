@@ -1,0 +1,19 @@
+﻿#app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+    
+    .page {
+        flex: 1;
+
+        main {
+            display: grid;
+            flex: 1;
+            padding-block: 1em;
+            
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+}

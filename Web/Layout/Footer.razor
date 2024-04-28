@@ -1,0 +1,75 @@
+﻿@inject IJSRuntime JsRuntime
+
+<footer class="footer">
+    <div class="footer__container">
+
+        <div class="footer__container__right">
+            <div class="footer__container__right__brand">
+                <Bio_AboutMe IsLink="true"></Bio_AboutMe>
+            </div>
+
+            <div class="footer__container__right__contact">
+                <Bio_Info Show="@(new[] { "mail", "phone" })"></Bio_Info>
+            </div>
+
+            <div class="footer__container__right__notice">
+                <p class="footer__container__right__notice__note">
+                    Unless noted otherwise, all dates on this website adhere to the
+                    <a href="https://www.iso.org/iso-8601-date-and-time-format.html" target="_blank">
+                        <span>ISO 8601 date format</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                            <path fill="currentColor" d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"/>
+                        </svg>
+                    </a> of <span class="marked">YYYY-MM-DD</span>
+                </p>
+
+                <p class="footer__container__right__notice__copyright">
+                    <a href="https://github.com/kimlukasmyrvold" target="_blank">
+                        <span>Copyright &COPY; @DateTime.Now.Year Kim Lukas Myrvold</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                            <path fill="currentColor" d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"/>
+                        </svg>
+                    </a>
+                </p>
+                <p class="footer__container__right__notice__license">
+                    <a href="https://www.gnu.org/licenses/gpl-3.0.en.html" target="_blank">
+                        <span>Licensed with GNU General Public License v3.0</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                            <path fill="currentColor" d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"/>
+                        </svg>
+                    </a>
+                </p>
+                <p class="footer__container__right__notice__codeBehind">
+                    Check out the code here:
+                    <a href="https://github.com/kimlukasmyrvold/kimlukasmyrvold.github.io/" target="_blank">
+                        <span>GitHub</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                            <path fill="currentColor" d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"/>
+                        </svg>
+                    </a>
+                </p>
+                <p class="footer__container__right__notice__version">
+                    Version: 2.0.0
+                </p>
+            </div>
+        </div>
+
+        <div class="footer__container__left">
+            <div class="footer__container__left__location">
+                <p class="footer__container__left__location__title">Location</p>
+                <div class="footer__container__left__location__map" id="map"></div>
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+@code {
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        if (!firstRender) return;
+        JsRuntime.InvokeVoidAsync("openLayers");
+    }
+
+}

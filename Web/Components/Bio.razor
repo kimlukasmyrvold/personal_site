@@ -1,0 +1,64 @@
+﻿@inject HttpClient Http
+@inject IJSRuntime JsRuntime
+
+<div class="bio" @onmousemove="MouseMoved" @onmouseleave="MouseMovedOut">
+    <div class="bio__wrapper" style="@_mousePosStyling">
+        <div class="bio__container">
+            <div class="bio__container__image">
+                <img src="Assets/Images/Persons/kimlukas300x300.webp" alt="Image of me">
+            </div>
+            <Bio_AboutMe></Bio_AboutMe>
+            <Bio_Info Show="@(new[] { "born", "location", "mail", "phone", "github" })"></Bio_Info>
+        </div>
+    </div>
+</div>
+
+@code {
+
+    private CodeLanguagesModel[]? _langs;
+
+    private int Age { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        var today = DateTime.Now.ToString("yyyyMMdd");
+        var birth = new DateTime(2006, 5, 21).ToString("yyyyMMdd");
+        Age = (int.Parse(today) - int.Parse(birth)) / 10000;
+
+        await GetJsonData();
+    }
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        if (!firstRender) return;
+        JsRuntime.InvokeVoidAsync("initMoveBox");
+    }
+
+
+    private string? _mousePosStyling = "--mousePosX: -2000px; --mousePosY: -2000px";
+
+    private void MouseMoved(MouseEventArgs e)
+    {
+        _mousePosStyling = $"--mousePosX: {e.ClientX}px; --mousePosY: {e.ClientY}px";
+    }
+
+    private void MouseMovedOut()
+    {
+        _mousePosStyling = "--mousePosX: -2000px; --mousePosY: -2000px";
+    }
+
+    private async Task GetJsonData()
+    {
+        _langs = await Http.GetFromJsonAsync<CodeLanguagesModel[]>("Assets/JSON/Data.json");
+        foreach (var lang in _langs!)
+        {
+            Console.WriteLine(lang.Name);
+
+            foreach (var project in lang.Projects!)
+            {
+                Console.WriteLine(project);
+            }
+        }
+    }
+
+}

@@ -1,0 +1,11 @@
+﻿$bs-sep: 0 0 4px rgba(255, 255, 255, 0.20);
+
+$breakpoints: (
+        'tiny': (max-width: 400px),
+        'small': (max-width: 600px),
+        'medium': (max-width: 800px),
+        'large': (max-width: 1000px),
+        'huge': (max-width: 1200px),
+);
+
+

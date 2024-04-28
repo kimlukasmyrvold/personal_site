@@ -1,0 +1,101 @@
+﻿@use "../base" as *;
+@use "../themes" as themeColor;
+@use "../themes/global" as *;
+
+button {
+    border: none;
+}
+
+button,
+.button-primary {
+    padding: .6em 1.25em;
+
+    color: map-get(themeColor.$dark, text);
+    background-color: var(--primary);
+
+    border-radius: 5px;
+    font-size: $p;
+    cursor: pointer;
+
+    white-space: nowrap;
+    transition: box-shadow .2s ease, translate .2s ease;
+
+    &:hover {
+        translate: 0 -3px;
+        box-shadow: 0 20px 80px -5px var(--primary);
+    }
+}
+
+.button-nofancy {
+    padding: 0;
+    color: var(--text);
+    background-color: transparent;
+}
+
+.button-secondary {
+    color: var(--text);
+    background-color: var(--secondary);
+
+    &:hover {
+        box-shadow: none;
+    }
+}
+
+.button-cancel {
+    background-color: $destructive;
+
+    &:hover {
+        box-shadow: none;
+    }
+}
+
+
+.button-radio,
+.button-checkbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .75rem;
+    background: none;
+    padding: .75em .5em;
+    position: relative;
+    color: var(--text);
+
+    &:hover {
+        box-shadow: none;
+        translate: none;
+    }
+
+    &::before {
+        content: '';
+        position: relative;
+        display: block;
+        $_size: 16px;
+        width: $_size;
+        height: $_size;
+        aspect-ratio: 1;
+        border-radius: 5px;
+        background-color: var(--text10);
+        outline: 2px solid var(--text85);
+
+        transition: .2s ease;
+    }
+
+    &[data-active="true"]::before {
+        content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='50%' cy='50%' r='9' fill='#{map-get(themeColor.$dark, text)}' style='stroke-width: 0px;'/%3E%3C/svg%3E");
+        background-color: var(--primary);
+        outline-color: var(--primary);
+    }
+}
+
+.button-radio {
+    &::before {
+        border-radius: 99vw;
+    }
+}
+
+.button-checkbox {
+    &[data-active="true"]::before {
+        content: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 12.6111L8.92308 17.5L20 6.5' stroke='#{map-get(themeColor.$dark, text)}' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3C/path%3E%3C/svg%3E");
+    }
+}
