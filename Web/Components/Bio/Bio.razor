@@ -1,5 +1,4 @@
-﻿@inject HttpClient Http
-@inject IJSRuntime JsRuntime
+﻿@inject IJSRuntime JsRuntime
 
 <div class="bio" @onmousemove="MouseMoved" @onmouseleave="MouseMovedOut">
     <div class="bio__wrapper" style="@_mousePosStyling">
@@ -15,17 +14,15 @@
 
 @code {
 
-    private CodeLanguagesModel[]? _langs;
-
     private int Age { get; set; }
 
-    protected override async Task OnInitializedAsync()
+    protected override Task OnInitializedAsync()
     {
         var today = DateTime.Now.ToString("yyyyMMdd");
         var birth = new DateTime(2006, 5, 21).ToString("yyyyMMdd");
         Age = (int.Parse(today) - int.Parse(birth)) / 10000;
-
-        await GetJsonData();
+        
+        return Task.CompletedTask;
     }
 
     protected override void OnAfterRender(bool firstRender)
@@ -45,21 +42,6 @@
     private void MouseMovedOut()
     {
         _mousePosStyling = "--mousePosX: -2000px; --mousePosY: -2000px";
-    }
-
-    
-    private async Task GetJsonData()
-    {
-        _langs = await Http.GetFromJsonAsync<CodeLanguagesModel[]>("Assets/JSON/Data.json");
-        foreach (var lang in _langs!)
-        {
-            Console.WriteLine(lang.Name);
-
-            foreach (var project in lang.Projects!)
-            {
-                Console.WriteLine(project);
-            }
-        }
     }
 
 }
