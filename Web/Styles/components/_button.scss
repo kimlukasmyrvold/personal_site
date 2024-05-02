@@ -30,6 +30,13 @@ button,
     padding: 0;
     color: var(--text);
     background-color: transparent;
+    transition: color .3s ease;
+
+    &:hover {
+        color: var(--text75);
+        translate: none;
+        box-shadow: none;
+    }
 }
 
 .button-secondary {

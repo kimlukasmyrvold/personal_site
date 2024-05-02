@@ -1,0 +1,214 @@
+﻿<div class="coding_languages__card" style="@MousePosStyling">
+    <div class="coding_languages__card__container">
+        <div class="coding_languages__card__container__content">
+
+            <div class="coding_languages__card__container__content__header">
+                <div class="coding_languages__card__container__content__header__icon">
+                    @if (Json!.ImageUrl is not null)
+                    {
+                        <img src="@Json.ImageUrl" alt="@(Json.ImageAlt ?? $"{Json.Name} coding language icon.")">
+                    }
+                    else if (Json.Svg is not null)
+                    {
+                        @((MarkupString)Json.Svg)
+                    }
+                    else
+                    {
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                            <path fill="currentColor"
+                                  d="M320-240 80-480l240-240 57 57-184 184 183 183-56 56Zm320 0-57-57 184-184-183-183 56-56 240 240-240 240Z"/>
+                        </svg>
+                    }
+                </div>
+                <div class="coding_languages__card__container__content__header__heading">
+                    <p class="coding_languages__card__container__content__header__heading__title">@Json.Name</p>
+                    @if (Json.SubName is not null)
+                    {
+                        <p class="coding_languages__card__container__content__header__heading__subtitle">@Json.SubName</p>
+                    }
+                </div>
+            </div>
+
+            @if (Json.Certificates is not null)
+            {
+                <div class="coding_languages__card__container__content__certificates">
+                    <p class="coding_languages__card__container__content__certificates__title">Certificates:</p>
+
+                    @foreach (var certificate in Json.Certificates.Take(ShowAmountCert))
+                    {
+                        <div class="coding_languages__card__container__content__certificates__certificate">
+                            <a class="coding_languages__card__container__content__certificates__certificate__link"
+                               href="@certificate.Url" target="_blank">
+                                <span class="coding_languages__card__container__content__certificates__certificate__link__icon">
+                                    @if (certificate.ImageUrl is not null)
+                                    {
+                                        <img src="@certificate.ImageUrl"
+                                             alt="@(certificate.ImageAlt ?? $"{certificate.Name} link icon.")">
+                                    }
+                                    else if (certificate.Svg is not null)
+                                    {
+                                        @((MarkupString)certificate.Svg)
+                                    }
+                                </span>
+
+                                <span
+                                    class="coding_languages__card__container__content__certificates__certificate__link__text">
+                                    @certificate.Name
+                                </span>
+
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                                    <path fill="currentColor"
+                                          d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    }
+
+                    @if (LengthCert >= ShowAmount)
+                    {
+                        if (ShowingMoreCert)
+                        {
+                            <button class="coding_languages__card__container__content__certificates__show button-nofancy"
+                                    @onclick="() => ShowLess(1)">
+                                Show less...
+                            </button>
+                        }
+                        else
+                        {
+                            <button class="coding_languages__card__container__content__certificates__show button-nofancy"
+                                    @onclick="() => ShowMore(1)">
+                                Show more...
+                            </button>
+                        }
+                    }
+                </div>
+            }
+
+            <div class="coding_languages__card__container__content__projects">
+                <p class="coding_languages__card__container__content__projects__title">Projects:</p>
+
+                @if (Json.Projects is not null)
+                {
+                    @foreach (var project in Json.Projects.Take(ShowAmountProj))
+                    {
+                        <div class="coding_languages__card__container__content__projects__project">
+                            <a class="coding_languages__card__container__content__projects__project__link" href="@project.Url"
+                               target="_blank">
+                                <span class="coding_languages__card__container__content__projects__project__link__icon">
+                                    @if (project.ImageUrl is not null)
+                                    {
+                                        <img src="@project.ImageUrl" alt="@(project.ImageAlt ?? $"{project.Name} link icon.")">
+                                    }
+                                    else if (project.Svg is not null)
+                                    {
+                                        @((MarkupString)project.Svg)
+                                    }
+                                </span>
+                                <span
+                                    class="coding_languages__card__container__content__projects__project__link__text">
+                                    @project.Name
+                                </span>
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                                    <path fill="currentColor"
+                                          d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    }
+                }
+                else
+                {
+                    <p class="coding_languages__card__container__content__projects__show">Only local projects for now...</p>
+                }
+
+                @if (LengthProj >= ShowAmount)
+                {
+                    if (ShowingMoreProj)
+                    {
+                        <button class="coding_languages__card__container__content__projects__show button-nofancy"
+                                @onclick="() => ShowLess(2)">
+                            Show less...
+                        </button>
+                    }
+                    else
+                    {
+                        <button class="coding_languages__card__container__content__projects__show button-nofancy"
+                                @onclick="() => ShowMore(2)">
+                            Show more...
+                        </button>
+                    }
+                }
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@code {
+    [Parameter] public string? MousePosStyling { get; set; }
+    [Parameter] public CodingLanguage? Json { get; set; }
+    [Parameter] public int ShowAmount { get; set; }
+    [Parameter] public int ShowAmountCert { get; set; }
+    [Parameter] public bool ShowingMoreCert { get; set; }
+    [Parameter] public int ShowAmountProj { get; set; }
+    [Parameter] public bool ShowingMoreProj { get; set; }
+    [Parameter] public EventCallback<(int type, int value)> CallBack { get; set; }
+
+    private int LengthCert { get; set; }
+    private int LengthProj { get; set; }
+
+    protected override Task OnInitializedAsync()
+    {
+        if (Json!.Certificates is not null) LengthCert = Json.Certificates.Count;
+        if (Json.Projects is not null) LengthProj = Json.Projects.Count;
+
+        return Task.CompletedTask;
+    }
+
+    private async Task ShowMore(int type = 0)
+    {
+        if (type == 0)
+        {
+            Console.WriteLine("Error, type is not set! Method: ShowMore(int)");
+            return;
+        }
+
+        switch (type)
+        {
+            case 1:
+                ShowingMoreCert = !ShowingMoreCert;
+                ShowAmountCert += LengthCert;
+                await CallBack.InvokeAsync((1, ShowAmountCert));
+                break;
+            case 2:
+                ShowingMoreProj = !ShowingMoreProj;
+                ShowAmountProj += LengthProj;
+                await CallBack.InvokeAsync((2, ShowAmountProj));
+                break;
+        }
+    }
+
+    private async Task ShowLess(int type = 0)
+    {
+        if (type == 0)
+        {
+            Console.WriteLine("Error, type is not set! Method: ShowLess(int)");
+            return;
+        }
+
+        switch (type)
+        {
+            case 1:
+                ShowingMoreCert = !ShowingMoreCert;
+                ShowAmountCert = ShowAmount;
+                await CallBack.InvokeAsync((1, ShowAmountCert));
+                break;
+            case 2:
+                ShowingMoreProj = !ShowingMoreProj;
+                ShowAmountProj = ShowAmount;
+                await CallBack.InvokeAsync((2, ShowAmountProj));
+                break;
+        }
+    }
+
+}

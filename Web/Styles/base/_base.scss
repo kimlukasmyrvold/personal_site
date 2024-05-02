@@ -104,8 +104,8 @@ a {
     flex-direction: column;
     gap: 1em;
     background-color: var(--text5);
-    border-radius: 25px;
-    padding: 1.5rem 2.5rem;
+    border-radius: 5px;
+    padding: 1rem 1.5rem;
     border-left: 5px solid var(--accent);
     
     .title {
@@ -117,11 +117,25 @@ a {
         font-size: $h5;
         margin: 0;
     }
+    
+    .text {
+        margin: 0;
+    }
 
     .buttons {
         place-self: center;
         margin-top: 1em;
     }
+}
+
+.information_popup {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    margin-inline: auto;
+    width: fit-content;
 }
 
 .not_found {

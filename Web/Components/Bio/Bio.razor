@@ -47,6 +47,7 @@
         _mousePosStyling = "--mousePosX: -2000px; --mousePosY: -2000px";
     }
 
+    
     private async Task GetJsonData()
     {
         _langs = await Http.GetFromJsonAsync<CodeLanguagesModel[]>("Assets/JSON/Data.json");

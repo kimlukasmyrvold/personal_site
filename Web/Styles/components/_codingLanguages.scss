@@ -1,0 +1,153 @@
+﻿@use "../base" as *;
+
+.coding_languages {
+    
+    &__title {
+        font-size: $h3;
+        font-weight: 600;
+    }
+
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.25rem;
+    }
+
+    &__card {
+        position: relative;
+        isolation: isolate;
+        border-radius: 15px;
+
+        @media only screen and (width > 580px) {
+
+            &::after {
+                content: '';
+                position: absolute;
+                inset: -1px;
+                background-attachment: fixed;
+                background-image: radial-gradient(circle at var(--mousePosX, 0) var(--mousePosY, 0), #ffffffdc, transparent 10em);
+                border-radius: inherit;
+                pointer-events: none;
+                z-index: -1;
+            }
+        }
+
+        &__container {
+            background-color: var(--bg);
+            border-radius: inherit;
+            height: 100%;
+
+            &__content {
+                background-color: var(--text5);
+                border-radius: inherit;
+                padding: 1.25rem;
+                height: 100%;
+
+                &__header {
+                    display: flex;
+                    align-items: flex-end;
+
+                    &__icon {
+                        img,
+                        svg {
+                            $size: 64px;
+                            max-width: $size;
+                            width: $size;
+                            max-height: $size;
+                            aspect-ratio: 1;
+                            border-radius: 10px;
+                        }
+                    }
+
+                    &__heading {
+                        display: flex;
+                        align-items: flex-end;
+                        font-size: $h3;
+                        font-weight: 600;
+                        margin-left: .65rem;
+
+                        &__title {
+                            margin: 0;
+                        }
+
+                        &__subtitle {
+                            $offset: .25rem;
+                            margin: 0 0 0 $offset;
+                            color: var(--text75);
+                            font-size: $h4;
+                            text-transform: lowercase;
+
+                            &::before {
+                                content: '/';
+                                margin-right: $offset;
+                            }
+                        }
+                    }
+
+                }
+
+
+                &__certificates {
+                    &__title {
+                        font-size: $h5;
+                        font-weight: 500;
+                        margin-bottom: .65rem;
+                    }
+
+                    &__show {
+                        margin-top: .25rem;
+                        color: var(--text85);
+                        font-size: calc($p * .95);
+                    }
+
+                    &__certificate {
+                        &__link {
+                            display: flex;
+                            align-items: center;
+                            margin-bottom: .5rem;
+
+                            &__icon img,
+                            &__icon svg, {
+                                min-width: 24px;
+                                width: 24px;
+                                margin-right: .2rem;
+                            }
+                        }
+                    }
+                }
+
+
+                &__projects {
+                    &__title {
+                        font-size: $h5;
+                        font-weight: 500;
+                        margin-bottom: .65rem;
+                    }
+
+                    &__show {
+                        margin-top: .25rem;
+                        color: var(--text85);
+                        font-size: calc($p * .95);
+                    }
+
+                    &__project {
+                        &__link {
+                            display: flex;
+                            align-items: center;
+                            margin-bottom: .5rem;
+
+                            &__icon img,
+                            &__icon svg, {
+                                min-width: 24px;
+                                width: 24px;
+                                margin-right: .2rem;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+}

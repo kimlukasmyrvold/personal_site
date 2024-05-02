@@ -1,4 +1,6 @@
-﻿<Router @rendermode="RenderMode.InteractiveAuto" AppAssembly="@typeof(App).Assembly">
+﻿@inject NavigationManager NavigationManager
+
+<Router @rendermode="RenderMode.InteractiveAuto" AppAssembly="@typeof(App).Assembly">
     <Found Context="routeData">
         <RouteView RouteData="@routeData" DefaultLayout="@typeof(Main)"/>
         <FocusOnNavigate RouteData="@routeData" Selector="main"/>
@@ -12,7 +14,7 @@
                     <p class="heading" role="alert">Sorry, there's nothing at this address.</p>
 
                     <div class="buttons">
-                        <button onclick="window.history.back()">Go Back</button>
+                        <button onclick="@(() => NavigationManager.NavigateTo("/", forceLoad: true))">Go Back</button>
                     </div>
                 </div>
             </div>

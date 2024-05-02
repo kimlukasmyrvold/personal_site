@@ -1,0 +1,82 @@
+﻿@inject HttpClient Http
+
+<div class="coding_languages" @onmousemove="MouseMoved" @onmouseleave="MouseMovedOut">
+    <p class="coding_languages__title">Coding languages I have worked with</p>
+
+    <div class="coding_languages__container">
+
+        @if (CodingLanguagesArray is null)
+        {
+            <Loading></Loading>
+        }
+        else
+        {
+            @foreach (var lang in CodingLanguagesArray!)
+            {
+                <CodingLanguages_Card MousePosStyling="@_mousePosStyling"
+                                      Json="@lang"
+                                      ShowAmount="@ShowAmount"
+                                      ShowAmountCert="@ShowAmountCert"
+                                      ShowingMoreCert="@ShowingMoreCert"
+                                      ShowAmountProj="@ShowAmountProj"
+                                      ShowingMoreProj="@ShowingMoreProj"
+                                      CallBack="@(e => CodingLanguageCallBack(e.type, e.value))">
+                </CodingLanguages_Card>
+            }
+        }
+
+
+    </div>
+</div>
+
+@code {
+
+    private CodingLanguage[]? CodingLanguagesArray { get; set; }
+    private int ShowAmount { get; set; } = 5;
+    private int ShowAmountCert { get; set; }
+    private bool ShowingMoreCert { get; set; }
+    private int ShowAmountProj { get; set; }
+    private bool ShowingMoreProj { get; set; }
+
+    private async Task GetJsonData()
+    {
+        CodingLanguagesArray = await Http.GetFromJsonAsync<CodingLanguage[]>("Assets/JSON/CodingLanguages.json");
+    }
+
+    private void CodingLanguageCallBack(int type, int value)
+    {
+        switch (type)
+        {
+            case 1:
+                ShowingMoreCert = !ShowingMoreCert;
+                ShowAmountCert = value;
+                break;
+            case 2:
+                ShowingMoreProj = !ShowingMoreProj;
+                ShowAmountProj = value;
+                break;
+        }
+    }
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        ShowAmountCert = ShowAmount;
+        ShowAmountProj = ShowAmount;
+        await GetJsonData();
+    }
+
+
+    private string? _mousePosStyling = "--mousePosX: -2000px; --mousePosY: -2000px";
+
+    private void MouseMoved(MouseEventArgs e)
+    {
+        _mousePosStyling = $"--mousePosX: {e.ClientX}px; --mousePosY: {e.ClientY}px";
+    }
+
+    private void MouseMovedOut()
+    {
+        _mousePosStyling = "--mousePosX: -2000px; --mousePosY: -2000px";
+    }
+
+}
