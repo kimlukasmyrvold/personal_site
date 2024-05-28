@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Start cookieyes banner -->
+    <script id="cookieyes" type="text/javascript"
+            src="https://cdn-cookieyes.com/client_data/b5f0ef41ff566436ee882847/script.js"></script>
+    <!-- End cookieyes banner -->
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+            'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+        });
+        let f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l !== 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-NKBCRNNX');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="google" content="notranslate">
+    <meta name="author" content="Kim Lukas Myrvold">
+    <meta name="keywords"
+          content="personal, website, site, cv, curriculum, vitae, blazor, wasm, blazorwasm, static, standalone, app, web, assembly, kim, lukas, myrvold, norway, norwegian">
+    <meta name="description" content="Kim Lukas Myrvold's Personal Website">
+    <meta property="og:image" content="https://kimlukasmyrvold.github.io/assets/images/persons/kimlukas300x300.webp">
+
+    <title>Kim Lukas Myrvold</title>
+
+    <base href="/"/>
+
+    <link rel="shortcut icon" href="Assets/Images/Favicons/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="Assets/CSS/Main.css"/>
+
+    <!--    &lt;!&ndash; Google tag (gtag.js) &ndash;&gt;-->
+    <!--    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MDHPPTX2S6"></script>-->
+    <!--    <script>-->
+    <!--        window.dataLayer = window.dataLayer || [];-->
+
+    <!--        function gtag() {-->
+    <!--            dataLayer.push(arguments);-->
+    <!--        }-->
+
+    <!--        gtag('js', new Date());-->
+
+    <!--        gtag('config', 'G-MDHPPTX2S6');-->
+    <!--    </script>-->
+</head>
+
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NKBCRNNX"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div id="app">
+    <div style="position:fixed;inset:0;display:grid;place-items:center;z-index:999;background:#0005;backdrop-filter:blur(2px);transition:all .3s ease">
+        <svg style="width: 5em;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+            <radialGradient id="loadingGradient" cx=".66" fx=".66" cy=".3125" fy=".3125" gradientTransform="scale(1.5)">
+                <stop offset="0" stop-color="#9cacdf"></stop>
+                <stop offset=".3" stop-color="#9cacdf" stop-opacity=".9"></stop>
+                <stop offset=".6" stop-color="#9cacdf" stop-opacity=".6"></stop>
+                <stop offset=".8" stop-color="#9cacdf" stop-opacity=".3"></stop>
+                <stop offset="1" stop-color="#9cacdf" stop-opacity="0"></stop>
+            </radialGradient>
+            <circle transform-origin="center" fill="none" stroke="url(#loadingGradient)" stroke-width="20"
+                    stroke-linecap="round"
+                    stroke-dasharray="200 1000" stroke-dashoffset="0" cx="100" cy="100" r="70">
+                <animateTransform type="rotate" attributeName="transform" calcMode="spline" dur="2" values="360;0"
+                                  keyTimes="0;1" keySplines="0 0 1 1" repeatCount="indefinite">
+                </animateTransform>
+            </circle>
+            <circle transform-origin="center" fill="none" opacity=".2" stroke="#9cacdf" stroke-width="20"
+                    stroke-linecap="round" cx="100" cy="100" r="70">
+            </circle>
+        </svg>
+    </div>
+</div>
+
+<div id="blazor-error-ui">
+    <div class="blazor_error_ui">
+        <div class="blazor_error_ui__main">
+            <p>
+                An unhandled exception has occurred. See browser dev tools for details.
+                <a href="" class="reload">Reload</a>
+            </p>
+        </div>
+
+        <div class="blazor_error_ui__dismiss">
+            <button class="dismiss button-nofancy">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <title>close</title>
+                    <path fill="currentColor"
+                          d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+</div>
+<script src="_framework/blazor.webassembly.js"></script>
+<script>
+    function initMoveBox() {
+        document.querySelectorAll(".bio .bio__wrapper .bio__container__image").forEach(container => {
+            const inner = container.querySelector("img");
+
+            const mouse = {
+                _x: 0,
+                _y: 0,
+                x: 0,
+                y: 0,
+                updatePosition: function (event) {
+                    const e = event;
+                    this.x = e.clientX - this._x;
+                    this.y = (e.clientY - this._y) * -1;
+                },
+                setOrigin: function (e) {
+                    this._x = e.offsetLeft + Math.floor(e.offsetWidth / 2);
+                    this._y = e.offsetTop + Math.floor(e.offsetHeight / 2);
+                }
+            };
+
+            mouse.setOrigin(container);
+
+
+            let counter = 0;
+            const updateRate = 10;
+            const isTimeToUpdate = function () {
+                return counter++ % updateRate === 0;
+            };
+
+
+            const onMouseEnterHandler = function (event) {
+                update(event);
+            };
+
+            const onMouseLeaveHandler = function () {
+                inner.style = '';
+            };
+
+            const onMouseMoveHandler = function (event) {
+                if (isTimeToUpdate()) {
+                    update(event);
+                }
+            };
+
+
+            const update = function (event) {
+                mouse.updatePosition(event);
+                updateTransformStyle(
+                    (mouse.y / inner.offsetHeight).toFixed(2),
+                    (mouse.x / inner.offsetWidth).toFixed(2)
+                );
+            };
+
+            const updateTransformStyle = function (x, y) {
+                const style = "rotateX(" + x + "deg) rotateY(" + y + "deg)";
+                inner.style.transform = style;
+                inner.style.mozTransform = style;
+                inner.style.msTransform = style;
+                inner.style.oTransform = style;
+            };
+
+
+            container.onmouseenter = onMouseEnterHandler;
+            container.onmouseleave = onMouseLeaveHandler;
+            container.onmousemove = onMouseMoveHandler;
+        });
+    }
+
+
+    function openLayers() {
+        const openLayersScript = document.createElement('script');
+        openLayersScript.src = 'https://cdn.jsdelivr.net/npm/ol@v7.3.0/dist/ol.js';
+        openLayersScript.onload = () => {
+            onloadOpenLayers();
+        };
+        document.body.appendChild(openLayersScript);
+    }
+
+    function onloadOpenLayers() {
+        const longitude = 11.107192;
+        const latitude = 59.260573;
+
+        let map = new ol.Map({
+            target: 'map',
+            layers: [
+                new ol.layer.Tile({
+                    source: new ol.source.OSM()
+                })
+            ],
+            view: new ol.View({
+                center: ol.proj.fromLonLat([longitude, latitude]),
+                zoom: 14
+            })
+        });
+
+        let marker = new ol.Feature({
+            geometry: new ol.geom.Point(ol.proj.fromLonLat([longitude, latitude]))
+        });
+
+        let vectorSource = new ol.source.Vector();
+        let vectorLayer = new ol.layer.Vector({
+            source: vectorSource
+        });
+        vectorSource.addFeature(marker);
+        map.addLayer(vectorLayer);
+
+        let markerStyle = new ol.style.Style({
+            image: new ol.style.Icon({
+                anchor: [0.38, 1],
+                src: '/Assets/Images/map-marker.svg'
+            })
+        });
+        marker.setStyle(markerStyle);
+
+        window.addEventListener('resize', function () {
+            map.updateSize();
+
+            let extent = map.getView().calculateExtent(map.getSize());
+            map.getView().fit(extent, {size: map.getSize()});
+        });
+    }
+</script>
+</body>
+
+</html>
