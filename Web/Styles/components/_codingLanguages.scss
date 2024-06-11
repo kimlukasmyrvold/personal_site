@@ -1,39 +1,51 @@
 ﻿@use "../base" as *;
 
 .coding_languages {
-    
+
     &__title {
         font-size: $h3;
         font-weight: 600;
+        margin-block-end: .85rem;
+    }
+
+    .information {
+        @supports (grid-template-rows: masonry) {
+            display: none;
+        }
     }
 
     &__container {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 1.25rem;
+        
+        @supports (grid-template-rows: masonry) {
+            grid-template-rows: masonry;
+        }
     }
 
     &__card {
         position: relative;
         isolation: isolate;
         border-radius: 15px;
+        box-shadow: 0 0 5px var(--text5);
 
         @media only screen and (width > 580px) {
-
-            &::after {
+            &::before {
                 content: '';
                 position: absolute;
                 inset: -1px;
                 background-attachment: fixed;
-                background-image: radial-gradient(circle at var(--mousePosX, 0) var(--mousePosY, 0), #ffffffdc, transparent 10em);
+                background-image: radial-gradient(circle at var(--mousePosX, 0) var(--mousePosY, 0), var(--text15), transparent 10em);
                 border-radius: inherit;
                 pointer-events: none;
                 z-index: -1;
+                filter: blur(5px);
             }
         }
 
         &__container {
-            background-color: var(--bg);
+            background-color: var(--bg85);
             border-radius: inherit;
             height: 100%;
 
