@@ -1,9 +1,22 @@
 ﻿@inject HttpClient Http
 
-<div class="coding_languages" @onmousemove="MouseMoved" @onmouseleave="MouseMovedOut">
+<div class="coding_languages wrapper" @onmousemove="MouseMoved" @onmouseleave="MouseMovedOut">
     <p class="coding_languages__title">Coding languages I have worked with</p>
 
-    <div class="coding_languages__container">
+    <div class="information inline">
+        <p class="heading">Tip</p>
+        <p class="text">
+            For better design use firefox and set <code>layout.css.grid-template-masonry-value.enabled</code> to true.
+            <a href="https://caniuse.com/mdn-css_properties_grid-template-rows_masonry" target="_blank">
+                <span>Browser support</span>
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                    <path fill="currentColor" d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"></path>
+                </svg>
+            </a>
+        </p>
+    </div>
+
+    <div class="coding_languages__container" style="@_mousePosStyling">
 
         @if (CodingLanguagesArray is null)
         {
@@ -13,18 +26,9 @@
         {
             @foreach (var lang in CodingLanguagesArray!)
             {
-                <CodingLanguages_Card MousePosStyling="@_mousePosStyling"
-                                      Json="@lang"
-                                      ShowAmount="@ShowAmount"
-                                      ShowAmountCert="@ShowAmountCert"
-                                      ShowingMoreCert="@ShowingMoreCert"
-                                      ShowAmountProj="@ShowAmountProj"
-                                      ShowingMoreProj="@ShowingMoreProj"
-                                      CallBack="@(e => CodingLanguageCallBack(e.type, e.value))">
-                </CodingLanguages_Card>
+                <CodingLanguages_Card Json="@lang" ShowAmount="@ShowAmount"></CodingLanguages_Card>
             }
         }
-
 
     </div>
 </div>
@@ -32,37 +36,16 @@
 @code {
 
     private CodingLanguage[]? CodingLanguagesArray { get; set; }
+
     private int ShowAmount { get; set; } = 5;
-    private int ShowAmountCert { get; set; }
-    private bool ShowingMoreCert { get; set; }
-    private int ShowAmountProj { get; set; }
-    private bool ShowingMoreProj { get; set; }
 
     private async Task GetJsonData()
     {
         CodingLanguagesArray = await Http.GetFromJsonAsync<CodingLanguage[]>("Assets/JSON/CodingLanguages.json");
     }
 
-    private void CodingLanguageCallBack(int type, int value)
-    {
-        switch (type)
-        {
-            case 1:
-                ShowingMoreCert = !ShowingMoreCert;
-                ShowAmountCert = value;
-                break;
-            case 2:
-                ShowingMoreProj = !ShowingMoreProj;
-                ShowAmountProj = value;
-                break;
-        }
-    }
-
-
     protected override async Task OnInitializedAsync()
     {
-        ShowAmountCert = ShowAmount;
-        ShowAmountProj = ShowAmount;
         await GetJsonData();
     }
 
