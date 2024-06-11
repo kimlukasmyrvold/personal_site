@@ -1,0 +1,18 @@
+﻿<Timeline Items="_items" Dir="right"></Timeline>
+
+@code {
+
+    private List<(string name, string start, string end, string img, string desc)>? _items;
+
+    protected override Task OnInitializedAsync()
+    {
+        _items = new List<(string name, string start, string end, string img, string desc)>
+        {
+            ("Årum school", "2012", "2019", "https://old.kimlukas.com/assets/images/education/arum-skole.webp", "This was the first school I attended, it was during this time that I became interested in computers and programming."),
+            ("Borge secondary school", "2019", "2022", "https://old.kimlukas.com/assets/images/education/borge-skole.webp", "During secondary school, my interest in computers had turned into a hobby. At this time I already knew a lot about computers, but I didn't know much about programming. In the 10th grade, I chose programming as an elective and that's when I got a good taste for coding. There I learned to code in Python and Scratch."),
+            ("Glemmen high school", "2022", "now", "https://old.kimlukas.com/assets/images/education/glemmen.webp", "The first year of Glemmen I went Information technology and media production where I was introduced to media production and IT, this gave me some experience within both fields. I learnt a lot of usefull stuff like: HTML, JavaScript, CSS and SCSS. Also Adobe programs like Photoshop, Illustrator and Lightroom. The second year at Glemmen I picked Information Technology which is where I currenly am at. So far I have gotten more knowledge in IT and it has been the best school year in my life so far.")
+        };
+        return Task.CompletedTask;
+    }
+
+}
