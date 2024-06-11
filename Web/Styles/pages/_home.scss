@@ -1,5 +1,46 @@
-﻿#hero {
-    display: grid;
-    place-items: center;
-    min-height: 80dvh;
+﻿@use "../base/typography" as *;
+
+#hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 90dvh;
+
+    .scroll {
+        display: flex;
+        align-items: center;
+        gap: 1ch;
+        margin-block-end: .75rem;
+        font-size: $small;
+        animation: levitate 7s linear infinite;
+        user-select: none;
+        transition: color .5s ease;
+
+        p {
+            margin: 0;
+        }
+        
+        &:hover {
+            color: var(--accent75);
+        }
+
+        @keyframes levitate {
+            0% {
+                transform: rotate(0deg) translateY(0%);
+            }
+            25% {
+                transform: rotate(2deg) translateY(-25%);
+            }
+            50% {
+                transform: rotate(0deg) translateY(0%);
+            }
+            75% {
+                transform: rotate(-1.5deg) translateY(-25%);
+            }
+            100% {
+                transform: rotate(0deg) translateY(0%);
+            }
+        }
+    }
 }
