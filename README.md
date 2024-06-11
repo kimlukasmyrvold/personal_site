@@ -16,6 +16,17 @@ and adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).<br>
 Dates use the [ISO 8601 date format](https://www.iso.org/iso-8601-date-and-time-format.html) of `YYYY-MM-DD`.
 
 
+## [0.2.2] - 2024-06-11
+
+### Added
+
+- gap to #hero section, fixes "scroll to see more" text clipping into .bio on smaller screens. `_home.scss`
+
+### Changed
+
+- updated version in `Footer.razor` 
+
+
 ## [0.2.1] - 2024-06-11
 
 ### Added
@@ -90,6 +101,7 @@ You can find the code for it at: https://github.com/kimlukasmyrvold/old_personal
 No changelog for the old website was properly tracked.
 
 
+[0.2.2]: https://github.com/kimlukasmyrvold/kimlukasmyrvold.github.io/releases/tag/v0.2.2
 [0.2.1]: https://github.com/kimlukasmyrvold/kimlukasmyrvold.github.io/releases/tag/v0.2.1
 [0.2.0]: https://github.com/kimlukasmyrvold/kimlukasmyrvold.github.io/releases/tag/v0.2.0
 [0.1.0]: https://github.com/kimlukasmyrvold/kimlukasmyrvold.github.io/releases/tag/v0.1.0
