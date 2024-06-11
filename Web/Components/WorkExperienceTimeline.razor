@@ -1,0 +1,17 @@
+﻿<Timeline Items="_items" Dir="left"></Timeline>
+
+@code {
+
+    private List<(string name, string start, string end, string img, string desc)>? _items;
+
+    protected override Task OnInitializedAsync()
+    {
+        _items = new List<(string name, string start, string end, string img, string desc)>
+        {
+            ("Bli Synlig", "March 2024", "now", "Assets/Images/Places/bli_synlig.png", "Currently working here as an intern."),
+            ("Elkjøp", "September 2023", "March 2024", "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftubby.scene7.com%2Fis%2Fimage%2Ftubby%2Felkjop-fredrikstad-store&f=1&nofb=1&ipt=cceed63c4a5652a79e421ac5a511d72836db0a8094c67655ad059ca45a8606a3&ipo=images", "Worked here as an intern.")
+        };
+        return Task.CompletedTask;
+    }
+
+}
