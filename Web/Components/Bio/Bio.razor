@@ -1,7 +1,7 @@
 ﻿@inject IJSRuntime JsRuntime
 
-<div class="bio" @onmousemove="MouseMoved" @onmouseleave="MouseMovedOut">
-    <div class="bio__wrapper" style="@_mousePosStyling">
+<div class="bio" @onmousemove="MouseMoved" style="@_mousePosStyling">
+    <div class="bio__wrapper">
         <div class="bio__container">
             <div class="bio__container__image">
                 <img src="Assets/Images/Persons/kimlukas300x300.webp" alt="Image of me">
@@ -21,27 +21,14 @@
         var today = DateTime.Now.ToString("yyyyMMdd");
         var birth = new DateTime(2006, 5, 21).ToString("yyyyMMdd");
         Age = (int.Parse(today) - int.Parse(birth)) / 10000;
-        
         return Task.CompletedTask;
     }
-
-    protected override void OnAfterRender(bool firstRender)
-    {
-        if (!firstRender) return;
-        JsRuntime.InvokeVoidAsync("initMoveBox");
-    }
-
 
     private string? _mousePosStyling = "--mousePosX: -2000px; --mousePosY: -2000px";
 
     private void MouseMoved(MouseEventArgs e)
     {
         _mousePosStyling = $"--mousePosX: {e.ClientX}px; --mousePosY: {e.ClientY}px";
-    }
-
-    private void MouseMovedOut()
-    {
-        _mousePosStyling = "--mousePosX: -2000px; --mousePosY: -2000px";
     }
 
 }
