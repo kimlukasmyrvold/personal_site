@@ -1,0 +1,121 @@
+﻿@use "../base" as *;
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
+
+    .tipbox {
+        display: flex;
+        justify-content: center;
+        margin-inline: 1.5em;
+
+        .content {
+            border-radius: 10px;
+            border: 1px solid var(--text5);
+            padding: .5em 1.5em;
+        }
+    }
+
+    @media screen and (width >=750px) {
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 3px 1fr;
+            max-width: 1000px;
+
+            .middle {
+                width: 3px;
+                height: 100%;
+                background-color: var(--secondary);
+                position: relative;
+
+                &:nth-child(2),
+                &:nth-last-child(2) {
+                    align-self: flex-end;
+                    height: 50%;
+
+                    &::before {
+                        top: unset;
+                    }
+                }
+
+                &:nth-last-child(2) {
+                    align-self: flex-start;
+                    rotate: 180deg;
+                }
+
+                &::before {
+                    $_size: 15px;
+
+                    content: '';
+                    position: absolute;
+
+                    left: -#{calc(($_size / 2) - (3px / 2))};
+                    top: calc(50% - ($_size / 2));
+
+                    width: $_size;
+                    aspect-ratio: 1;
+
+                    border-radius: calc($_size) * 10;
+                    background-color: inherit;
+                }
+            }
+
+        }
+    }
+
+    .event {
+        display: flex;
+        flex-direction: column;
+
+        padding: .5em 1em;
+        margin: 0 1.5em 1em;
+
+        background-color: var(--text5);
+        border-radius: 10px;
+        box-shadow: 0 0 3px var(--text30);
+        
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: .5em;
+            flex-wrap: wrap;
+
+            margin-bottom: .5em;
+
+            .title,
+            .time {
+                margin: .5rem 0 .25rem;
+            }
+
+            .title {
+                font-size: $h4;
+            }
+
+            .time {
+                color: var(--text70);
+            }
+        }
+        
+        .image {
+            margin-top: .5rem;
+            
+            img {
+                border-radius: 5px;
+            }
+        }
+        
+        .description {
+            margin-top: .75rem;
+        }
+
+        .hero,
+        .image,
+        .description {
+            pointer-events: none;
+        }
+
+    }
+}
