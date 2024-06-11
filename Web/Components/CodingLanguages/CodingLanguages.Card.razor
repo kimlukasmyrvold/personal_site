@@ -1,4 +1,4 @@
-﻿<div class="coding_languages__card" style="@MousePosStyling">
+﻿<div class="coding_languages__card">
     <div class="coding_languages__card__container">
         <div class="coding_languages__card__container__content">
 
@@ -145,16 +145,16 @@
 </div>
 
 @code {
-    [Parameter] public string? MousePosStyling { get; set; }
     [Parameter] public CodingLanguage? Json { get; set; }
+
     [Parameter] public int ShowAmount { get; set; }
+
     [Parameter] public int ShowAmountCert { get; set; }
     [Parameter] public bool ShowingMoreCert { get; set; }
+    private int LengthCert { get; set; }
+
     [Parameter] public int ShowAmountProj { get; set; }
     [Parameter] public bool ShowingMoreProj { get; set; }
-    [Parameter] public EventCallback<(int type, int value)> CallBack { get; set; }
-
-    private int LengthCert { get; set; }
     private int LengthProj { get; set; }
 
     protected override Task OnInitializedAsync()
@@ -162,12 +162,15 @@
         if (Json!.Certificates is not null) LengthCert = Json.Certificates.Count;
         if (Json.Projects is not null) LengthProj = Json.Projects.Count;
 
+        ShowAmountCert = ShowAmount;
+        ShowAmountProj = ShowAmount;
+
         return Task.CompletedTask;
     }
 
-    private async Task ShowMore(int type = 0)
+    private void ShowMore(int type = 0)
     {
-        if (type == 0)
+        if (type <= 0)
         {
             Console.WriteLine("Error, type is not set! Method: ShowMore(int)");
             return;
@@ -176,21 +179,19 @@
         switch (type)
         {
             case 1:
-                ShowingMoreCert = !ShowingMoreCert;
-                ShowAmountCert += LengthCert;
-                await CallBack.InvokeAsync((1, ShowAmountCert));
+                ShowingMoreCert = true;
+                ShowAmountCert = LengthCert;
                 break;
             case 2:
-                ShowingMoreProj = !ShowingMoreProj;
-                ShowAmountProj += LengthProj;
-                await CallBack.InvokeAsync((2, ShowAmountProj));
+                ShowingMoreProj = true;
+                ShowAmountProj = LengthProj;
                 break;
         }
     }
 
-    private async Task ShowLess(int type = 0)
+    private void ShowLess(int type = 0)
     {
-        if (type == 0)
+        if (type <= 0)
         {
             Console.WriteLine("Error, type is not set! Method: ShowLess(int)");
             return;
@@ -199,14 +200,12 @@
         switch (type)
         {
             case 1:
-                ShowingMoreCert = !ShowingMoreCert;
+                ShowingMoreCert = false;
                 ShowAmountCert = ShowAmount;
-                await CallBack.InvokeAsync((1, ShowAmountCert));
                 break;
             case 2:
-                ShowingMoreProj = !ShowingMoreProj;
+                ShowingMoreProj = false;
                 ShowAmountProj = ShowAmount;
-                await CallBack.InvokeAsync((2, ShowAmountProj));
                 break;
         }
     }
