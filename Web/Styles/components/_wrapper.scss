@@ -4,13 +4,19 @@
     --gap: clamp(1rem, 6vw, 3rem);
     --full: minmax(var(--gap), 1fr);
     --breakout: minmax(0, 5rem);
-    --content: min(1400px, 100% - var(--gap) * 2);
+    --content: minmax(0, 100px);
+    --inline: minmax(0, 200px);
+    --small: min(800px, 100% - var(--gap) * 2);
 
     display: grid;
     grid-template-columns:
     [full-start] var(--full)
     [breakout-start] var(--breakout)
-    [content-start] var(--content) [content-end]
+    [content-start] var(--content)
+    [inline-start] var(--inline)
+    [small-start] var(--small) [small-end]
+    var(--inline) [inline-end]
+    var(--content) [content-end]
     var(--breakout) [breakout-end]
     var(--full) [full-end];
 }
@@ -18,6 +24,14 @@
 .wrapper > * {
     grid-column: content;
     margin-block-end: 1.5em;
+}
+
+.small {
+    grid-column: small;
+}
+
+.inline {
+    grid-column: inline;
 }
 
 .full {
