@@ -1,0 +1,75 @@
+﻿<div class="timeline">
+    <div class="container">
+        @if (Items is null)
+        {
+            <p>
+                <em>
+                    Loading...
+                </em>
+            </p>
+        }
+        else
+        {
+            @foreach (var item in Items)
+            {
+                _count++;
+
+                @if (_count % 2 == (Dir == "right" ? 1 : 0))
+                {
+                    <div class="marker"></div>
+                    <div class="middle"></div>
+                    <div class="event">
+                        <div class="hero">
+                            <p class="title">@item.name</p>
+                            <p class="time">
+                                @if (item.start == item.end)
+                                {
+                                    @item.start
+                                }
+                                else
+                                {
+                                    @($"{item.start} → {item.end}")
+                                }
+                            </p >
+                        </div >
+                        <div class="image">
+                            <img src="@item.img" alt="">
+                        </div>
+                        <p class="description">@item.desc</p>
+                    </div>
+                }
+                else
+                {
+                    <div class="event">
+                        <div class="hero">
+                            <p class="title">@item.name</p>
+                            <p class="time">
+                                @if (item.start == item.end)
+                                {
+                                    @item.start
+                                }
+                                else
+                                {
+                                    @($"{item.start} → {item.end}")
+                                }
+                            </p>
+                        </div>
+                        <div class="image">
+                            <img src="@item.img" alt="">
+                        </div>
+                        <p class="description">@item.desc</p>
+                    </div>
+                    <div class="middle"></div>
+                    <div class="marker"></div>
+                }
+            }
+        }
+
+    </div>
+</div>
+
+@code {
+    [Parameter] public List<(string name, string start, string end, string img, string desc)>? Items { get; set; }
+    [Parameter] public string? Dir { get; set; }
+    private int _count;
+}
