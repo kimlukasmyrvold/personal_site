@@ -1,0 +1,31 @@
+﻿@if (Text is not null)
+{
+    <div class="timeline__container__item__event__content__description">
+        @if (_isTrunc && Text.Length > 150)
+        {
+            <p aria-hidden="true" class="timeline__container__item__event__content__description__text">@(Text[..150]) ...</p>
+            <button aria-hidden="true" class="timeline__container__item__event__content__description__button button-nofancy" @onclick="Toggle">Show more</button>
+        }
+        else
+        {
+            <p aria-hidden="true" class="timeline__container__item__event__content__description__text">@Text</p>
+            if (Text.Length > 150)
+            {
+                <button aria-hidden="true" class="timeline__container__item__event__content__description__button button-nofancy" @onclick="Toggle">Show less</button>
+            }
+        }
+        <p class="visually_hidden">@Text</p>
+    </div>
+}
+
+@code {
+
+    [Parameter] public string? Text { get; set; }
+    private bool _isTrunc = true;
+
+    private void Toggle()
+    {
+        _isTrunc = !_isTrunc;
+    }
+
+}
