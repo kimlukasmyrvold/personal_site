@@ -1,0 +1,46 @@
+﻿<div class="timeline">
+    <div class="timeline__container">
+        @if (Data is null)
+        {
+            <p>
+                <em>Loading...</em>
+            </p>
+        }
+        else
+        {
+            foreach (var item in Reverse ? Data.Reverse() : Data)
+            {
+                _count++;
+
+                <div class="timeline__container__item" data-order="@(_count % 2 == (StartAtRight ? 1 : 0) ? 1 : 0)">
+                    <Timeline_Marker Item="item"></Timeline_Marker>
+                    <div class="timeline__container__item__middle" data-order="@GetOrder(_count)">
+                        <div class="timeline__container__item__middle__line"></div>
+                    </div>
+                    <Timeline_Event Item="item"></Timeline_Event>
+                </div>
+            }
+
+            _count = 0;
+        }
+
+    </div>
+</div>
+
+@code {
+
+    [Parameter] public TimelineModel[]? Data { get; set; }
+    [Parameter] public bool StartAtRight { get; set; }
+    [Parameter] public bool Reverse { get; set; }
+
+    private int _count;
+
+    private int GetOrder(int count)
+    {
+        if (Data is null) return 3;
+        if (_count == 1) return 1;
+        if (_count == Data.Length) return 2;
+        return Data.Length < 2 ? 3 : 0;
+    }
+
+}
