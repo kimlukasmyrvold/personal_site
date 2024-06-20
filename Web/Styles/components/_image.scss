@@ -1,0 +1,83 @@
+﻿@use "../base" as *;
+
+.image_viewer {
+    position: fixed;
+    inset: 0;
+    translate: 0 -200%;
+
+    pointer-events: none;
+    z-index: -9999;
+    opacity: 0;
+    visibility: hidden;
+
+    transition: translate .3s ease-in-out, opacity .5s linear, visibility .5s linear, z-index .5s linear;
+
+    &[data-active="true"] {
+        background-color: var(--bg);
+        pointer-events: unset;
+        z-index: 9999;
+        translate: 0;
+        opacity: 1;
+        visibility: visible;
+        
+        transition: translate .3s ease-in-out, opacity 0s linear, visibility 0s linear, z-index 0s linear;
+    }
+
+    &__container {
+
+        &__content {
+            display: grid;
+            place-items: center;
+            width: 100vw;
+            height: 100vh;
+            background-color: var(--bg);
+
+            &__background {
+                position: absolute;
+                inset: 0;
+                overflow: hidden;
+                opacity: .3;
+                filter: blur(10px);
+                pointer-events: none;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: fill;
+                }
+            }
+
+            &__image {
+                position: absolute;
+                inset: 0;
+                pointer-events: none;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain !important;
+                }
+            }
+        }
+
+        &__close {
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            button {
+                margin: 1rem 1.5rem;
+                padding: .25rem;
+                font-size: $h5;
+                background-color: var(--bg50);
+                border-radius: 100vw;
+                transition: background-color .3s ease;
+
+                &:hover {
+                    background-color: var(--bg85);
+                    color: var(--text85);
+                }
+            }
+        }
+    }
+}
