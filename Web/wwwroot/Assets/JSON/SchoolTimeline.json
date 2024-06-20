@@ -1,0 +1,26 @@
+﻿[
+    {
+        "Name": "Årum school",
+        "StartTime": "2012",
+        "EndTime": "2019",
+        "Description": "This was the first school I attended, it was during this time that I became interested in computers and programming.",
+        "ImageUrl": "Assets/Images/Places/aarum_skole-1.jpg",
+        "Link": "https://www.fredrikstad.kommune.no/skoler/arum-skole/"
+    },
+    {
+        "Name": "Borge secondary school",
+        "StartTime": "2019",
+        "EndTime": "2022",
+        "Description": "During secondary school, my interest in computers had turned into a hobby. At this time I already knew a lot about computers, but I did not know much about programming. In 10th grade, I chose programming as an elective subject and that is when I got a good taste for programming. Here I got familiar with coding in Python and Scratch.",
+        "ImageUrl": "Assets/Images/Places/borge_ungdomsskole-1.jpg",
+        "Link": "https://www.fredrikstad.kommune.no/skoler/borge-uskole"
+    },
+    {
+        "Name": "Glemmen high school",
+        "StartTime": "2022",
+        "EndTime": "now",
+        "Description": "In my first year at Glemmen, I went into Information Technology and Media Production, which gave me some experience within both fields. In the first year, I learned basic web development with HTML, JavaScript and CSS, SQL databases, and some C#. In the media portion, I got familiar with some Adobe programs like Photoshop, Illustrator, and InDesign. We also had some projects involving some media production sets. In the second year, I picked IT, where I got more in-depth with the IT part. More databases, C#, networking, and user support.",
+        "ImageUrl": "Assets/Images/Places/glemmen_vgs-3.jpg",
+        "Link": "https://ofk.no/glemmen-vgs/"
+    }
+]
