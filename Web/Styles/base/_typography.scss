@@ -34,3 +34,7 @@ h5 {
 small {
     font-size: $small;
 }
+
+p, small, a, li, table {
+    margin: 0;
+}
