@@ -36,8 +36,4 @@
     </Compile>
   </ItemGroup>
 
-  <ItemGroup>
-    <None Include="wwwroot\Assets\JSON\Data.json" />
-  </ItemGroup>
-
 </Project>
