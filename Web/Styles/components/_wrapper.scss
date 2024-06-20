@@ -34,10 +34,14 @@
     grid-column: inline;
 }
 
-.full {
-    grid-column: full;
+.content {
+    grid-column: content;
 }
 
 .breakout {
     grid-column: breakout;
+}
+
+.full {
+    grid-column: full;
 }
