@@ -1,0 +1,68 @@
+﻿@inject IJSRuntime JsRuntime
+
+<div class="image_viewer" data-active="@Active.ToString().ToLower()" @onkeydown="Keydown" tabindex="@(Active ? 0 : -1)" @ref="_element">
+    <div class="image_viewer__container">
+        <div class="image_viewer__container__content">
+            <div class="image_viewer__container__content__background" aria-hidden="true">
+                <img loading="lazy" src="@Url" alt="@Alt" aria-hidden="true">
+            </div>
+            <div class="image_viewer__container__content__image">
+                <img loading="lazy" src="@Url" alt="@Alt">
+            </div>
+        </div>
+        <div class="image_viewer__container__close">
+            <button class="button-nofancy" @onclick="Close" @onkeydown="CloseKeydown">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor">
+                    <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+</div>
+
+@code
+{
+    [Parameter] public string? Url { get; set; }
+    [Parameter] public string? Alt { get; set; }
+    [Parameter] public bool Active { get; set; }
+    [Parameter] public EventCallback<bool> ActiveChanged { get; set; }
+
+    private ElementReference _element;
+    private bool _focusPending;
+
+    private async Task Close()
+    {
+        Active = false;
+        await ActiveChanged.InvokeAsync(Active);
+    }
+
+    private async Task CloseKeydown(KeyboardEventArgs e)
+    {
+        if (e.Key is " " or "Enter") await Close();
+    }
+    
+    private async Task Keydown(KeyboardEventArgs e)
+    {
+        if (e.Key == "Escape") await Close();
+    }
+
+    protected override Task OnParametersSetAsync()
+    {
+        if (Active)
+        {
+            _focusPending = true;
+        }
+
+        return Task.CompletedTask;
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (_focusPending)
+        {
+            _focusPending = false;
+            await JsRuntime.InvokeVoidAsync("SetFocusToElement", _element);
+        }
+    }
+
+}
