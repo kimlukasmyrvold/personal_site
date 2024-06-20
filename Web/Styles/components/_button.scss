@@ -8,13 +8,15 @@ button {
 
 button,
 .button-primary {
-    padding: .6em 1.25em;
+    padding: .5em 1.5em;
+    margin: .5em 0;
 
     color: map-get(themeColor.$dark, text);
     background-color: var(--primary);
 
-    border-radius: 5px;
+    border-radius: .5rem;
     font-size: $p;
+    line-height: 2.25;
     cursor: pointer;
 
     white-space: nowrap;
@@ -27,7 +29,10 @@ button,
 }
 
 .button-nofancy {
+    margin: 0;
     padding: 0;
+    line-height: normal;
+    border-radius: 0;
     color: var(--text);
     background-color: transparent;
     transition: color .3s ease;
@@ -41,7 +46,7 @@ button,
 
 .button-secondary {
     color: var(--text);
-    background-color: var(--secondary);
+    background-color: var(--secondary30);
 
     &:hover {
         box-shadow: none;
