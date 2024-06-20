@@ -8,8 +8,8 @@
 
         main {
             display: grid;
-            flex: 1;
-            padding-block: 1em;
+            padding-block: 1.5em 5em;
+            overflow-x: hidden;
             
             &:focus {
                 outline: none;
