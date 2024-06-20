@@ -16,6 +16,36 @@ and adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).<br>
 Dates use the [ISO 8601 date format](https://www.iso.org/iso-8601-date-and-time-format.html) of `YYYY-MM-DD`.
 
 
+## [0.3.0] - 2024-06-20
+
+### Added
+
+- New images in `/Places`
+- new class for viewing large images in `_image.scss`
+- margin 0 to certain text elements in `_typography.scss`
+- component for viewing image in large view `ImageViewer.razor`
+- noscript tag to tell user that javascript must be enabled to work `index.html`
+- json file for storing job timeline data in `JobTimeline.json`
+- json file for storing school timeline data in `SchoolTimeline.json`
+- main javascript file for functions `Main.js`
+- new components for timeline `Timeline.Event.Description.razor`, `Timeline.Event.razor`, `Timeline.Marker.razor` and `Timeline.razor`
+- model for json timeline `TimelineModel.cs`
+
+### Changed
+
+- styling for visually_hidden class in `_base.scss`
+- styling for buttons in `_button.scss`
+- Version in `Footer.razor`
+- spacing of <main> element and hide horizontal overflow in `_main.scss`
+- entire styling for timeline component in `_timeline.scss`
+- Work- and school timeline to use new timeline component in `Home.razor`
+
+### Removed
+
+- Unused model `CodeLanguagesModel.cs`
+- old components for work- and school timeline `SchoolTimeline.razor` and `WorkExperienceTimeline.razor` 
+
+
 ## [0.2.2] - 2024-06-11
 
 ### Added
@@ -101,6 +131,7 @@ You can find the code for it at: https://github.com/kimlukasmyrvold/old_personal
 No changelog for the old website was properly tracked.
 
 
+[0.3.0]: https://github.com/kimlukasmyrvold/kimlukasmyrvold.github.io/releases/tag/v0.3.0
 [0.2.2]: https://github.com/kimlukasmyrvold/kimlukasmyrvold.github.io/releases/tag/v0.2.2
 [0.2.1]: https://github.com/kimlukasmyrvold/kimlukasmyrvold.github.io/releases/tag/v0.2.1
 [0.2.0]: https://github.com/kimlukasmyrvold/kimlukasmyrvold.github.io/releases/tag/v0.2.0
