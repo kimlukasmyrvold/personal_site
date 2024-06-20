@@ -29,12 +29,35 @@
     <CodingLanguages></CodingLanguages>
 </div>
 
-<div id="school_timeline">
-    <h3>School timeline</h3>
-    <SchoolTimeline></SchoolTimeline>
+<br>
+
+<div id="school_timeline" class="full">
+    <div class="wrapper">
+        <h3>School timeline</h3>
+    </div>
+    <Timeline Data="SchoolTimelineJson"></Timeline>
 </div>
 
-<div id="work_experience">
-    <h3>Work experience</h3>
-    <WorkExperienceTimeline></WorkExperienceTimeline>
+<br>
+
+<div id="work_experience" class="full">
+    <div class="wrapper">
+        <h3>Work experience</h3>
+    </div>
+    <Timeline Data="JobTimelineJson" Reverse="true" StartAtRight="true"></Timeline>
 </div>
+
+@inject HttpClient Http
+
+@code {
+
+    private TimelineModel[]? SchoolTimelineJson { get; set; }
+    private TimelineModel[]? JobTimelineJson { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        SchoolTimelineJson = await Http.GetFromJsonAsync<TimelineModel[]>("Assets/JSON/SchoolTimeline.json");
+        JobTimelineJson = await Http.GetFromJsonAsync<TimelineModel[]>("Assets/JSON/JobTimeline.json");
+    }
+
+}
