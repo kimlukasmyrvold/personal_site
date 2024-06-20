@@ -1,121 +1,291 @@
 ﻿@use "../base" as *;
 
 .timeline {
+    $_brp: 800px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1.5em;
 
-    .tipbox {
-        display: flex;
-        justify-content: center;
-        margin-inline: 1.5em;
+    &__container {
+        &__item {
+            &[data-order="0"] {
+                flex-direction: row-reverse;
+            }
 
-        .content {
-            border-radius: 10px;
-            border: 1px solid var(--text5);
-            padding: .5em 1.5em;
-        }
-    }
+            &__marker {
+                display: flex;
+                flex-direction: column-reverse;
+                justify-content: center;
+                margin-inline: 1.5rem;
 
-    @media screen and (width >=750px) {
-        .container {
-            display: grid;
-            grid-template-columns: 1fr 3px 1fr;
-            max-width: 1000px;
+                &__time {
+                    font-size: $h5;
+                }
+            }
 
-            .middle {
-                width: 3px;
-                height: 100%;
-                background-color: var(--secondary);
+
+            &__event {
+                display: flex;
                 position: relative;
+                margin: 0 1.5em 1em;
 
-                &:nth-child(2),
-                &:nth-last-child(2) {
-                    align-self: flex-end;
-                    height: 50%;
+                @media screen and (width >= $_brp) {
+                    &__background {
+                        position: absolute;
+                        inset: 0;
 
-                    &::before {
-                        top: unset;
+                        &__orb {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            translate: 50% 0;
+
+                            height: 100%;
+                            width: 50%;
+                            aspect-ratio: 1;
+                            background: radial-gradient(circle at center, var(--accent5) 70%, #0000);
+                            animation: rotate 20s linear infinite;
+                            filter: blur(50px);
+
+                            @keyframes rotate {
+                                0% {
+                                    rotate: -90deg;
+                                    transform: skew(8deg);
+                                }
+
+                                50% {
+                                    rotate: 0deg;
+                                    transform: skew(0deg);
+                                }
+
+                                100% {
+                                    rotate: 90deg;
+                                    transform: skew(8deg);
+                                }
+                            }
+                        }
                     }
                 }
 
-                &:nth-last-child(2) {
-                    align-self: flex-start;
-                    rotate: 180deg;
+
+                &__content {
+                    position: relative;
+                    padding-block: .5rem;
+
+                    &__background {
+                        position: absolute;
+                        inset: 0;
+
+                        background-color: var(--secondary30);
+                        border-radius: 10px;
+
+                        @media screen and (width >= $_brp) {
+                            margin-inline-end: 2rem;
+                            transition: margin .2s ease;
+                        }
+                    }
+
+                    &:hover &__background {
+                        margin-inline-end: 0;
+                    }
+
+                    &__hero {
+                        position: relative;
+
+                        &__title {
+                            display: flex;
+                            justify-content: space-between;
+                            flex-wrap: wrap;
+                            gap: 1rem;
+
+                            &[data-noimage="false"] {
+                                pointer-events: none;
+                                
+                                align-items: flex-end;
+
+                                background: linear-gradient(0deg, #000000ef, #0000);
+                                position: absolute;
+                                inset: 0;
+                                z-index: 1;
+
+                                padding: .5rem 1rem;
+                                margin-inline: .25rem;
+                                border-radius: 5px;
+
+                                @media screen and (width >= $_brp) {
+                                    border-radius: 10px;
+                                    margin-block: 0;
+                                    margin-inline: 1.5rem 0;
+                                }
+
+                            }
+
+                            margin-inline: 1rem;
+                            transition: margin .5s ease;
+
+                            &__text {
+                                font-size: $h4;
+                                pointer-events: auto;
+                            }
+
+                            &__time {
+                                @media screen and (width >= $_brp) {
+                                    display: none;
+                                }
+                            }
+                        }
+
+                        &__image {
+                            position: relative;
+                            overflow: hidden;
+
+                            display: flex;
+                            border-radius: 5px;
+                            cursor: pointer;
+
+                            background-color: var(--text5);
+                            min-height: 200px;
+                            max-height: 300px;
+
+                            margin-inline: .25rem;
+                            transition: margin .5s ease;
+
+                            img {
+                                object-fit: cover;
+                                object-position: center;
+                                width: 100%;
+
+                                &:focus {
+                                    border: 2px solid var(--primary);
+                                }
+                            }
+
+                            @media screen and (width >= $_brp) {
+                                margin-inline: 1.5rem 0;
+                                border-radius: 10px;
+                                max-height: 250px;
+                            }
+                        }
+                    }
+
+                    @media screen and (width >= $_brp) {
+                        &[data-noimage="false"]:hover &__hero__title {
+                            margin-inline: .25rem;
+                        }
+                    }
+
+                    &:hover &__hero__image {
+                        margin-inline: .25rem;
+                    }
+
+                    &__description {
+                        position: relative;
+                        margin: 1rem;
+                        padding-inline-end: 1.5rem;
+
+                        &__button {
+                            margin-block-start: .5em;
+                            position: relative;
+                            color: var(--text75);
+
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                bottom: -.25em;
+                                left: 0;
+                                right: 0;
+                                width: 100%;
+                                height: 1px;
+                                background-color: var(--accent75);
+                                transition: height .2s ease;
+                            }
+
+                            &:hover {
+                                color: var(--text);
+
+                                &::after {
+                                    height: 2px;
+                                }
+                            }
+                        }
+                    }
                 }
 
-                &::before {
-                    $_size: 15px;
+            }
 
-                    content: '';
-                    position: absolute;
 
-                    left: -#{calc(($_size / 2) - (3px / 2))};
-                    top: calc(50% - ($_size / 2));
+            @media screen and (width <  $_brp) {
+                &__marker,
+                &__middle {
+                    display: none;
+                }
+            }
 
-                    width: $_size;
-                    aspect-ratio: 1;
+            @media screen and (width >= $_brp) {
+                display: flex;
+                max-width: 1000px;
 
-                    border-radius: calc($_size) * 10;
-                    background-color: inherit;
+                &__event,
+                &__marker {
+                    flex: 0 0 calc(calc(50% - 3rem) - 1.5px);
+                }
+
+                &[data-order="1"] &__marker {
+                    align-items: flex-end;
+                }
+
+                &__middle {
+                    $_bg: var(--accent);
+
+                    display: flex;
+
+                    &__line {
+                        width: 3px;
+                        min-height: 100%;
+                        background-color: $_bg;
+                        position: relative;
+                    }
+
+                    &[data-order="1"] &__line,
+                    &[data-order="2"] &__line,
+                    &[data-order="3"] &__line, {
+                        align-self: flex-end;
+                        min-height: 50%;
+
+                        &::before {
+                            top: unset;
+                        }
+                    }
+
+                    &[data-order="2"] &__line {
+                        align-self: flex-start;
+                        rotate: 180deg;
+                    }
+
+                    &[data-order="3"] &__line {
+                        background-color: transparent;
+                    }
+
+                    &__line::before {
+                        $_size: 15px;
+
+                        content: '';
+                        position: absolute;
+
+                        left: -#{calc(($_size / 2) - (3px / 2))};
+                        top: calc(50% - ($_size / 2));
+
+                        width: $_size;
+                        aspect-ratio: 1;
+
+                        border-radius: calc($_size) * 10;
+                        background-color: $_bg;
+                    }
                 }
             }
 
         }
-    }
-
-    .event {
-        display: flex;
-        flex-direction: column;
-
-        padding: .5em 1em;
-        margin: 0 1.5em 1em;
-
-        background-color: var(--text5);
-        border-radius: 10px;
-        box-shadow: 0 0 3px var(--text30);
-        
-        .hero {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: .5em;
-            flex-wrap: wrap;
-
-            margin-bottom: .5em;
-
-            .title,
-            .time {
-                margin: .5rem 0 .25rem;
-            }
-
-            .title {
-                font-size: $h4;
-            }
-
-            .time {
-                color: var(--text70);
-            }
-        }
-        
-        .image {
-            margin-top: .5rem;
-            
-            img {
-                border-radius: 5px;
-            }
-        }
-        
-        .description {
-            margin-top: .75rem;
-        }
-
-        .hero,
-        .image,
-        .description {
-            pointer-events: none;
-        }
-
     }
 }
