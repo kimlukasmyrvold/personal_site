@@ -1,0 +1,18 @@
+﻿[
+    {
+        "Name": "Elkjøp",
+        "StartTime": "September 2023",
+        "EndTime": "March 2024",
+        "Description": "Worked here as an intern.",
+        "ImageUrl": "Assets/Images/Places/elkjop_fredrikstad-1.jpg",
+        "Link": "https://www.elkjop.no/store/elkjop-fredrikstad"
+    },
+    {
+        "Name": "Bli Synlig",
+        "StartTime": "March 2024",
+        "EndTime": "now",
+        "Description": "Currently working here as an intern.",
+        "ImageUrl": "Assets/Images/Places/bli_synlig.png",
+        "Link": "https://www.blisynlig.no/"
+    }
+]
