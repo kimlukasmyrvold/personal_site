@@ -39,18 +39,13 @@
             flex-direction: column;
             gap: 1.5em;
             
-            &__brand {
-                margin-bottom: .5rem;
-            }
-            
             &__contact {
-                margin-bottom: 1.5rem;
+                margin-block: auto;
             }
             
             &__notice {
                 display: grid;
                 gap: .5em;
-                margin-top: auto;
 
                 &__note,
                 &__copyright,
