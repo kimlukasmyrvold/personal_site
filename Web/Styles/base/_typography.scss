@@ -38,3 +38,35 @@ small {
 p, small, a, li, table {
     margin: 0;
 }
+
+
+a {
+    color: var(--text);
+
+    text-underline-offset: 3px;
+    text-decoration-color: var(--accent50);
+    transition: text-decoration-color .2s ease, color .2s ease;
+
+    &:hover {
+        text-decoration-color: var(--accent);
+    }
+    
+    &.link-no-underline {
+        text-decoration: none;
+
+        &:hover {
+            color: var(--text75);
+        }
+    }
+
+    &[target="_blank"] {
+        display: inline-flex;
+        align-items: center;
+        gap: .1rem;
+
+        svg {
+            align-self: flex-start;
+            width: 12px;
+        }
+    }
+}

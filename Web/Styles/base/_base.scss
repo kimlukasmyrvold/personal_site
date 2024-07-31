@@ -53,29 +53,6 @@ svg {
     width: 1.75em;
 }
 
-a {
-    color: var(--text);
-    text-decoration-color: var(--accent);
-    text-underline-offset: 3px;
-    text-decoration-line: none;
-    transition: color .3s ease;
-
-    &:hover {
-        color: var(--text75);
-    }
-
-    &[target="_blank"] {
-        display: inline-flex;
-        align-items: center;
-        gap: .1rem;
-
-        svg {
-            align-self: flex-start;
-            width: 12px;
-        }
-    }
-}
-
 
 .visually_hidden:not(:focus):not(:active) {
     width: 1px;
