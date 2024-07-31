@@ -16,6 +16,24 @@ and adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).<br>
 Dates use the [ISO 8601 date format](https://www.iso.org/iso-8601-date-and-time-format.html) of `YYYY-MM-DD`.
 
 
+## [0.3.1] - 2024-07-31
+
+### Added
+
+- added JavaScript file for footer map in `ol.js` and `ol.js.map`
+
+### Changed
+
+- changed styling for link elements, also moved from `_base.scss` to `_typography.scss` in `_typography.scss`
+- changed text for GitHub link from `Check out the code here` to `Website is open source:` in `Footer.razor`
+- improved metadata for head in `index.html` and `404.html`
+
+### Removed
+
+- removed note telling user that all dates on website follows iso-8601 date format in `Footer.razor`
+- removed Google Analytics scripts from head in `index.html`
+
+
 ## [0.3.0] - 2024-06-20
 
 ### Added
@@ -131,6 +149,7 @@ You can find the code for it at: https://github.com/kimlukasmyrvold/old_personal
 No changelog for the old website was properly tracked.
 
 
+[0.3.1]: https://github.com/kimlukasmyrvold/kimlukasmyrvold.github.io/releases/tag/v0.3.1
 [0.3.0]: https://github.com/kimlukasmyrvold/kimlukasmyrvold.github.io/releases/tag/v0.3.0
 [0.2.2]: https://github.com/kimlukasmyrvold/kimlukasmyrvold.github.io/releases/tag/v0.2.2
 [0.2.1]: https://github.com/kimlukasmyrvold/kimlukasmyrvold.github.io/releases/tag/v0.2.1
