@@ -8,7 +8,7 @@ window.RemoveFocusToElement = (element) => {
 
 function openLayers() {
     const openLayersScript = document.createElement('script');
-    openLayersScript.src = 'https://cdn.jsdelivr.net/npm/ol@v7.3.0/dist/ol.js';
+    openLayersScript.src = '/Assets/JavaScript/ol.js';
     openLayersScript.onload = () => {
         onloadOpenLayers();
     };
