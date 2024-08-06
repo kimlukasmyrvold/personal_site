@@ -182,32 +182,16 @@
 
                     &__description {
                         position: relative;
-                        margin: 1rem;
+                        margin: 1rem 1rem .5rem;
                         padding-inline-end: 1.5rem;
 
                         &__button {
-                            margin-block-start: .5em;
+                            margin-block-start: 1em;
                             position: relative;
                             color: var(--text75);
 
-                            &::after {
-                                content: '';
-                                position: absolute;
-                                bottom: -.25em;
-                                left: 0;
-                                right: 0;
-                                width: 100%;
-                                height: 1px;
-                                background-color: var(--accent75);
-                                transition: height .2s ease;
-                            }
-
                             &:hover {
                                 color: var(--text);
-
-                                &::after {
-                                    height: 2px;
-                                }
                             }
                         }
                     }
