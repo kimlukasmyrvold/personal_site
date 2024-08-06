@@ -16,6 +16,14 @@ and adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).<br>
 Dates use the [ISO 8601 date format](https://www.iso.org/iso-8601-date-and-time-format.html) of `YYYY-MM-DD`.
 
 
+## [0.3.2] - 2024-08-06
+
+### Changed
+
+- Removed underline from show more button in `_timeline.scss`
+- Added more spacing to elements in `_timeline.scss`
+
+
 ## [0.3.1] - 2024-07-31
 
 ### Added
@@ -149,6 +157,7 @@ You can find the code for it at: https://github.com/kimlukasmyrvold/old_personal
 No changelog for the old website was properly tracked.
 
 
+[0.3.2]: https://github.com/kimlukasmyrvold/kimlukasmyrvold.github.io/releases/tag/v0.3.2
 [0.3.1]: https://github.com/kimlukasmyrvold/kimlukasmyrvold.github.io/releases/tag/v0.3.1
 [0.3.0]: https://github.com/kimlukasmyrvold/kimlukasmyrvold.github.io/releases/tag/v0.3.0
 [0.2.2]: https://github.com/kimlukasmyrvold/kimlukasmyrvold.github.io/releases/tag/v0.2.2
