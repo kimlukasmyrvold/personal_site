@@ -1,0 +1,116 @@
+﻿[
+    {
+        "Title": "Satisfactory",
+        "Description": "Satisfactory is a first-person open-world factory building game with a dash of exploration and combat. Play alone or with friends, explore an alien planet, create multi-story factories, and enter conveyor belt heaven!",
+        "PlayTime": "1102",
+        "Purchased": "2020-09-05",
+        "Platforms": [
+            {
+                "Title": "Steam",
+                "Link": "https://store.steampowered.com/app/526870/Satisfactory/"
+            },
+            {
+                "Title": "Epic Games",
+                "Link": "https://store.epicgames.com/en-US/p/satisfactory"
+            }
+        ],
+        "Banner": {
+            "Url": "/Images/banner.png",
+            "Alt": "Cool banner image"
+        },
+        "Media": [
+            {
+                "Url": "/Images/example.png",
+                "Alt": "Cool image"
+            }
+        ],
+        "Achievements": [
+            {
+                "Title": "New fear unlocked",
+                "Description": "Fix blown fuse.",
+                "Unlocked": true
+            },
+            {
+                "Title": "Yoink",
+                "Description": "Gather a Power Slug.",
+                "Unlocked": true
+            }
+        ]
+    },
+    {
+        "Title": "Dyson Sphere Program",
+        "Description": "Build the most efficient intergalactic factory in space simulation strategy game Dyson Sphere Program! Harness the power of stars, collect resources, plan and design production lines and develop your interstellar factory from a small space workshop to a galaxy-wide industrial empire.",
+        "PlayTime": "405.7",
+        "Purchased": "2021-02-22",
+        "Platforms": [
+            {
+                "Title": "Steam",
+                "Link": "https://store.steampowered.com/app/1366540/Dyson_Sphere_Program/"
+            }
+        ],
+        "Banner": {
+            "Url": "/Images/banner.png",
+            "Alt": "Cool banner image"
+        },
+        "Media": [
+            {
+                "Url": "/Images/example.png",
+                "Alt": "Cool image"
+            }
+        ],
+        "Achievements": [
+            {
+                "Title": "Know any campfire songs?",
+                "Description": "Consume at least 40 wood by burning it.",
+                "Unlocked": true
+            },
+            {
+                "Title": "Infinite Factory I",
+                "Description": "Exceed a total energy consumption of 1GJ.",
+                "Unlocked": true
+            }
+        ]
+    },
+    {
+        "Title": "Space Engineers",
+        "Description": "Space Engineers is a sandbox game about engineering, construction, exploration and survival in space and on planets. Players build space ships, space stations, planetary outposts of various sizes and uses, pilot ships and travel through space to explore planets and gather resources to survive.",
+        "PlayTime": "384.5",
+        "Purchased": "2021-08-02",
+        "Platforms": [
+            {
+                "Title": "Steam",
+                "Link": "https://store.steampowered.com/app/244850/Space_Engineers/"
+            },
+            {
+                "Title": "Xbox",
+                "Link": "https://www.xbox.com/en-US/games/store/space-engineers/9NLV3X229LG1/0010"
+            },
+            {
+                "Title": "Playstaion",
+                "Link": "https://store.playstation.com/en-no/concept/10002535/"
+            }
+        ],
+        "Banner": {
+            "Url": "/Images/banner.png",
+            "Alt": "Cool banner image"
+        },
+        "Media": [
+            {
+                "Url": "/Images/example.png",
+                "Alt": "Cool image"
+            }
+        ],
+        "Achievements": [
+            {
+                "Title": "Number 5 is alive",
+                "Description": "Connect your suit to power with less than 1% power remaining in Survival.",
+                "Unlocked": true
+            },
+            {
+                "Title": "The harder they fall",
+                "Description": "Destroy more than 1,000,000 Kg of cubes.",
+                "Unlocked": true
+            }
+        ]
+    }
+]

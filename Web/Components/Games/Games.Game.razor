@@ -1,0 +1,61 @@
+﻿@code {
+
+    [Parameter] public GamesModel? Data { get; set; }
+
+}
+
+<div class="games__container__game">
+    @if (Data is not null)
+    {
+        <p>@Data.Title</p>
+        <p>@Data.Description</p>
+        <p>@Data.PlayTime</p>
+        <p>@Data.Purchased</p>
+        
+        <br/>
+
+        if (Data.Banner is not null)
+        {
+            <p>@Data.Banner.Url</p>
+            <p>@Data.Banner.Alt</p>
+        }
+        
+        <br/>
+
+        if (Data.Platforms is not null)
+        {
+            foreach (var platform in Data.Platforms)
+            {
+                <p>@platform.Title</p>
+                <p>@platform.Link</p>
+            }
+        }
+        
+        <br/>
+
+        if (Data.Media is not null)
+        {
+            foreach (var platform in Data.Media)
+            {
+                <p>@platform.Url</p>
+                <p>@platform.Alt</p>
+            }
+        }
+        
+        <br/>
+
+        if (Data.Achievements is not null)
+        {
+            foreach (var platform in Data.Achievements)
+            {
+                <p>@platform.Title</p>
+                <p>@platform.Description</p>
+                <p>@platform.Unlocked</p>
+            }
+        }
+    }
+</div>
+
+<br>
+<hr>
+<br>

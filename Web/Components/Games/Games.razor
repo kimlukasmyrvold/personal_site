@@ -1,0 +1,29 @@
+﻿@inject HttpClient Http
+
+@code {
+
+    private GamesModel[]? GamesJson { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        GamesJson = await Http.GetFromJsonAsync<GamesModel[]>("Assets/JSON/Games.json");
+    }
+
+}
+
+
+<div class="games">
+    <div class="games__container">
+        @if (GamesJson is null)
+        {
+            <Loading></Loading>
+        }
+        else
+        {
+            foreach (var game in GamesJson)
+            {
+                <Games_Game Data="@game"></Games_Game>
+            }
+        }
+    </div>
+</div>
