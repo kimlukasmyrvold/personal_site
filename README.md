@@ -15,6 +15,19 @@ The format for this file is based on [Keep a Changelog](https://keepachangelog.c
 and adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).<br>
 Dates use the [ISO 8601 date format](https://www.iso.org/iso-8601-date-and-time-format.html) of `YYYY-MM-DD`.
 
+## [0.3.5] - 2024-09-23
+
+### Added
+
+- added games component for showcasing played games in `Games.razor`, `Games.Game.razor`
+- added json for games played in `Games.json`
+
+### Changed
+
+- updated GitHub repo link in `Footer.razor`
+- updated end time for glemmen high school in `SchoolTimeline.json`
+
+
 ## [0.3.4] - 2024-09-22
 
 ### Changed
