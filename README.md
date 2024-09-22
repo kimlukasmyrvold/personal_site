@@ -184,6 +184,8 @@ You can find the code for it at: https://github.com/kimlukasmyrvold/old_personal
 No changelog for the old website was properly tracked.
 
 
+[0.3.5]: https://github.com/kimlukasmyrvold/kimlukasmyrvold.github.io/releases/tag/v0.3.5
+[0.3.4]: https://github.com/kimlukasmyrvold/kimlukasmyrvold.github.io/releases/tag/v0.3.4
 [0.3.3]: https://github.com/kimlukasmyrvold/kimlukasmyrvold.github.io/releases/tag/v0.3.3
 [0.3.2]: https://github.com/kimlukasmyrvold/kimlukasmyrvold.github.io/releases/tag/v0.3.2
 [0.3.1]: https://github.com/kimlukasmyrvold/kimlukasmyrvold.github.io/releases/tag/v0.3.1
