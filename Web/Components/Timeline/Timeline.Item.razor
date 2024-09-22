@@ -1,0 +1,33 @@
+﻿@code {
+
+    [Parameter] public TimelineModel? Item { get; set; }
+    [Parameter] public bool StartAtRight { get; set; }
+    [Parameter] public bool Reverse { get; set; }
+    [Parameter] public int Count { get; set; }
+
+}
+
+<div class="timeline__container__item">
+    @if ((Count % 2 == 0 && !StartAtRight) || (Count % 2 != 0 && StartAtRight))
+    {
+        <div class="timeline__container__item__event">
+            @if (Item is not null)
+            {
+                <Timeline_Event Item="Item"></Timeline_Event>
+            }
+        </div>
+        <div class="timeline__container__item__divider"></div>
+        <div class="timeline__container__item__spacer"></div>
+    }
+    else
+    {
+        <div class="timeline__container__item__spacer"></div>
+        <div class="timeline__container__item__divider"></div>
+        <div class="timeline__container__item__event">
+            @if (Item is not null)
+            {
+                <Timeline_Event Item="Item"></Timeline_Event>
+            }
+        </div>
+    }
+</div>

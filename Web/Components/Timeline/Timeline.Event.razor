@@ -1,58 +1,13 @@
-﻿<div class="timeline__container__item__event">
-    @if (Item is null)
-    {
-        <p>
-            <em>Loading...</em>
-        </p>
-    }
-    else
-    {
-        var alt = $"Image of {Item.Name}";
-
-        <div class="timeline__container__item__event__background">
-            <div class="timeline__container__item__event__background__orb"></div>
-        </div>
-        <div class="timeline__container__item__event__content" data-noimage="@(Item.ImageUrl is null ? "true" : "false")">
-            <div class="timeline__container__item__event__content__background"></div>
-
-            <div class="timeline__container__item__event__content__hero">
-                <div class="timeline__container__item__event__content__hero__title" data-noimage="@(Item.ImageUrl is null ? "true" : "false")">
-                    <p class="timeline__container__item__event__content__hero__title__text">
-                        <a href="@Item.Link" target="_blank" class="timeline__container__item__event__content__hero__title__text__link">
-                            <span>@Item.Name</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
-                                <path fill="currentColor" d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"/>
-                            </svg>
-                        </a>
-                    </p>
-                    <p class="timeline__container__item__event__content__hero__title__time">@(Item.StartTime == Item.EndTime ? Item.StartTime : $"{Item.StartTime} → {Item.EndTime}")</p>
-                </div>
-                @if (Item.ImageUrl is not null)
-                {
-                    <div class="timeline__container__item__event__content__hero__image">
-                        <img tabindex="0" @onkeydown="ImageKeydown" @onclick="() => _imageActive = true" src="@Item.ImageUrl" alt="Image of @Item.Name" class="timeline__container__item__event__content__hero__image__img">
-                        <ImageViewer Url="@Item.ImageUrl" Alt="@alt" Active="@_imageActive" ActiveChanged="ActiveChanged"></ImageViewer>
-                    </div>
-                }
-            </div>
-            <Timeline_Event_Description Text="@Item.Description"></Timeline_Event_Description>
-        </div>
-    }
-</div>
-
-@code {
+﻿@code {
 
     [Parameter] public TimelineModel? Item { get; set; }
-    private bool _imageActive;
-
-    private void ActiveChanged(bool active)
-    {
-        _imageActive = active;
-    }
-
-    private void ImageKeydown(KeyboardEventArgs e)
-    {
-        if (e.Key is " " or "Enter") _imageActive = true;
-    }
 
 }
+
+<div class="timeline__container__item__event__top">
+    <p class="timeline__container__item__event__top__title">@Item!.Name</p>
+    <p class="timeline__container__item__event__top__time">@(Item.StartTime == Item.EndTime ? Item.StartTime : $"{Item.StartTime} → {Item.EndTime}")</p>
+</div>
+<div class="timeline__container__item__event__bottom">
+    <p class="timeline__container__item__event__bottom__description">@Item.Description</p>
+</div>
