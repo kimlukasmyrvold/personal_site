@@ -15,6 +15,14 @@ The format for this file is based on [Keep a Changelog](https://keepachangelog.c
 and adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).<br>
 Dates use the [ISO 8601 date format](https://www.iso.org/iso-8601-date-and-time-format.html) of `YYYY-MM-DD`.
 
+## [0.3.4] - 2024-09-22
+
+### Changed
+
+- updated styling and functionality of timeline component in `/Timeline/*` and `_timeline.scss`
+- changed description for elkjøp in `JobTimeline.json`
+
+
 ## [0.3.3] - 2024-08-25
 
 ### Changed
