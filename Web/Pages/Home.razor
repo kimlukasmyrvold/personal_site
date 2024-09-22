@@ -7,7 +7,7 @@
     <p class="heading">This website is currently under construction</p>
     <p class="text">
         Visit
-        <a href="https://old.kimlukas.com/">old.kimlukas.com</a>
+        <a href="https://old.kimlukas.com/">old.kimlukas.com</a> 
         for old website
     </p>
 </div>
@@ -18,33 +18,33 @@
     <Bio></Bio>
 
     <div class="scroll" onclick="document.getElementById('coding_languages').scrollIntoView({behaviour:'smooth'})">
-        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor">
+        <svg fill="currentColor" height="24px" viewBox="0 -960 960 960" width="24px" xmlns="http://www.w3.org/2000/svg">
             <path d="M480-80q-116 0-198-82t-82-198v-240q0-116 82-198t198-82q116 0 198 82t82 198v240q0 116-82 198T480-80Zm40-520h160q0-72-45.5-127T520-796v196Zm-240 0h160v-196q-69 14-114.5 69T280-600Zm200 440q83 0 141.5-58.5T680-360v-160H280v160q0 83 58.5 141.5T480-160Zm0-360Zm40-80Zm-80 0Zm40 80Z"/>
         </svg>
         <p>Scroll to see more</p>
     </div>
 </div>
 
-<div id="coding_languages" class="full">
+<div class="full" id="coding_languages">
     <CodingLanguages></CodingLanguages>
 </div>
 
 <br>
 
-<div id="school_timeline" class="full">
+<div class="full" id="school_timeline">
     <div class="wrapper">
         <h3>School timeline</h3>
     </div>
-    <Timeline Data="SchoolTimelineJson"></Timeline>
+    <Timeline Data="SchoolTimelineJson" Reverse="false" SkeletonAmount="3"></Timeline>
 </div>
 
 <br>
 
-<div id="work_experience" class="full">
+<div class="full" id="work_experience">
     <div class="wrapper">
         <h3>Work experience</h3>
     </div>
-    <Timeline Data="JobTimelineJson" Reverse="true" StartAtRight="true"></Timeline>
+    <Timeline Data="JobTimelineJson" Reverse="false" SkeletonAmount="2" StartAtRight="true"></Timeline>
 </div>
 
 @inject HttpClient Http
