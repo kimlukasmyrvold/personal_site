@@ -44,13 +44,14 @@ a {
     color: var(--text);
 
     text-underline-offset: 3px;
-    text-decoration-color: var(--accent50);
+    text-decoration-color: var(--text);
     transition: text-decoration-color .2s ease, color .2s ease;
 
     &:hover {
-        text-decoration-color: var(--accent);
+        color: var(--text75);
+        text-decoration-color: var(--text75);
     }
-    
+
     &.link-no-underline {
         text-decoration: none;
 

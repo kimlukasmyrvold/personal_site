@@ -31,7 +31,7 @@
                 z-index: -1;
                 transition: opacity .5s ease;
             }
-            
+
             &:hover::after {
                 opacity: 1;
                 transition: opacity 1s ease;
@@ -139,6 +139,10 @@
             &__icon {
                 min-width: 24px;
                 width: 24px;
+            }
+
+            a &__icon {
+                margin-right: .25rem;
             }
         }
     }
