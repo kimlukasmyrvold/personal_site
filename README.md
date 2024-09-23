@@ -11,7 +11,7 @@ This is my personal website where you can learn more about me, you can find pers
 
 All notable changes to this project will be documented in this file.
 
-The format for this file is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
+The format for this changelog is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).<br>
 Dates use the [ISO 8601 date format](https://www.iso.org/iso-8601-date-and-time-format.html) of `YYYY-MM-DD`.
 
@@ -19,13 +19,22 @@ Dates use the [ISO 8601 date format](https://www.iso.org/iso-8601-date-and-time-
 
 ### Added
 
-- added games component for showcasing played games in `Games.razor`, `Games.Game.razor`
+- added games component for showcasing played games in `Games.razor` and `Games.Game.razor`
 - added json for games played in `Games.json`
+- added option for hiding link underlines in `Bio.Info.razor` 
 
 ### Changed
 
 - updated GitHub repo link in `Footer.razor`
 - updated end time for glemmen high school in `SchoolTimeline.json`
+- changed underline styling of links in `_typography.scss`
+- centered headers for sections in `Home.razor` and `_home.scss`
+- moved base tag further up inside head tag in `index.html`
+- updated description meta inside head tag in `index.html`
+
+### Fixed
+
+- fixed image links in head linking to wrong URL in `index.html`
 
 
 ## [0.3.4] - 2024-09-22
