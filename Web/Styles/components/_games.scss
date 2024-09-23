@@ -1,0 +1,13 @@
+﻿.games {
+    //display: flex;
+    //flex-direction: column;
+    //align-items: center;
+    //gap: 1.5rem;
+    //padding-inline: 1rem;
+}
+
+.games__container__game {
+    background-color: var(--text5);
+    padding: 1rem 1rem 1.25rem;
+    border-radius: 10px;
+}

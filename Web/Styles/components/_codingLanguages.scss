@@ -58,6 +58,7 @@
                 &__header {
                     display: flex;
                     align-items: flex-end;
+                    margin-bottom: .75rem;
 
                     &__icon {
                         img,
@@ -100,6 +101,8 @@
 
 
                 &__certificates {
+                    margin-bottom: .5rem;
+                    
                     &__title {
                         font-size: $h5;
                         font-weight: 500;
