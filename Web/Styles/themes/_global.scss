@@ -1,1 +1,5 @@
-﻿$destructive: #de1111;
+﻿$destructiveRaw: 0 86% 47%;
+$destructive: hsl($destructiveRaw);
+
+$successRaw: 120 100% 37%;
+$success: hsl($successRaw);

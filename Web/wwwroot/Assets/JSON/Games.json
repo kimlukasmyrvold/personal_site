@@ -15,7 +15,7 @@
             }
         ],
         "Banner": {
-            "Url": "/Images/banner.png",
+            "Url": "/Assets/Images/Games/Satisfactory/satisfactory_banner.jpg",
             "Alt": "Cool banner image"
         },
         "Media": [
@@ -49,7 +49,7 @@
             }
         ],
         "Banner": {
-            "Url": "/Images/banner.png",
+            "Url": "/Assets/Images/Games/DysonSphereProgram/dyson_sphere_program_banner.jpg",
             "Alt": "Cool banner image"
         },
         "Media": [
@@ -91,7 +91,7 @@
             }
         ],
         "Banner": {
-            "Url": "/Images/banner.png",
+            "Url": "/Assets/Images/Games/SpaceEngineers/space_engineers_banner.jpg",
             "Alt": "Cool banner image"
         },
         "Media": [

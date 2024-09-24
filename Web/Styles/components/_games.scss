@@ -1,4 +1,6 @@
 ﻿@use '../base' as *;
+@use '../themes' as *;
+@use '../themes/light' as light;
 
 .games {
 
@@ -12,13 +14,32 @@
 
 .games__container__game {
     flex: 1;
+    //display: flex;
+    //flex-direction: column;
 
     background-color: var(--text5);
-    padding: 1rem 1rem 1.25rem;
+    padding: .75rem;
     border-radius: 10px;
+    max-width: 450px;
 
     &__banner {
+        display: flex;
+        border-radius: 10px;
+        overflow: hidden;
+        width: 426px;
+        height: 200px;
 
+        background: linear-gradient(90deg, #0000, var(--text5), #0000) no-repeat, var(--text5);
+        animation: loading 1.5s infinite;
+
+        @keyframes loading {
+            from {
+                background-position: -426px 0;
+            }
+            to {
+                background-position: 426px 0;
+            }
+        }
     }
 
     &__hero {
@@ -26,7 +47,7 @@
         flex-direction: row;
         justify-content: space-between;
         gap: .5rem;
-        margin-bottom: 1rem;
+        padding: .5rem;
 
         &__title {
             font-size: $h4;
@@ -37,7 +58,7 @@
             flex-direction: row;
             gap: .25rem;
             align-items: center;
-            
+
             &__platform svg {
                 min-width: 21px;
             }
@@ -45,7 +66,117 @@
     }
 
     &__content {
+        //flex: 1;
+        //display: flex;
+        //flex-direction: column;
+        padding: 0 .5rem .5rem;
+        
+        //&__description {
+        //    margin-block: auto;
+        //}
 
+        &__stats {
+            //margin-top: auto;
+
+            display: flex;
+            flex-direction: column;
+            gap: .25rem;
+            padding-block: .5rem;
+
+            &__playtime,
+            &__purchased,
+            &__achievements {
+                font-weight: 600;
+
+                &__title {
+                    display: inline-flex;
+                    min-width: 110px;
+                    color: var(--text75);
+                }
+
+                &__title,
+                &__faded {
+                    font-weight: 400;
+                }
+            }
+        }
+
+        &__achievements {
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+            position: relative;
+            border-radius: 10px;
+            max-height: 100px;
+            overflow: hidden;
+
+            &::after {
+                content: '';
+                position: absolute;
+                inset: 40% 0 0;
+                background: linear-gradient(#0000, var(--bg90)), radial-gradient(ellipse at 50% 100%, var(--bg90), #0000);
+                //background: radial-gradient(ellipse at 50% 150%, var(--bg), #0000);
+                border-radius: inherit;
+                //filter: blur(2px);
+            }
+
+            &__achievement {
+                padding: .5rem;
+                border-radius: 10px;
+                background-color: var(--accent5);
+                position: relative;
+
+                &__title {
+                    font-size: calc($small * 1.15);
+                }
+
+                &__description {
+                    color: var(--text85);
+                    font-size: $small;
+                }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: .75rem;
+                    right: .75rem;
+                    width: 7px;
+                    height: 7px;
+                    border-radius: 100%;
+                    background-color: $destructive;
+                    box-shadow: 0 0 20px 3px #{'hsl(#{$destructiveRaw} / 1)'};
+                }
+
+                &[unlocked="True"]::after {
+                    background-color: $success;
+                    box-shadow: 0 0 20px 3px #{'hsl(#{$successRaw} / 1)'};
+                }
+            }
+
+            &__show_all {
+                position: absolute;
+                left: 50%;
+                bottom: .1rem;
+                translate: -50% 0;
+                z-index: 1;
+
+
+                padding: .25rem .5rem;
+                border-radius: 5px;
+                //font-size: calc($small * 1.15);
+                //background-color: var(--secondary);
+                //color: map-get($light, 'text');
+
+                transition: bottom .3s ease, color .3s ease;
+
+                &:hover {
+                    translate: -50% 0;
+                    bottom: .25rem;
+                    color: var(--text85);
+                    //color: map-get($light, 'text75');
+                }
+            }
+        }
     }
 
     &__media {
