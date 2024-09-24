@@ -1,13 +1,56 @@
-﻿.games {
-    //display: flex;
-    //flex-direction: column;
-    //align-items: center;
-    //gap: 1.5rem;
-    //padding-inline: 1rem;
+﻿@use '../base' as *;
+
+.games {
+
+    &__container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+    }
 }
 
 .games__container__game {
+    flex: 1;
+
     background-color: var(--text5);
     padding: 1rem 1rem 1.25rem;
     border-radius: 10px;
+
+    &__banner {
+
+    }
+
+    &__hero {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: .5rem;
+        margin-bottom: 1rem;
+
+        &__title {
+            font-size: $h4;
+        }
+
+        &__platforms {
+            display: flex;
+            flex-direction: row;
+            gap: .25rem;
+            align-items: center;
+            
+            &__platform svg {
+                min-width: 21px;
+            }
+        }
+    }
+
+    &__content {
+
+    }
+
+    &__media {
+        &__title {
+            font-size: $h5;
+        }
+    }
 }
