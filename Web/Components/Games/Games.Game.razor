@@ -86,23 +86,25 @@
                             <p class="games__container__game__content__achievements__achievement__description">@platform.Description</p>
                         </div>
                     }
-                    <button class="games__container__game__content__achievements__show_all button-nofancy">View all</button>
+                    <div class="games__container__game__content__achievements__show_all">
+                        <button class="games__container__game__content__achievements__show_all__button button-nofancy">View all</button>
+                    </div>
                 </div>
             }
 
         </div>
 
-        <div class="games__container__game__media">
-            <p class="games__container__game__media__title">Images</p>
-            <div class="games__container__game__media__wrapper">
-                @if (Data.Media is not null)
-                {
-                    foreach (var platform in Data.Media)
-                    {
-                        <img alt="@platform.Alt" src="@platform.Url"/>
-                    }
-                }
-            </div>
-        </div>
+        @* <div class="games__container__game__media"> *@
+        @*     <p class="games__container__game__media__title">Images</p> *@
+        @*     <div class="games__container__game__media__wrapper"> *@
+        @*         @if (Data.Media is not null) *@
+        @*         { *@
+        @*             foreach (var platform in Data.Media) *@
+        @*             { *@
+        @*                 <img alt="@platform.Alt" src="@platform.Url"/> *@
+        @*             } *@
+        @*         } *@
+        @*     </div> *@
+        @* </div> *@
     }
 </div>
