@@ -18,7 +18,7 @@
     {
         "Name": "Glemmen high school",
         "StartTime": "2022",
-        "EndTime": "now",
+        "EndTime": "2024",
         "Description": "In my first year at Glemmen, I went into Information Technology and Media Production, which gave me some experience within both fields. In the first year, I learned basic web development with HTML, JavaScript and CSS, SQL databases, and some C#. In the media portion, I got familiar with some Adobe programs like Photoshop, Illustrator, and InDesign. We also had some projects involving some media production sets. In the second year, I picked IT, where I got more in-depth with the IT part. More databases, C#, networking, and user support.",
         "ImageUrl": "Assets/Images/Places/glemmen_vgs-3.jpg",
         "Link": "https://ofk.no/glemmen-vgs/"
