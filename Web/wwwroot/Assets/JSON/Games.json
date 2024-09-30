@@ -2,7 +2,7 @@
     {
         "Title": "Satisfactory",
         "Description": "Satisfactory is a first-person open-world factory building game with a dash of exploration and combat. Play alone or with friends, explore an alien planet, create multi-story factories, and enter conveyor belt heaven!",
-        "PlayTime": "1102",
+        "PlayTime": "1128.2",
         "Purchased": "2020-09-05",
         "Platforms": [
             {
@@ -26,14 +26,268 @@
         ],
         "Achievements": [
             {
-                "Title": "New fear unlocked",
-                "Description": "Fix blown fuse.",
+                "Title": "A Concrete Example",
+                "Description": "Build 5000 Foundations.",
+                "Hidden": false,
                 "Unlocked": true
             },
             {
-                "Title": "Yoink",
-                "Description": "Gather a Power Slug.",
+                "Title": "Spaghetti master",
+                "Description": "Build 5 km of Conveyor Belts.",
+                "Hidden": false,
                 "Unlocked": true
+            },
+            {
+                "Title": "Bigger. Better. FICSIT.",
+                "Description": "Build your first Manufacturer.",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Commencing Project Assembly",
+                "Description": "Build the Space Elevator.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "...Satisfactory brought it back",
+                "Description": "Complete all MAM research trees.",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Curiosity killed the cat...",
+                "Description": "Complete a MAM research tree.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Mediocre pioneering",
+                "Description": "Complete Phase 1 of the Space Elevator.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Adequate pioneering",
+                "Description": "Complete Phase 2 of the Space Elevator.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Pretty good pioneering",
+                "Description": "Complete Phase 3 of the Space Elevator.",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Efficient pioneering",
+                "Description": "Complete Phase 4 of the Space Elevator.",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Saved the Day, probably",
+                "Description": "Complete Phase 5 of the Space Elevator and finish the game.",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Do you want a medal?",
+                "Description": "Complete the Onboarding process.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Heal this, nature!",
+                "Description": "Destroy 1000 foliage.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Are you sure that's coffee?",
+                "Description": "Drink coffee.",
+                "Hidden": true,
+                "Unlocked": true
+            },
+            {
+                "Title": "No refunds",
+                "Description": "Drive the Cyber Wagon.",
+                "Hidden": true,
+                "Unlocked": true
+            },
+            {
+                "Title": "The floor is lava",
+                "Description": "Avoid touching the ground for 30 minutes.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "New fear unlocked",
+                "Description": "Fix blown fuse.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Caught them all",
+                "Description": "Gather all three Power Slug types.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Data driven",
+                "Description": "Gather 100 Hard Drives from Crash Sites.",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Wheeeee!",
+                "Description": "Bounce on a Space Giraffe Tick Penguin Thing.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Establish dominance",
+                "Description": "Hit a creature with a vehicle.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Look both ways next time",
+                "Description": "Get knocked over by a vehicle.",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Wait, you can pet it?",
+                "Description": "Pet the flying Manta.",
+                "Hidden": true,
+                "Unlocked": true
+            },
+            {
+                "Title": "Thank you for the music",
+                "Description": "Find and gather a Boombox tape in the world.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Varied diet",
+                "Description": "Gather all three types of edible flora.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "I'm sure these play a Critical Role",
+                "Description": "Gather a Mercer Sphere.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Oddly familiar",
+                "Description": "Gather a Somersloop.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Yoink!",
+                "Description": "Gather a Power Slug.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Consume",
+                "Description": "Gather 150 Mercer Spheres.",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "My skin feels itchy all of a sudden...",
+                "Description": "Gather 50 Somersloops.",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Pipe dream",
+                "Description": "Build 5 km of Pipelines.",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Rock and stone!",
+                "Description": "Place down a Portable Miner.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Now where to spend it...",
+                "Description": "Print out your first Coupon.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Do you need that?",
+                "Description": "Buy the Golden Nut Statue from the AWESOME Shop.",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Railroad tycoon",
+                "Description": "Build 5 km of Railway.",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "What a thrill",
+                "Description": "Reach the maximum world height.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Peak gameplay",
+                "Description": "Reach the highest cliff in the world.",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "All aboard!",
+                "Description": "Set up a train schedule.",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "That was a close one",
+                "Description": "Survive a fall on 1 health point.",
+                "Hidden": true,
+                "Unlocked": true
+            },
+            {
+                "Title": "Pioneer's best friend",
+                "Description": "Tame a Lizard Doggo.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Too fast, Too factory",
+                "Description": "Move faster than 140 km/h.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Efficiency first",
+                "Description": "Unlock all Milestones.",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Master Chef",
+                "Description": "Unlock your first alternate recipe.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Let's see what's out there",
+                "Description": "Visit each starting area biome once.",
+                "Hidden": false,
+                "Unlocked": false
             }
         ]
     },
@@ -62,11 +316,13 @@
             {
                 "Title": "Know any campfire songs?",
                 "Description": "Consume at least 40 wood by burning it.",
+                "Hidden": false,
                 "Unlocked": true
             },
             {
                 "Title": "Infinite Factory I",
                 "Description": "Exceed a total energy consumption of 1GJ.",
+                "Hidden": false,
                 "Unlocked": true
             }
         ]
@@ -104,11 +360,13 @@
             {
                 "Title": "Number 5 is alive",
                 "Description": "Connect your suit to power with less than 1% power remaining in Survival.",
+                "Hidden": false,
                 "Unlocked": true
             },
             {
                 "Title": "The harder they fall",
                 "Description": "Destroy more than 1,000,000 Kg of cubes.",
+                "Hidden": false,
                 "Unlocked": true
             }
         ]

@@ -23,76 +23,85 @@
         Console.WriteLine(_percent);
     }
 
+    private bool _achievementsOpen;
+
+    private void ToggleAchievementsOpen()
+    {
+        _achievementsOpen = !_achievementsOpen;
+    }
+
 }
 
 <div class="games__container__game">
     @if (Data is not null)
     {
-        if (Data.Banner is not null)
-        {
-            <div class="games__container__game__banner">
-                <img alt="@Data.Banner.Alt" class="games__container__game__banner__image" src="@Data.Banner.Url">
-            </div>
-        }
-
-        <div class="games__container__game__hero">
-            <p class="games__container__game__hero__title">@Data.Title</p>
-            <div class="games__container__game__hero__platforms">
-                @if (Data.Platforms is not null)
-                {
-                    foreach (var platform in Data.Platforms)
-                    {
-                        if (platform.Title is null) continue;
-
-                        <a class="games__container__game__hero__platforms__platform" href="@platform.Link" target="_blank">
-                            @if (_icons.ContainsKey(platform.Title.ToLower()))
-                            {
-                                @(new MarkupString(_icons[platform.Title.ToLower()]))
-                                <span class="visually_hidden">@platform.Title</span>
-                            }
-                            else
-                            {
-                                <span>@platform.Title</span>
-                            }
-                        </a>
-                    }
-                }
-            </div>
-        </div>
-
-        <div class="games__container__game__content">
-            <p class="games__container__game__content__description">@Data.Description</p>
-            <div class="games__container__game__content__stats">
-                <p class="games__container__game__content__stats__playtime">
-                    <span class="games__container__game__content__stats__playtime__title">Hours played:</span> @Data.PlayTime
-                </p>
-                <p class="games__container__game__content__stats__purchased">
-                    <span class="games__container__game__content__stats__purchased__title">Purchased:</span> @Data.Purchased
-                </p>
-                @if (Data.Achievements is not null)
-                {
-                    <p class="games__container__game__content__stats__achievements">
-                        <span class="games__container__game__content__stats__achievements__title">Achievements:</span> @_unlocked <span class="games__container__game__content__stats__achievements__faded">/</span> @_total <span class="games__container__game__content__stats__achievements__percent">(@_percent.ToString("00")%)</span>
-                    </p>
-                }
-            </div>
-            @if (Data.Achievements is not null)
+        <div class="games__container__game__wrapper" style="@(_achievementsOpen ? "top: -82%;" : "")">
+            @if (Data.Banner is not null)
             {
-                <div class="games__container__game__content__achievements">
-                    @foreach (var platform in Data.Achievements)
-                    {
-                        <div class="games__container__game__content__achievements__achievement" unlocked="@platform.Unlocked.ToString()">
-                            <p class="games__container__game__content__achievements__achievement__title">@platform.Title</p>
-                            <p class="games__container__game__content__achievements__achievement__description">@platform.Description</p>
-                        </div>
-                    }
-                    <div class="games__container__game__content__achievements__show_all">
-                        <button class="games__container__game__content__achievements__show_all__button button-nofancy">View all</button>
-                    </div>
+                <div class="games__container__game__banner">
+                    <img alt="@Data.Banner.Alt" class="games__container__game__banner__image" src="@Data.Banner.Url">
                 </div>
             }
 
+            <div class="games__container__game__hero">
+                <p class="games__container__game__hero__title">@Data.Title</p>
+                <div class="games__container__game__hero__platforms">
+                    @if (Data.Platforms is not null)
+                    {
+                        foreach (var platform in Data.Platforms)
+                        {
+                            if (platform.Title is null) continue;
+
+                            <a class="games__container__game__hero__platforms__platform" href="@platform.Link" target="_blank">
+                                @if (_icons.ContainsKey(platform.Title.ToLower()))
+                                {
+                                    @(new MarkupString(_icons[platform.Title.ToLower()]))
+                                    <span class="visually_hidden">@platform.Title</span>
+                                }
+                                else
+                                {
+                                    <span>@platform.Title</span>
+                                }
+                            </a>
+                        }
+                    }
+                </div>
+            </div>
+
+            <div class="games__container__game__content">
+                <p class="games__container__game__content__description">@Data.Description</p>
+                <div class="games__container__game__content__stats">
+                    <p class="games__container__game__content__stats__playtime">
+                        <span class="games__container__game__content__stats__playtime__title">Hours played:</span> @Data.PlayTime
+                    </p>
+                    <p class="games__container__game__content__stats__purchased">
+                        <span class="games__container__game__content__stats__purchased__title">Purchased:</span> @Data.Purchased
+                    </p>
+                    @if (Data.Achievements is not null)
+                    {
+                        <p class="games__container__game__content__stats__achievements">
+                            <span class="games__container__game__content__stats__achievements__title">Achievements:</span> @_unlocked <span class="games__container__game__content__stats__achievements__faded">/</span> @_total <span class="games__container__game__content__stats__achievements__percent">(@_percent.ToString("00")%)</span>
+                        </p>
+                    }
+                </div>
+            </div>
         </div>
+
+        @if (Data.Achievements is not null)
+        {
+            <div class="games__container__game__achievements" style="@(_achievementsOpen ? "top: -82%;" : "")">
+                @foreach (var platform in Data.Achievements)
+                {
+                    <div class="games__container__game__achievements__achievement" unlocked="@platform.Unlocked.ToString()">
+                        <p class="games__container__game__achievements__achievement__title">@platform.Title</p>
+                        <p class="games__container__game__achievements__achievement__description">@platform.Description</p>
+                    </div>
+                }
+                <div class="games__container__game__achievements__show_all">
+                    <button class="games__container__game__achievements__show_all__button button-nofancy" @onclick="ToggleAchievementsOpen">Show all</button>
+                </div>
+            </div>
+        }
 
         @* <div class="games__container__game__media"> *@
         @*     <p class="games__container__game__media__title">Images</p> *@
