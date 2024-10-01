@@ -89,7 +89,7 @@
 
         @if (Data.Achievements is not null)
         {
-            <div class="games__container__game__achievements" style="@(_achievementsOpen ? "top: -82%;" : "")">
+            <div class="games__container__game__achievements" style="@(_achievementsOpen ? "overflow:unset;" : "")">
                 @foreach (var platform in Data.Achievements)
                 {
                     <div class="games__container__game__achievements__achievement" unlocked="@platform.Unlocked.ToString()">

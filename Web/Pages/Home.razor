@@ -3,53 +3,53 @@
 
 <PageTitle>Home</PageTitle>
 
-<div class="information information_popup">
-    <p class="heading">This website is currently under construction</p>
-    <p class="text">
-        Visit
-        <a href="https://old.kimlukas.com/">old.kimlukas.com</a>
-        for old website
-    </p>
-</div>
-
-<div id="hero">
-    <div class="spacer"></div>
-
-    <Bio></Bio>
-
-    <button class="scroll button-nofancy" onclick="document.getElementById('coding_languages').scrollIntoView({behaviour:'smooth'})">
-        <svg aria-hidden="true" fill="currentColor" height="24px" viewBox="0 -960 960 960" width="24px" xmlns="http://www.w3.org/2000/svg">
-            <path d="M480-80q-116 0-198-82t-82-198v-240q0-116 82-198t198-82q116 0 198 82t82 198v240q0 116-82 198T480-80Zm40-520h160q0-72-45.5-127T520-796v196Zm-240 0h160v-196q-69 14-114.5 69T280-600Zm200 440q83 0 141.5-58.5T680-360v-160H280v160q0 83 58.5 141.5T480-160Zm0-360Zm40-80Zm-80 0Zm40 80Z"/>
-        </svg>
-        <span>Scroll to see more</span>
-    </button>
-</div>
-
-<div class="full" id="coding_languages">
-    <h2>Coding languages I have worked with</h2>
-    <CodingLanguages></CodingLanguages>
-</div>
-
-<br>
-
-<div class="full" id="school_timeline">
-    <h2>School timeline</h2>
-    <Timeline Data="SchoolTimelineJson" Reverse="false" SkeletonAmount="3"></Timeline>
-</div>
-
-<br>
-
-<div class="full" id="work_experience">
-    <h2>Work experience</h2>
-    <Timeline Data="JobTimelineJson" Reverse="false" SkeletonAmount="2" StartAtRight="true"></Timeline>
-</div>
-
+@* <div class="information information_popup"> *@
+@*     <p class="heading">This website is currently under construction</p> *@
+@*     <p class="text"> *@
+@*         Visit *@
+@*         <a href="https://old.kimlukas.com/">old.kimlukas.com</a> *@
+@*         for old website *@
+@*     </p> *@
+@* </div> *@
+@* *@
+@* <div id="hero"> *@
+@*     <div class="spacer"></div> *@
+@* *@
+@*     <Bio></Bio> *@
+@* *@
+@*     <button class="scroll button-nofancy" onclick="document.getElementById('coding_languages').scrollIntoView({behaviour:'smooth'})"> *@
+@*         <svg aria-hidden="true" fill="currentColor" height="24px" viewBox="0 -960 960 960" width="24px" xmlns="http://www.w3.org/2000/svg"> *@
+@*             <path d="M480-80q-116 0-198-82t-82-198v-240q0-116 82-198t198-82q116 0 198 82t82 198v240q0 116-82 198T480-80Zm40-520h160q0-72-45.5-127T520-796v196Zm-240 0h160v-196q-69 14-114.5 69T280-600Zm200 440q83 0 141.5-58.5T680-360v-160H280v160q0 83 58.5 141.5T480-160Zm0-360Zm40-80Zm-80 0Zm40 80Z"/> *@
+@*         </svg> *@
+@*         <span>Scroll to see more</span> *@
+@*     </button> *@
+@* </div> *@
+@* *@
+@* <div class="full" id="coding_languages"> *@
+@*     <h2>Coding languages I have worked with</h2> *@
+@*     <CodingLanguages></CodingLanguages> *@
+@* </div> *@
+@* *@
 @* <br> *@
 @* *@
-@* <div id="games_played"> *@
-@*     <h2>Games played</h2> *@
-@*     <Games></Games> *@
+@* <div class="full" id="school_timeline"> *@
+@*     <h2>School timeline</h2> *@
+@*     <Timeline Data="SchoolTimelineJson" Reverse="false" SkeletonAmount="3"></Timeline> *@
 @* </div> *@
+@* *@
+@* <br> *@
+@* *@
+@* <div class="full" id="work_experience"> *@
+@*     <h2>Work experience</h2> *@
+@*     <Timeline Data="JobTimelineJson" Reverse="false" SkeletonAmount="2" StartAtRight="true"></Timeline> *@
+@* </div> *@
+@* *@
+@* <br> *@
+
+<div id="games_played">
+    <h2>Games played</h2>
+    <Games></Games>
+</div>
 
 @inject HttpClient Http
 
