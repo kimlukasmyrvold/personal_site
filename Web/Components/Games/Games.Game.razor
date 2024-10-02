@@ -69,7 +69,7 @@
             </div>
 
             <div class="games__container__game__content">
-                <p class="games__container__game__content__description">@Data.Description</p>
+                @* <p class="games__container__game__content__description">@Data.Description</p> *@
                 <div class="games__container__game__content__stats">
                     <p class="games__container__game__content__stats__playtime">
                         <span class="games__container__game__content__stats__playtime__title">Hours played:</span> @Data.PlayTime
@@ -77,12 +77,12 @@
                     <p class="games__container__game__content__stats__purchased">
                         <span class="games__container__game__content__stats__purchased__title">Purchased:</span> @Data.Purchased
                     </p>
-                    @if (Data.Achievements is not null)
-                    {
-                        <p class="games__container__game__content__stats__achievements">
-                            <span class="games__container__game__content__stats__achievements__title">Achievements:</span> @_unlocked <span class="games__container__game__content__stats__achievements__faded">/</span> @_total <span class="games__container__game__content__stats__achievements__percent">(@_percent.ToString("00")%)</span>
-                        </p>
-                    }
+                    @* @if (Data.Achievements is not null) *@
+                    @* { *@
+                    @*     <p class="games__container__game__content__stats__achievements"> *@
+                    @*         <span class="games__container__game__content__stats__achievements__title">Achievements:</span> @_unlocked <span class="games__container__game__content__stats__achievements__faded">/</span> @_total <span class="games__container__game__content__stats__achievements__percent">(@_percent.ToString("00")%)</span> *@
+                    @*     </p> *@
+                    @* } *@
                 </div>
             </div>
         </div>
@@ -90,30 +90,44 @@
         @if (Data.Achievements is not null)
         {
             <div class="games__container__game__achievements" style="@(_achievementsOpen ? "overflow:unset;" : "")">
-                @foreach (var platform in Data.Achievements)
+                <div>
+                    <p class="games__container__game__content__stats__achievements" style="display: flex;justify-content: space-between">
+                        @* <span class="">Achievements</span> @_unlocked <span class="games__container__game__content__stats__achievements__faded">/</span> @_total <span class="games__container__game__content__stats__achievements__percent">(@_percent.ToString("00")%)</span> *@
+
+                        <span class="">Achievements</span>
+                        <span>
+                            @_unlocked / @_total
+                            <span class="games__container__game__content__stats__achievements__percent">(@_percent.ToString("00")%)</span>
+                        </span>
+                    </p>
+
+                    <progress style="width: 100%" max="@_total" value="@_unlocked"></progress>
+                </div>
+
+                @for (var x = 0; x < (Data.Achievements.Count > 1 ? 2 : Data.Achievements.Count); x++)
                 {
-                    <div class="games__container__game__achievements__achievement" unlocked="@platform.Unlocked.ToString()">
-                        <p class="games__container__game__achievements__achievement__title">@platform.Title</p>
-                        <p class="games__container__game__achievements__achievement__description">@platform.Description</p>
+                    <div class="games__container__game__achievements__achievement" unlocked="@Data.Achievements[x].Unlocked.ToString()">
+                        <p class="games__container__game__achievements__achievement__title">@Data.Achievements[x].Title</p>
+                        <p class="games__container__game__achievements__achievement__description">@Data.Achievements[x].Description</p>
                     </div>
                 }
                 <div class="games__container__game__achievements__show_all">
-                    <button class="games__container__game__achievements__show_all__button button-nofancy" @onclick="ToggleAchievementsOpen">Show all</button>
+                    <button class="games__container__game__achievements__show_all__button button-nofancy" @onclick="ToggleAchievementsOpen">Show All Achievements</button>
                 </div>
             </div>
         }
 
-        @* <div class="games__container__game__media"> *@
-        @*     <p class="games__container__game__media__title">Images</p> *@
-        @*     <div class="games__container__game__media__wrapper"> *@
-        @*         @if (Data.Media is not null) *@
-        @*         { *@
-        @*             foreach (var platform in Data.Media) *@
-        @*             { *@
-        @*                 <img alt="@platform.Alt" src="@platform.Url"/> *@
-        @*             } *@
-        @*         } *@
-        @*     </div> *@
-        @* </div> *@
+        <div class="games__container__game__media">
+            <p class="games__container__game__media__title">Images</p>
+            <div class="games__container__game__media__wrapper">
+                @if (Data.Media is not null)
+                {
+                    foreach (var platform in Data.Media)
+                    {
+                        <img alt="@platform.Alt" src="@platform.Url"/>
+                    }
+                }
+            </div>
+        </div>
     }
 </div>
