@@ -37,6 +37,10 @@ html, body {
     margin: 0;
 }
 
+body:has([data-modal-open="True"]) {
+    overflow: hidden;
+}
+
 img, svg {
     font-style: italic;
     shape-margin: 1rem;

@@ -35,7 +35,7 @@
 <div class="games__container__game">
     @if (Data is not null)
     {
-        <div class="games__container__game__wrapper" style="@(_achievementsOpen ? "top: -82%;" : "")">
+        <div class="games__container__game__wrapper">
             @if (Data.Banner is not null)
             {
                 <div class="games__container__game__banner">
@@ -89,7 +89,7 @@
 
         @if (Data.Achievements is not null)
         {
-            <div class="games__container__game__achievements" style="@(_achievementsOpen ? "overflow:unset;" : "")">
+            <div class="games__container__game__achievements">
                 <div>
                     <p class="games__container__game__content__stats__achievements" style="display: flex;justify-content: space-between">
                         @* <span class="">Achievements</span> @_unlocked <span class="games__container__game__content__stats__achievements__faded">/</span> @_total <span class="games__container__game__content__stats__achievements__percent">(@_percent.ToString("00")%)</span> *@
@@ -101,7 +101,7 @@
                         </span>
                     </p>
 
-                    <progress style="width: 100%" max="@_total" value="@_unlocked"></progress>
+                    <progress max="@_total" style="width: 100%" value="@_unlocked"></progress>
                 </div>
 
                 @for (var x = 0; x < (Data.Achievements.Count > 1 ? 2 : Data.Achievements.Count); x++)
@@ -114,20 +114,22 @@
                 <div class="games__container__game__achievements__show_all">
                     <button class="games__container__game__achievements__show_all__button button-nofancy" @onclick="ToggleAchievementsOpen">Show All Achievements</button>
                 </div>
+
+                <Modal></Modal>
             </div>
         }
 
-        <div class="games__container__game__media">
-            <p class="games__container__game__media__title">Images</p>
-            <div class="games__container__game__media__wrapper">
-                @if (Data.Media is not null)
-                {
-                    foreach (var platform in Data.Media)
-                    {
-                        <img alt="@platform.Alt" src="@platform.Url"/>
-                    }
-                }
-            </div>
-        </div>
+        @* <div class="games__container__game__media"> *@
+        @*     <p class="games__container__game__media__title">Images</p> *@
+        @*     <div class="games__container__game__media__wrapper"> *@
+        @*         @if (Data.Media is not null) *@
+        @*         { *@
+        @*             foreach (var platform in Data.Media) *@
+        @*             { *@
+        @*                 <img alt="@platform.Alt" src="@platform.Url"/> *@
+        @*             } *@
+        @*         } *@
+        @*     </div> *@
+        @* </div> *@
     }
 </div>

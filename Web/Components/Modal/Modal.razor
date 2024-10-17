@@ -1,0 +1,40 @@
+﻿@code {
+
+    [Parameter] public HtmlRenderer? Content { get; set; }
+
+    private bool _modalOpen = true;
+    private bool _childClicked = false;
+
+    private void Close()
+    {
+        if (!_childClicked)
+        {
+            _modalOpen = false;
+        }
+
+        _childClicked = false;
+    }
+
+    private void ChildClick(MouseEventArgs e)
+    {
+        _childClicked = true;
+    }
+
+}
+
+<div class="modal" data-modal-open="False" @onclick="Close">
+    <div class="modal__container" @onclick="ChildClick">
+        <div class="modal__container__close">
+            <button class="modal__container__close__button button-nofancy" @onclick="Close">
+                <svg role="img" aria-hidden="true" fill="currentColor" height="24px" viewBox="0 -960 960 960" width="24px" xmlns="http://www.w3.org/2000/svg">
+                    <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
+                </svg>
+                <span class="visually_hidden">Close</span>
+            </button>
+        </div>
+        <div class="modal__container__content">
+            <p>Lorem ipsum dolor sit amet</p>
+            <p>@_modalOpen</p>
+        </div>
+    </div>
+</div>
