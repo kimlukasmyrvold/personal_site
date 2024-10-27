@@ -1087,16 +1087,184 @@
         "Banner": "/Assets/Images/Games/SpaceEngineers/space_engineers_banner-contact_update.jpg",
         "Achievements": [
             {
-                "Title": "Number 5 is alive",
+                "Title": "Crayon Box",
+                "Description": "Build and fly ship with more than 20 colors.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Declare War",
+                "Description": "Declare war with different faction.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "I've Got Present For You",
+                "Description": "Detonate a warhead that kills you and another player.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Lock And Load",
+                "Description": "Kill an enemy with a rifle.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Monolith",
+                "Description": "Get within 5 meter radius of the monolith in Survival. *Monoliths have to be in the world on loading time",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Number 5 Is Alive",
                 "Description": "Connect your suit to power with less than 1% power remaining in Survival.",
                 "Hidden": false,
                 "Unlocked": true
             },
             {
-                "Title": "The harder they fall",
+                "Title": "Personality Crisis",
+                "Description": "Change astronaut style (color or skin) 20 times in 10 minutes.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Smile And Wave",
+                "Description": "Wave to an enemy that is also waving back within 5 meters looking at you in Survival.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Win-Win",
+                "Description": "Make peace with a faction.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Death Wish",
+                "Description": "Armageddon Mode for 5 hours in Survival.",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Explorer",
+                "Description": "Visit all planets and moons in Survival mode.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Giant Leap For Humankind",
+                "Description": "Walk 1969 meters on a Moon.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Going Green",
+                "Description": "Build 25 Solar Panels while playing in Survival Mode.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Lost In Space",
+                "Description": "Spend more than 1 hour out of sight of other players on a MP server.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Master Engineer",
+                "Description": "150+ hours.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "The Bigger They Are",
+                "Description": "Build more than 1,000,000 Kg of cubes.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "The Harder They Fall",
                 "Description": "Destroy more than 1,000,000 Kg of cubes.",
                 "Hidden": false,
                 "Unlocked": true
+            },
+            {
+                "Title": "The Story Begins",
+                "Description": "Finish the First Jump scenario.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Promoted Engineer",
+                "Description": "Complete the final objective of Learning to Survive scenario.",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Engineering Degree",
+                "Description": "Finish all tasks of Learning to Survive scenario.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Planetesphobia",
+                "Description": "Disable the pirate facility without entering the atmosphere in Learning to Survive scenario.",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "It Takes But One",
+                "Description": "Complete all objectives without dying in Learning to Survive scenario.",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "I See Dead Drones",
+                "Description": "Survive 10 waves of drones in Never Surrender scenario.",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Bring It On",
+                "Description": "Survive 30 waves of drones in Never Surrender scenario.",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "I'm Doing My Part",
+                "Description": "Survive 100 waves of drones in Never Surrender scenario.",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Scrap Delivery",
+                "Description": "Destroy 1000 pirate drones in Never Surrender scenario.",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Joint Operation",
+                "Description": "Survive 10 waves with at least 1 other player in Never Surrender scenario.",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Millionaire Club",
+                "Description": "Get 1,000,000 Space Credits and join the club of the wealthiest people in the galaxy.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "The friend of the factions",
+                "Description": "Befriend 3 factions; earning trust always pays well in the future.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Playing it cool",
+                "Description": "Complete the Frostbite scenario",
+                "Hidden": false,
+                "Unlocked": false
             }
         ]
     },
@@ -1129,13 +1297,13 @@
                 "Title": "Choo-Choo",
                 "Description": "Use the train to cross the channel",
                 "Hidden": false,
-                "Unlocked": false
+                "Unlocked": true
             },
             {
                 "Title": "Sardine",
                 "Description": "Utilize a boat",
                 "Hidden": false,
-                "Unlocked": false
+                "Unlocked": true
             },
             {
                 "Title": "Head Hunter",
@@ -1153,13 +1321,13 @@
                 "Title": "From the Comfort of Your Home",
                 "Description": "Buy a truck online",
                 "Hidden": false,
-                "Unlocked": false
+                "Unlocked": true
             },
             {
                 "Title": "My Precious",
                 "Description": "Design and apply to your truck a custom multi-color metallic paint",
                 "Hidden": false,
-                "Unlocked": false
+                "Unlocked": true
             },
             {
                 "Title": "Test Drive Limited",
@@ -1177,13 +1345,13 @@
                 "Title": "Long Hauler",
                 "Description": "Complete a delivery that was greater than 2,000 km",
                 "Hidden": false,
-                "Unlocked": false
+                "Unlocked": true
             },
             {
                 "Title": "Reliable Contractor",
                 "Description": "Perform jobs for at least 15 different companies in the game",
                 "Hidden": false,
-                "Unlocked": false
+                "Unlocked": true
             },
             {
                 "Title": "Profit Hunter",
@@ -1201,43 +1369,43 @@
                 "Title": "Job Is Only Worth It If It's Done Well!",
                 "Description": "Complete a perfect delivery (no damage, no fines, in-time) for a job that is at least 1,000 km",
                 "Hidden": false,
-                "Unlocked": false
+                "Unlocked": true
             },
             {
                 "Title": "Careerist",
                 "Description": "Complete 5 jobs in a row - in-time, without taking any damage to cargo and without using autoparking",
                 "Hidden": false,
-                "Unlocked": false
+                "Unlocked": true
             },
             {
                 "Title": "Friends Are Always Here to Help You",
                 "Description": "Use automatic parking",
                 "Hidden": false,
-                "Unlocked": false
+                "Unlocked": true
             },
             {
                 "Title": "All Is Possible",
                 "Description": "Take and complete jobs with at least 30 different cargo",
                 "Hidden": false,
-                "Unlocked": false
+                "Unlocked": true
             },
             {
                 "Title": "Minimaxer",
                 "Description": "Gain 20,000 XP for several consecutive jobs with the total distance below 10,000 km",
                 "Hidden": false,
-                "Unlocked": false
+                "Unlocked": true
             },
             {
                 "Title": "Honey, I'm Home",
                 "Description": "Use quick travel to return to your headquarters",
                 "Hidden": false,
-                "Unlocked": false
+                "Unlocked": true
             },
             {
                 "Title": "National Company",
                 "Description": "Own a garage in every city in your headquarter country",
                 "Hidden": false,
-                "Unlocked": false
+                "Unlocked": true
             },
             {
                 "Title": "Property Magnate",
@@ -1255,7 +1423,7 @@
                 "Title": "Swimming in Success",
                 "Description": "Reach an average daily profit of €450,000",
                 "Hidden": false,
-                "Unlocked": false
+                "Unlocked": true
             },
             {
                 "Title": "Performance Optimizer",
@@ -1273,13 +1441,13 @@
                 "Title": "Zzzzz",
                 "Description": "Use a rest stop",
                 "Hidden": false,
-                "Unlocked": false
+                "Unlocked": true
             },
             {
                 "Title": "Diesel, No Petrol!",
                 "Description": "Use a filling station",
                 "Hidden": false,
-                "Unlocked": false
+                "Unlocked": true
             },
             {
                 "Title": "Volvo Trucks Lover",
@@ -1291,7 +1459,7 @@
                 "Title": "Scania Trucks Lover",
                 "Description": "Deliver truck cargo from Scania factory (requires Scandinavia DLC)",
                 "Hidden": false,
-                "Unlocked": false
+                "Unlocked": true
             },
             {
                 "Title": "Sailor",
@@ -1327,7 +1495,7 @@
                 "Title": "Aquaphobia",
                 "Description": "Travel across the Øresund Bridge between København and Malmö (requires Scandinavia DLC)",
                 "Hidden": false,
-                "Unlocked": false
+                "Unlocked": true
             },
             {
                 "Title": "Bon Voyage!",
@@ -1363,7 +1531,7 @@
                 "Title": "Time for Big Hauling",
                 "Description": "Deliver first Heavy Cargo (requires Heavy Cargo Pack DLC)",
                 "Hidden": false,
-                "Unlocked": false
+                "Unlocked": true
             },
             {
                 "Title": "Keep Calm and Haul Heavy",
@@ -1375,7 +1543,7 @@
                 "Title": "You Bet I Can Park It!",
                 "Description": "Collect 1,000 XP from parking on Heavy Cargo Pack deliveries (requires Heavy Cargo Pack DLC)",
                 "Hidden": false,
-                "Unlocked": false
+                "Unlocked": true
             },
             {
                 "Title": "No Pain No Gain",
@@ -1429,7 +1597,7 @@
                 "Title": "Size Matters",
                 "Description": "Deliver first oversize cargo (requires Special Transport DLC)",
                 "Hidden": false,
-                "Unlocked": false
+                "Unlocked": true
             },
             {
                 "Title": "The Bigger the Better",
@@ -1603,7 +1771,7 @@
                 "Title": "Parking Challenge",
                 "Description": "Complete 20 deliveries choosing the trailer delivery option which requires reversing",
                 "Hidden": false,
-                "Unlocked": false
+                "Unlocked": true
             },
             {
                 "Title": "Road to the Adriatics",
