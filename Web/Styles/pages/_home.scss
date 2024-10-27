@@ -46,6 +46,12 @@
     }
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 7rem;
+}
+
 #coding_languages,
 #school_timeline,
 #work_experience,

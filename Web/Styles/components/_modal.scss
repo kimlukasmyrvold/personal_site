@@ -1,44 +1,76 @@
 ﻿.modal {
     --_height: 900px;
     --_width: 600px;
-    display: none !important;
+    //display: none;
 
-    &[data-modal-open="True"] {
-        position: fixed;
-        inset: 0;
-        background: hsl(0 0% 0% / .25);
-        z-index: 1000;
-        padding: .5rem;
-        display: grid;
-        place-items: center;
+    position: fixed;
+    inset: 0;
+    background: hsl(0 0% 0% / .5);
+    z-index: 1000;
+    padding: .5rem;
+    display: grid;
+    place-items: center;
 
-        @supports (backdrop-filter: blur(1px)) {
-            background: hsl(0 0% 0% / .1);
-            backdrop-filter: blur(1px);
-        }
+    @supports (backdrop-filter: blur(2px)) {
+        background: hsl(0 0% 0% / .4);
+        backdrop-filter: blur(2px);
     }
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .2s ease, visibility .2s ease;
 
     &__container {
         position: relative;
-        overflow: auto;
-        
+        overflow: hidden;
         border-radius: 10px;
         background-color: var(--bg);
         height: min(var(--_height), 100%);
         width: min(var(--_width), 100%);
-        
+
+        translate: 0 -150dvh;
+        transition: translate .2s ease;
+
         &__close {
             position: absolute;
             top: 6px;
-            right: 6px;
+            right: 10px;
+            z-index: 1001;
+
+            &__button {
+                padding: .2rem;
+                border-radius: 99vw;
+                background-color: var(--text5);
+
+                @supports (backdrop-filter: blur(2px)) {
+                    backdrop-filter: blur(2px);
+                }
+            }
         }
-        
+
         &__content {
-            border-radius: inherit;
             background-color: var(--text5);
+            overflow: auto;
+
+            border-radius: inherit;
             height: 100%;
             width: 100%;
-            padding: 1.5rem;
+            padding: .75rem 1rem;
+            scrollbar-width: thin;
+            
+            &:has([data-dropdown-open="True"]) {
+                overflow: hidden;
+            }
         }
+    }
+
+    &[data-modal-open="True"] {
+        opacity: 1;
+        visibility: visible;
+        transition: opacity .2s ease, visibility 0s ease;
+    }
+
+    &[data-modal-open="True"] &__container {
+        translate: 0;
     }
 }

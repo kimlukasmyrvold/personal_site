@@ -1,15 +1,20 @@
 ﻿@code {
 
-    [Parameter] public HtmlRenderer? Content { get; set; }
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+    [Parameter] public string? Width { get; set; }
+    [Parameter] public string? Height { get; set; }
+    [Parameter] public bool Open { get; set; }
+    [Parameter] public EventCallback<bool> Closed { get; set; }
 
-    private bool _modalOpen = true;
     private bool _childClicked = false;
+    private string _css = "";
 
-    private void Close()
+    private async Task Close()
     {
         if (!_childClicked)
         {
-            _modalOpen = false;
+            Open = false;
+            await Closed.InvokeAsync(Open);
         }
 
         _childClicked = false;
@@ -20,21 +25,34 @@
         _childClicked = true;
     }
 
+
+    protected override void OnInitialized()
+    {
+        if (Width is not null)
+        {
+            _css += $"--_width: {Width}";
+        }
+
+        if (Height is not null)
+        {
+            _css += $"--_height: {Height}";
+        }
+    }
+
 }
 
-<div class="modal" data-modal-open="False" @onclick="Close">
+<div class="modal" data-modal-open="@Open.ToString()" @onclick="Close" style="@_css">
     <div class="modal__container" @onclick="ChildClick">
         <div class="modal__container__close">
-            <button class="modal__container__close__button button-nofancy" @onclick="Close">
-                <svg role="img" aria-hidden="true" fill="currentColor" height="24px" viewBox="0 -960 960 960" width="24px" xmlns="http://www.w3.org/2000/svg">
+            <button class="modal__container__close__button button-nofancy" @onclick="Close" >
+                <svg aria-hidden="true" fill="currentColor" height="24px" role="img" viewBox="0 -960 960 960" width="24px" xmlns="http://www.w3.org/2000/svg">
                     <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
                 </svg>
                 <span class="visually_hidden">Close</span>
             </button>
         </div>
         <div class="modal__container__content">
-            <p>Lorem ipsum dolor sit amet</p>
-            <p>@_modalOpen</p>
+            @ChildContent
         </div>
     </div>
 </div>

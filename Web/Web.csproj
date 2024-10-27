@@ -36,4 +36,8 @@
     </Compile>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Components\Modal\" />
+  </ItemGroup>
+
 </Project>

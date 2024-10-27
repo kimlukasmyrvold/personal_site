@@ -1,8 +1,8 @@
 ﻿[
     {
         "Title": "Satisfactory",
-        "Description": "Satisfactory is a first-person open-world factory building game with a dash of exploration and combat. Play alone or with friends, explore an alien planet, create multi-story factories, and enter conveyor belt heaven!",
-        "PlayTime": "1128.2",
+        "PlayTime": "1197.1",
+        "LastUpdate": "2024-10-27",
         "Purchased": "2020-09-05",
         "Platforms": [
             {
@@ -14,16 +14,7 @@
                 "Link": "https://store.epicgames.com/en-US/p/satisfactory"
             }
         ],
-        "Banner": {
-            "Url": "/Assets/Images/Games/Satisfactory/satisfactory_banner.jpg",
-            "Alt": "Cool banner image"
-        },
-        "Media": [
-            {
-                "Url": "/Images/example.png",
-                "Alt": "Cool image"
-            }
-        ],
+        "Banner": "/Assets/Images/Games/Satisfactory/satisfactory_banner.jpg",
         "Achievements": [
             {
                 "Title": "A Concrete Example",
@@ -41,7 +32,7 @@
                 "Title": "Bigger. Better. FICSIT.",
                 "Description": "Build your first Manufacturer.",
                 "Hidden": false,
-                "Unlocked": false
+                "Unlocked": true
             },
             {
                 "Title": "Commencing Project Assembly",
@@ -77,7 +68,7 @@
                 "Title": "Pretty good pioneering",
                 "Description": "Complete Phase 3 of the Space Elevator.",
                 "Hidden": false,
-                "Unlocked": false
+                "Unlocked": true
             },
             {
                 "Title": "Efficient pioneering",
@@ -245,7 +236,7 @@
                 "Title": "Peak gameplay",
                 "Description": "Reach the highest cliff in the world.",
                 "Hidden": false,
-                "Unlocked": false
+                "Unlocked": true
             },
             {
                 "Title": "All aboard!",
@@ -293,8 +284,8 @@
     },
     {
         "Title": "Dyson Sphere Program",
-        "Description": "Build the most efficient intergalactic factory in space simulation strategy game Dyson Sphere Program! Harness the power of stars, collect resources, plan and design production lines and develop your interstellar factory from a small space workshop to a galaxy-wide industrial empire.",
         "PlayTime": "405.7",
+        "LastUpdate": "2024-10-27",
         "Purchased": "2021-02-22",
         "Platforms": [
             {
@@ -302,16 +293,7 @@
                 "Link": "https://store.steampowered.com/app/1366540/Dyson_Sphere_Program/"
             }
         ],
-        "Banner": {
-            "Url": "/Assets/Images/Games/DysonSphereProgram/dyson_sphere_program_banner.jpg",
-            "Alt": "Cool banner image"
-        },
-        "Media": [
-            {
-                "Url": "/Images/example.png",
-                "Alt": "Cool image"
-            }
-        ],
+        "Banner": "/Assets/Images/Games/DysonSphereProgram/dyson_sphere_program_banner.jpg",
         "Achievements": [
             {
                 "Title": "Know any campfire songs?",
@@ -320,17 +302,773 @@
                 "Unlocked": true
             },
             {
+                "Title": "Don't underestimate Plant Fuel",
+                "Description": "Consume at least 100 Plant Fuel by burning it.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Nice Surprise 1",
+                "Description": "Obtain at least 100 Titanium Ore by collecting Stone.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Nice Surprise 2",
+                "Description": "Obtain at least 100 Silicon Ore by collecting Stone.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Nice Surprise 3",
+                "Description": "Obtain at least 100 Organic Crystals by collecting plants.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Nice Surprise 4",
+                "Description": "Obtain at least 100 Sulfuric Acid by collecting plants.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Nice Surprise 5",
+                "Description": "Obtain at least 10 Carbon Nanotubes by collecting plants.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Chemist",
+                "Description": "Make 20 Organic Crystals by hand using the original formula.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Blackbox designer",
+                "Description": "Copy and save a Blueprint.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "I'm gonna need more drones!",
+                "Description": "Control 10 or more Construction Drones.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Sail away with me",
+                "Description": "Unlock upgrade to make the Solar Sail last 2 hours.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Who approved this?",
+                "Description": "Unlock technology to make the construction latitude of the Dyson Sphere node reach 45 degrees.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Light-footed",
+                "Description": "Unlock upgrade to make mecha reach 12m/s movement speed.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Employee of the month",
+                "Description": "Unlock upgrade to allow Pile Sorters to load and unload cargos simultaneously.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Magpie",
+                "Description": "Discover 7 kinds of rare minerals, and collect at least 10 by hand.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Space invaders",
+                "Description": "Use the mineral burial function to bury at least 20 Veins.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Mineral field depleted",
+                "Description": "Deplete 1 Vein.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Minerals by the dozen",
+                "Description": "Cover at least 12 Veins with one Mining machine.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Slip 'n' slide",
+                "Description": "Fill 10 tanks of fluid in a game.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Now Boarding",
+                "Description": "Have at least 100 Logistics Drones for a planet in transit.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Interstellar convoy",
+                "Description": "Have at least 50 Interstellar Logistics Vessels in space.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Forgot about that",
+                "Description": "Build Wind Turbines on a planet with no atmosphere.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "High-rise",
+                "Description": "Build a building at least 7 stories tall.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Determination",
+                "Description": "Use more than 80K foundations on a Waterworld planet.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Don't sand so close to me",
+                "Description": "Collect at least 4M units of sand in a game.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "I saw this in a movie once",
+                "Description": "Cover a planet with a Foundation.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Tickets please!",
+                "Description": "Establish an Interstellar Logistics Transportation line.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Intergalactic logistics",
+                "Description": "Establish 5 Interstellar Logistics Transportation lines between different planetary systems.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Low battery",
+                "Description": "Have Icarus’ energy below 5% for more than 3 minutes when on the ground.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Space junk",
+                "Description": "Exhaust both fuel and energy while flying in space.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Running on fumes",
+                "Description": "Manually collect 20 Hydrogen with Icarus on a Gas Giant while energy is at 5% or less.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "No diving!",
+                "Description": "Have a mecha run out of energy and fall into water.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Power surge",
+                "Description": "Use 12 Wireless Power Towers to charge a mecha at the same time.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Burn baby burn",
+                "Description": "Have Icarus burn at least 16 different fuels in a game.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "I can see my house from here!",
+                "Description": "Get Icarus 40m above sea level without entering flight mode.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Sonic boom!",
+                "Description": "Exceed a sailing speed of 340m/s in the atmosphere.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Faster than light",
+                "Description": "Reach a sailing speed of 3000m/s in non-warp transportation.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "My planet, my rules!",
+                "Description": "Name a planet.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "One giant leap for mankind!",
+                "Description": "Leave the original planet and land on another within an hour.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Where no coal has gone before",
+                "Description": "Use coal as the only fuel to move from one planet to another.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Only impossible until it's not",
+                "Description": "Start warp engine.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Before our time",
+                "Description": "Land on another planet outside the initial planetary system before unlocking Warp drive.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Planet Explorer I",
+                "Description": "Land on 5 different planets!",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Planet Explorer II",
+                "Description": "Land on 15 different planets!",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "What time is it?",
+                "Description": "Find and land on a planet with day and night tidal locking.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "I'm not tilted",
+                "Description": "Find and land on a planet rotating on a horizontal axis.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "The sun rises in the...West?",
+                "Description": "Find and land on a planet rotating on a reverse axis.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Are you proud of me, Stephen?",
+                "Description": "Find and orbit a Black Hole.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Boy genius",
+                "Description": "Find and orbit a Neutron Star.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Bon voyage!",
+                "Description": "Travel to the planetary system farthest from your original system.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Well traveled",
+                "Description": "Travel to at least 32 planetary systems in a game.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Let there be light!",
+                "Description": "Light an Artificial Star on the North and South Pole of the original planet, an Ice Field Gelisol Planet, and the eternal night side of a tide-locked planet.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Lean mean cleaning machine",
+                "Description": "Use Icarus' garbage clearing function to absorb 50,000 units of Iron Ingot at the same time.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Environmental nightmare",
+                "Description": "Drop 3000 units of Titanium Ingot at once while flying through space.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Build it and they will come",
+                "Description": "Build 10 Orbital Collectors.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Maximum efficiency",
+                "Description": "Build and maintain 100 Ray Receivers with a receiving efficiency of over 85%.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Data rules everything around me",
+                "Description": "Achieve a Matrix Lab upload rate of 1M hash/s.",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Firing on all cylinders",
+                "Description": "Unlock upgrade to decrease the mineral mining consumption rate to less than 15%.",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Memento!",
+                "Description": "Don't dismantle the landing capsule before completing the game.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Icarus, PhD",
+                "Description": "Unlock all technologies (upgrade Unlimited Technology at least once).",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Mission accomplished",
+                "Description": "Complete the game.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "x0.5 Resource completion",
+                "Description": "Complete the game on x0.5 resource difficulty.",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Didn't break a sweat!",
+                "Description": "Complete the game within 25 hours on x1 (or less) resource difficulty.",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Mission impossible!",
+                "Description": "Complete the game within 10 hours on x1 (or less) resource difficulty.",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Solar Sail? No thank you!",
+                "Description": "Complete the game without launching a Solar Sail.",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Environmentalist",
+                "Description": "Complete the game without using Foundations.",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Alien Mineral Protection Act",
+                "Description": "Complete the game without gathering rare veins to obtain rare ores.",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Bullseye",
+                "Description": "Launch a total of 100K Solar Sails.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "We have lift-off",
+                "Description": "Launch a total of 30,000 Small Carrier Rockets.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Critical thinker",
+                "Description": "Produce a total of 60,000 Critical Photons.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Secrets of the universe I",
+                "Description": "Upload a total of 1M Universe matrices.",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Secrets of the universe II",
+                "Description": "Upload a total of 10M Universe matrices.",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Got Deuterium?",
+                "Description": "Use Fractionators to produce at least 100K Deuterium per hour on a single planet.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Green power",
+                "Description": "Produce at least 43,200 Electromagnetic turbines per hour.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Electromagnetic matrix",
+                "Description": "Produce at least 43,200 Electromagnetic matrices per hour.",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Energy matrix",
+                "Description": "Produce at least 43,200 Energy matrices per hour.",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Structure matrix",
+                "Description": "Produce at least 43,200 Structure matrices per hour.",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Information matrix",
+                "Description": "Produce at least 43,200 Information matrices per hour.",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Gravity matrix",
+                "Description": "Produce at least 43,200 Gravity matrices per hour.",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Universe matrix, Yellow Belt",
+                "Description": "Produce at least 21,600 Universe matrices per hour.",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Universe matrix, Green Belt",
+                "Description": "Produce at least 43,200 Universe matrices per hour.",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Universe matrix, Blue Belt",
+                "Description": "Produce at least 108,000 Universe matrices per hour.",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "No coal? No problem!",
+                "Description": "Generate more than 60MW of electricity on a planet using Wind Turbines.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Sunbather",
+                "Description": "Generate more than 180MW of electricity on a planet using Solar Panels.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "All systems are go!",
+                "Description": "Achieve discharge power of more than 300MW on a planet using Energy Hubs.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Going nuclear",
+                "Description": "Generate more than 600MW of power on a planet using Mini Fusion Power Plants.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Like a diamond in the sky",
+                "Description": "Light a star that belongs to you in the Milky Way View.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "CentreBrain needs more energy I",
+                "Description": "Total power generation of the Dyson Sphere reaches 200MW.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "CentreBrain needs more energy II",
+                "Description": "Total power generation of the Dyson Sphere reaches 1GW.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "CentreBrain needs more energy III",
+                "Description": "Total power generation of the Dyson Sphere reaches 1TW.",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "We can make it if we try",
+                "Description": "Build a Dyson Sphere around a Red Giant star with a power generation performance of more than 10GW.",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Backup plan",
+                "Description": "Build a Star Cluster with an energy storage capacity of 27GJ or more.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Small factory",
+                "Description": "Reach a total power generation of 20MW.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Medium factory",
+                "Description": "Reach a total power generation of 100MW.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Large factory",
+                "Description": "Reach a total power generation of 1GW.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Giant factory",
+                "Description": "Reach a total power generation of 5GW.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Universe factory",
+                "Description": "Reach a total power generation of 50GW.",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
                 "Title": "Infinite Factory I",
                 "Description": "Exceed a total energy consumption of 1GJ.",
                 "Hidden": false,
                 "Unlocked": true
+            },
+            {
+                "Title": "Infinite Factory II",
+                "Description": "Exceed a total energy consumption of 1TJ.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Infinite Factory III",
+                "Description": "Exceed a total energy consumption of 1PJ.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Dust to dust I",
+                "Description": "Collect 1M soil piles from Dark Fog.",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Dust to dust II",
+                "Description": "Collect 10M soil piles from Dark Fog.",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Dust to dust III",
+                "Description": "Collect 100M soil piles from Dark Fog.",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Happy Hunting I",
+                "Description": "Neutralize 100 Dark Fog space units.",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Happy Hunting II",
+                "Description": "Neutralize 1000 Dark Fog space units.",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Happy Hunting III",
+                "Description": "Neutralize 10000 Dark Fog space units.",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Bullet Storm",
+                "Description": "Bullet consumption reaches 360/min on any planet.",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "A Penny Saved",
+                "Description": "Complete the mission without any buildings destroyed at Difficulty 1.0 or above.",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Strangle in the cradle",
+                "Description": "Wipe out a Dark Fog Planetary Base within 1 hour at Difficulty 1.0 or above.",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Peace & Love",
+                "Description": "Complete the mission without any Dark Fog buildings neutralized at Difficulty 1.0 or above.",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "In the Spotlight",
+                "Description": "Have 40 Laser Towers shoot the same target at Difficulty 1.0 or above.",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "War has Changed",
+                "Description": "Complete the mission without building any Turrets at Difficulty 1.0 or above.",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Won't Lie Low",
+                "Description": "Attract an attack from a space unit within 1 hour at Difficulty 1.0 or above.",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Monster Kill",
+                "Description": "Icarus neutralizes over 1,000 Dark Fog units within 1 minute.",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "POPCORN!",
+                "Description": "Implosion Cannon neutralizes 40 enemies or more with 1 shot.",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Unbowed, Unbent, Unbroken",
+                "Description": "Keep Icarus' energy shield's power consumption at 1GW while resisting damage for over 1 minute.",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Invincible",
+                "Description": "Base radius of Icarus' Energy Shield reaches 25m.",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "A.T Field",
+                "Description": "Planetary Shield's coverage reaches 100% over a planet.",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Super Nova!",
+                "Description": "Activate Supernova.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Shoot Oneself in the Foot",
+                "Description": "Lure Lancers to destroy a Planetary Base.",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "You Started It",
+                "Description": "Have Icarus destroyed by Dark Fog at Passive Dark Fog aggressiveness.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "Right Under My Nose",
+                "Description": "Land on a planet that is 8000m or closer to a Dark Fog Hive.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "You Shall Not Pass!",
+                "Description": "Neutralize a Relay Station before it lands on a planet.",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Global Offense",
+                "Description": "Be simultaneously assaulted by 12 Planetary Bases on a planet.",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Wrong Place",
+                "Description": "Land on a planet occupied by over 20 Planetary Bases.",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Gotcha",
+                "Description": "Find Dark Fog Communicator.",
+                "Hidden": false,
+                "Unlocked": true
+            },
+            {
+                "Title": "It's on Fire",
+                "Description": "Icarus' Replicator speed reaches 400%.",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "All Calculated",
+                "Description": "Unlock all secret technologies.",
+                "Hidden": false,
+                "Unlocked": false
             }
         ]
     },
     {
         "Title": "Space Engineers",
-        "Description": "Space Engineers is a sandbox game about engineering, construction, exploration and survival in space and on planets. Players build space ships, space stations, planetary outposts of various sizes and uses, pilot ships and travel through space to explore planets and gather resources to survive.",
         "PlayTime": "384.5",
+        "LastUpdate": "2024-10-27",
         "Purchased": "2021-08-02",
         "Platforms": [
             {
@@ -346,16 +1084,7 @@
                 "Link": "https://store.playstation.com/en-no/concept/10002535/"
             }
         ],
-        "Banner": {
-            "Url": "/Assets/Images/Games/SpaceEngineers/space_engineers_banner.jpg",
-            "Alt": "Cool banner image"
-        },
-        "Media": [
-            {
-                "Url": "/Images/example.png",
-                "Alt": "Cool image"
-            }
-        ],
+        "Banner": "/Assets/Images/Games/SpaceEngineers/space_engineers_banner-contact_update.jpg",
         "Achievements": [
             {
                 "Title": "Number 5 is alive",
@@ -368,6 +1097,579 @@
                 "Description": "Destroy more than 1,000,000 Kg of cubes.",
                 "Hidden": false,
                 "Unlocked": true
+            }
+        ]
+    },
+    {
+        "Title": "Euro Truck Simulator 2",
+        "PlayTime": "203.5",
+        "LastUpdate": "2024-10-27",
+        "Purchased": "2022-05-30",
+        "Platforms": [
+            {
+                "Title": "Steam",
+                "Link": "https://store.steampowered.com/app/227300/Euro_Truck_Simulator_2/"
+            }
+        ],
+        "Banner": "/Assets/Images/Games/EuroTruckSimulator2/euro_truck_simulator_banner.jpg",
+        "Achievements": [
+            {
+                "Title": "I Am a GPS",
+                "Description": "Discover more than 60% of the map",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Pathfinder",
+                "Description": "Discover 100% of the map",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Choo-Choo",
+                "Description": "Use the train to cross the channel",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Sardine",
+                "Description": "Utilize a boat",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Head Hunter",
+                "Description": "Discover all recruitment agencies",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Successfully Docked",
+                "Description": "Use all ports in the game (counts sea and train ports)",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "From the Comfort of Your Home",
+                "Description": "Buy a truck online",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "My Precious",
+                "Description": "Design and apply to your truck a custom multi-color metallic paint",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Test Drive Limited",
+                "Description": "Drive at least 999 km during jobs with each truck brand featured in the game. Only your owned trucks are counted. (MAN, DAF, Mercedes-Benz, Renault, Iveco, Scania, Volvo)",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Just in Time!",
+                "Description": "Take an urgent delivery for a minimum of 550 km and complete it with less than 30 minutes remaining",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Long Hauler",
+                "Description": "Complete a delivery that was greater than 2,000 km",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Reliable Contractor",
+                "Description": "Perform jobs for at least 15 different companies in the game",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Profit Hunter",
+                "Description": "Complete a job worth over €130,000 and minimum 2,200 km",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Experience Beats All!",
+                "Description": "Complete deliveries with all trailer types (Machinery, ADR cargo, Container, Refrigerated, Liquid cargo, Fragile cargo, Construction, Bulk cargo)",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Job Is Only Worth It If It's Done Well!",
+                "Description": "Complete a perfect delivery (no damage, no fines, in-time) for a job that is at least 1,000 km",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Careerist",
+                "Description": "Complete 5 jobs in a row - in-time, without taking any damage to cargo and without using autoparking",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Friends Are Always Here to Help You",
+                "Description": "Use automatic parking",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "All Is Possible",
+                "Description": "Take and complete jobs with at least 30 different cargo",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Minimaxer",
+                "Description": "Gain 20,000 XP for several consecutive jobs with the total distance below 10,000 km",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Honey, I'm Home",
+                "Description": "Use quick travel to return to your headquarters",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "National Company",
+                "Description": "Own a garage in every city in your headquarter country",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Property Magnate",
+                "Description": "Own a garage in every city",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Working with the Elite",
+                "Description": "Achieve 100% of productivity for at least 5 large garages at the same time",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Swimming in Success",
+                "Description": "Reach an average daily profit of €450,000",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Performance Optimizer",
+                "Description": "Achieve at least 75% of the average garage productivity for 10 large garages in your company.",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Aspects of Professionalism",
+                "Description": "Have at least 10 female and 10 male employees of maximum level in your company",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Zzzzz",
+                "Description": "Use a rest stop",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Diesel, No Petrol!",
+                "Description": "Use a filling station",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Volvo Trucks Lover",
+                "Description": "Deliver truck cargo from Volvo Trucks factory (requires Scandinavia DLC)",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Scania Trucks Lover",
+                "Description": "Deliver truck cargo from Scania factory (requires Scandinavia DLC)",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Sailor",
+                "Description": "Deliver yachts to all Scandinavian marinas (requires Scandinavia and High Power Cargo Pack DLCs)",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Whatever Floats Your Boat",
+                "Description": "Deliver cargo to all container ports in Scandinavia (requires Scandinavia DLC)",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Cattle Drive",
+                "Description": "Complete a livestock delivery to Scandinavia (requires Scandinavia DLC)",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Sightseer",
+                "Description": "Discover all Scandinavian cities (requires Scandinavia DLC)",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Miner",
+                "Description": "Complete delivery jobs to all quarries in Scandinavia (requires Scandinavia DLC)",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Aquaphobia",
+                "Description": "Travel across the Øresund Bridge between København and Malmö (requires Scandinavia DLC)",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Bon Voyage!",
+                "Description": "Discover all French cities (requires Vive la France ! DLC)",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Landmark Tour",
+                "Description": "Discover following landmarks of France: Carcassonne, Brotonne bridge, Tiger tank, Peyrat-le-Château, Château de Ventadour, Château d'Ussé (requires Vive la France ! DLC)",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Go Nuclear!",
+                "Description": "Deliver cargo to five nuclear plants in France (requires Vive la France ! DLC)",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Check-in, Check-out",
+                "Description": "Deliver cargo to all cargo airport terminals in France (requires Vive la France ! DLC)",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Gas Must Flow!",
+                "Description": "Deliver diesel, lpg or petrol to all truck stops in France (requires Vive la France ! DLC)",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Time for Big Hauling",
+                "Description": "Deliver first Heavy Cargo (requires Heavy Cargo Pack DLC)",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Keep Calm and Haul Heavy",
+                "Description": "Complete a perfect delivery (no damage, no fines, in-time) of 3 consecutive Heavy Cargo Pack jobs (requires Heavy Cargo Pack DLC)",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "You Bet I Can Park It!",
+                "Description": "Collect 1,000 XP from parking on Heavy Cargo Pack deliveries (requires Heavy Cargo Pack DLC)",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "No Pain No Gain",
+                "Description": "Deliver total of 250 tons of cargo on 5 consecutive jobs (requires Heavy Cargo Pack DLC)",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "I Thought This Should Be Heavy?!",
+                "Description": "Complete a delivery of all heavy cargoes in Euro Truck Simulator 2 (requires Heavy Cargo Pack DLC)",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Imperator",
+                "Description": "Discover all Italian cities (requires Italia DLC)",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "True Sicilian",
+                "Description": "Own a garage in every Sicilian city (requires Italia DLC)",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Captain",
+                "Description": "Deliver cargo to all Italian shipyards (requires Italia DLC)",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Mind the Lava",
+                "Description": "Visit Etna and Vesuvius volcanoes (requires Italia DLC)",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Many Roads Lead to Rome",
+                "Description": "Enter Rome from all corridors that lead to it (requires Italia DLC)",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Michelangelo",
+                "Description": "Complete a delivery from Carrara quarry (requires Italia DLC)",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Size Matters",
+                "Description": "Deliver first oversize cargo (requires Special Transport DLC)",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "The Bigger the Better",
+                "Description": "Complete delivery of all oversize cargoes (requires Special Transport DLC)",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Driver Exceptionnel",
+                "Description": "Complete deliveries on all oversize routes in current map (requires Special Transport DLC)",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Not a Big Problem",
+                "Description": "Complete 3 consecutive oversize jobs without any damage (requires Special Transport DLC)",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Giant",
+                "Description": "Complete delivery of the Silo cargo (requires Special Transport DLC)",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Big Brother",
+                "Description": "Complete delivery of the Haul Truck Chassis (requires Special Transport DLC)",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Not a Canoe",
+                "Description": "Complete delivery of the Service Boat (requires Special Transport DLC)",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Mass-to-don",
+                "Description": "Deliver at least 195 tons of oversized cargo in just 3 consecutive deliveries (requires Special Transport DLC)",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Baltic Tourist",
+                "Description": "Discover all Beyond the Baltic Sea DLC cities (requires Beyond the Baltic Sea DLC)",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Grand Tour",
+                "Description": "Complete perfect deliveries (no damage, no fines, on time) between the following countries: Russia - Lithuania; Lithuania - Latvia; Latvia - Estonia; Estonia - Russia; Russia - Finland. Any order or direction counts (requires Beyond the Baltic Sea DLC)",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Exclave Transit",
+                "Description": "Complete 5 deliveries from Kaliningrad to any other Russian city (requires Beyond the Baltic Sea DLC)",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Concrete Jungle",
+                "Description": "Complete 10 deliveries from concrete plants (requires Beyond the Baltic Sea DLC)",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Industry Standard",
+                "Description": "Make at least two deliveries to each locomotive, furniture and paper mill factories (requires Beyond the Baltic Sea DLC)",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Like a Farmer",
+                "Description": "Deliver cargo to each farm in Beyond the Baltic Sea DLC (requires Beyond the Baltic Sea DLC)",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "All Around the Blue Island",
+                "Description": "Discover all Sardinian cities (requires Italia DLC)",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "All Around the Isle of Beauty",
+                "Description": "Discover all Corsican cities (requires Vive la France ! DLC)",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Balkan Explorer",
+                "Description": "Discover all cities in Romania, Bulgaria and Turkey (requires Road to the Black Sea DLC)",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Ranger",
+                "Description": "Visit all border crossings between Romania, Bulgaria and Turkey (requires Road to the Black Sea DLC)",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Ferryman",
+                "Description": "Use a river ferry (requires Road to the Black Sea DLC)",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Taking the Scenic Route",
+                "Description": "Visit the following landmarks and locations: Iron Gates, Bran Castle (Romania), Pomorie Beach, Wall of Heroes in Varna (Bulgaria), Lake Küçükçekmece in Istanbul (Turkey) (requires Road to the Black Sea DLC)",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Turkish Delight",
+                "Description": "Complete 3 deliveries from Istanbul which are at least 2,500 km long (requires Road to the Black Sea and Going East DLCs)",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Along the Black Sea",
+                "Description": "Complete perfect deliveries (no damage, no fines, on time) between these coastal cities: Istanbul-Burgas, Burgas-Varna, Varna-Mangalia, Mangalia-Constanța. Any order or direction counts (requires Road to the Black Sea DLC)",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Orient Express",
+                "Description": "Complete deliveries between following cities, in this order and direction: Paris-Strasbourg, Strasbourg-Munich, Munich-Vienna, Vienna-Budapest, Budapest-Bucharest, Bucharest-Istanbul (requires Road to the Black Sea and Going East DLCs)",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Conquistador",
+                "Description": "Discover every city in Iberia (requires Iberia DLC)",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Let's Get Shipping",
+                "Description": "Deliver cargo to all container ports in Iberia (requires Iberia DLC)",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Taste the Sun",
+                "Description": "Deliver ADR cargo to all solar power plants in Iberia (requires Iberia DLC)",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Fleet Builder",
+                "Description": "Deliver cargo to all shipyards in Iberia (requires Iberia DLC)",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Iberian Pilgrimage",
+                "Description": "Complete a delivery from Lisbon, Seville, and Pamplona to A Coruña (requires Iberia DLC)",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Grand Tour Guide",
+                "Description": "View cutscenes from all viewpoints in Iberia (requires Iberia DLC)",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Parking Challenge",
+                "Description": "Complete 20 deliveries choosing the trailer delivery option which requires reversing",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Road to the Adriatics",
+                "Description": "Discover every city in West Balkans (requires West Balkans DLC)",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Grand Adventurer",
+                "Description": "View cutscenes from all viewpoints in West Balkans (requires West Balkans DLC)",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Through the Serpentines",
+                "Description": "Complete a perfect delivery (no damage, no fines, on time) between Pristina and Bijelo Polje (requires West Balkans DLC)",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Holiday Coastline",
+                "Description": "Complete 3 deliveries along the coast in this order: Rijeka - Zadar - Split - Niksic (requires West Balkans DLC)",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Going Camping",
+                "Description": "Deliver the following cargoes to complete a production chain in this order: Ore (Bauxite Terminal), Aluminium Ingots (Aluminium Factory), Electrical Wiring (Betunija Market), Electronics (Light Factory Eumefa), Campervans (Larus Car Factory) (requires West Balkans DLC)",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Get the Ball Rollin'",
+                "Description": "Complete the first scenario of the first chapter in Truck Driving Basics (Driving Academy)",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Professional Driver",
+                "Description": "Complete at least 6 scenarios in the fourth chapter of Truck Driving Basics while using only the interior camera (Driving Academy)",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Dedicated Student",
+                "Description": "Complete at least 28 scenarios in Truck Driving Basics including the final exams (Driving Academy)",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "One-Shottin' It",
+                "Description": "Complete any scenario in fourth chapter of Truck Driving Basics in one attempt without correcting by driving forward (Driving Academy)",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Rowing Through the Gears",
+                "Description": "Complete 20 scenarios in chapters two, three or four of Truck Driving Basics using an H-shifter or sequential transmission (Driving Academy)",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Failure Is Not an Option",
+                "Description": "Complete any 5 scenarios in a row without failure from the third or fourth chapter in Truck Driving Basics (Driving Academy)",
+                "Hidden": false,
+                "Unlocked": false
             }
         ]
     }
