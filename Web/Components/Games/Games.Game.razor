@@ -167,14 +167,14 @@
             </div>
         </div>
 
-        @if (Data.Achievements is not null)
+        if (Data.Achievements is not null)
         {
             <div class="games__container__game__achievements">
-                @for (var x = 0; x < (Data.Achievements.Count > 1 ? 2 : Data.Achievements.Count); x++)
+                @foreach (var achievement in SortedAchievements.Take(2))
                 {
-                    <div class="games__container__game__achievements__achievement" unlocked="@Data.Achievements[x].Unlocked.ToString()">
-                        <p class="games__container__game__achievements__achievement__title">@Data.Achievements[x].Title</p>
-                        <p class="games__container__game__achievements__achievement__description">@Data.Achievements[x].Description</p>
+                    <div class="games__container__game__achievements__achievement" unlocked="@achievement.Unlocked.ToString()">
+                        <p class="games__container__game__achievements__achievement__title">@achievement.Title</p>
+                        <p class="games__container__game__achievements__achievement__description">@achievement.Description</p>
                     </div>
                 }
                 <div class="games__container__game__achievements__show_all">
