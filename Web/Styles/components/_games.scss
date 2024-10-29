@@ -36,7 +36,6 @@
         border-radius: 10px;
         overflow: hidden;
         width: 100%;
-        //height: 100%;
         aspect-ratio: 460/215;
 
         background: linear-gradient(90deg, #0000, var(--text5), #0000) no-repeat, var(--text5);
@@ -123,8 +122,8 @@
     border-radius: 10px;
 
     &__achievement {
-        height: 70px;
         padding: .5rem;
+        min-height: 70px;
         border-radius: 10px;
         background-color: var(--accent5);
         position: relative;
