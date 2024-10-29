@@ -1,8 +1,8 @@
 ﻿[
     {
         "Title": "Satisfactory",
-        "PlayTime": "1197.1",
-        "LastUpdate": "2024-10-27",
+        "PlayTime": "1201.8",
+        "LastUpdate": "2024-10-29",
         "Purchased": "2020-09-05",
         "Platforms": [
             {
@@ -200,7 +200,7 @@
                 "Title": "Pipe dream",
                 "Description": "Build 5 km of Pipelines.",
                 "Hidden": false,
-                "Unlocked": false
+                "Unlocked": true
             },
             {
                 "Title": "Rock and stone!",
