@@ -1,8 +1,8 @@
 ﻿[
     {
         "Title": "Satisfactory",
-        "PlayTime": "1201.8",
-        "LastUpdate": "2024-10-29",
+        "PlayTime": "1221.8",
+        "LastUpdate": "2024-11-20",
         "Purchased": "2020-09-05",
         "Platforms": [
             {
@@ -146,7 +146,7 @@
                 "Title": "Look both ways next time",
                 "Description": "Get knocked over by a vehicle.",
                 "Hidden": false,
-                "Unlocked": false
+                "Unlocked": true
             },
             {
                 "Title": "Wait, you can pet it?",
@@ -1067,8 +1067,8 @@
     },
     {
         "Title": "Space Engineers",
-        "PlayTime": "384.5",
-        "LastUpdate": "2024-10-27",
+        "PlayTime": "397.6",
+        "LastUpdate": "2024-11-20",
         "Purchased": "2021-08-02",
         "Platforms": [
             {
