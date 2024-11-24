@@ -1,8 +1,8 @@
 ﻿[
     {
         "Title": "Satisfactory",
-        "PlayTime": "1221.8",
-        "LastUpdate": "2024-11-20",
+        "PlayTime": "1232.7",
+        "LastUpdate": "2024-11-24",
         "Purchased": "2020-09-05",
         "Platforms": [
             {
@@ -224,7 +224,7 @@
                 "Title": "Railroad tycoon",
                 "Description": "Build 5 km of Railway.",
                 "Hidden": false,
-                "Unlocked": false
+                "Unlocked": true
             },
             {
                 "Title": "What a thrill",
@@ -242,7 +242,7 @@
                 "Title": "All aboard!",
                 "Description": "Set up a train schedule.",
                 "Hidden": false,
-                "Unlocked": false
+                "Unlocked": true
             },
             {
                 "Title": "That was a close one",
@@ -1836,6 +1836,36 @@
             {
                 "Title": "Failure Is Not an Option",
                 "Description": "Complete any 5 scenarios in a row without failure from the third or fourth chapter in Truck Driving Basics (Driving Academy)",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Sights and Legends",
+                "Description": "View cutscenes from at least 8 viewpoints in Greece (requires Greece DLC)",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "All Inclusive",
+                "Description": "Deliver cargo to at least 4 unique hotels in Greece (requires Greece DLC)",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Temple Worthy",
+                "Description": "Deliver 3 Marble Blocks and 3 undamaged Marble Slabs from Rock Eater Quarry in Greece (requires Greece DLC)",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Gift of Athena",
+                "Description": "Deliver olives or olive oil from Eliarchos Olive Farm to 5 different cities in Greece (requires Greece DLC)",
+                "Hidden": false,
+                "Unlocked": false
+            },
+            {
+                "Title": "Odyssean Voyager",
+                "Description": "Discover at least 12 cities in Greece (requires Greece DLC)",
                 "Hidden": false,
                 "Unlocked": false
             }
