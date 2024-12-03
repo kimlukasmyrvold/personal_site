@@ -1,8 +1,8 @@
 ﻿[
     {
         "Title": "Satisfactory",
-        "PlayTime": "1248.4",
-        "LastUpdate": "2024-11-28",
+        "PlayTime": "1261.5",
+        "LastUpdate": "2024-12-03",
         "Purchased": "2020-09-05",
         "Platforms": [
             {
@@ -278,7 +278,7 @@
                 "Title": "Let's see what's out there",
                 "Description": "Visit each starting area biome once.",
                 "Hidden": false,
-                "Unlocked": false
+                "Unlocked": true
             }
         ]
     },
