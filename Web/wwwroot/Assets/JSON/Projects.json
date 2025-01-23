@@ -1,0 +1,209 @@
+﻿[
+    {
+        "name": "Personal Site",
+        "shortDescription": "Personal Website made with Blazor WebAssembly using .net 8.0",
+        "description": "This is my personal website where you can learn more about me, you can find personal info, coding languages I know, were I went to school and more.",
+        "website": "https://kimlukas.com/",
+        "github": "https://github.com/kimlukasmyrvold/personal_site",
+        "visibility": "visible",
+        "frameworks": [
+            "Blazor WebAssembly"
+        ],
+        "languages": [
+            "C#",
+            "JavaScript",
+            "SCSS"
+        ],
+        "images": [
+            {
+                "alt": "Home page of kimlukas.com",
+                "src": "/Assets/Images/Projects/personalSite.png"
+            }
+        ]
+    },
+    {
+        "name": "JulebrusCounter",
+        "shortDescription": "A nextjs website for counting how much you drink during a period.",
+        "description": "This project was made so that you can count how much julebrus you drink during a certain period or multiple, it does technicaly allow you to count up any drink you want as well.",
+        "website": "https://julebruscounter.kimlukas.com/",
+        "github": "https://github.com/kimlukasmyrvold/julebrusCounter",
+        "visibility": "visible",
+        "frameworks": [
+            "Next.js",
+            "shadcn/ui",
+            "Tailwind CSS"
+        ],
+        "languages": [
+            "TypeScript",
+            "PostgreSQL"
+        ],
+        "images": [
+            {
+                "alt": "JulebrusCounter dashboard showcasing drinks consumed",
+                "src": "/Assets/Images/Projects/julebrusCounter.png"
+            }
+        ]
+    },
+    {
+        "name": "Weekend Countdown",
+        "shortDescription": "Countdown for the weekend made with next.js.",
+        "website": "https://weekend.kimlukas.com/",
+        "github": "https://github.com/kimlukasmyrvold/weekendCountdown",
+        "visibility": "visible",
+        "frameworks": [
+            "Next.js",
+            "shadcn/ui",
+            "Tailwind CSS"
+        ],
+        "languages": [
+            "TypeScript"
+        ],
+        "images": [
+            {
+                "alt": "Weekend Countdown showing it is the weekend with, 1 day 23 hours, 14 minutes and 9 seconds remaining until the weekend is over.",
+                "src": "/Assets/Images/Projects/weekendCountdown.png"
+            },
+            {
+                "alt": "Weekend Countdown showing it is a weekday with, 3 day 22 hours, 2 minutes and 1 seconds remaining until the weekend starts.",
+                "src": "/Assets/Images/Projects/weekendCountdown-2.png"
+            }
+        ]
+    },
+    {
+        "name": "Canthenos",
+        "shortDescription": "Blazor website for viewing canteen data for a school. Project was made as a school assignment.",
+        "github": "https://github.com/kimlukasmyrvold/Canthenos",
+        "visibility": "visible",
+        "frameworks": [
+            "Blazor WebAssembly"
+        ],
+        "languages": [
+            "C#",
+            "SCSS",
+            "MySQL"
+        ],
+        "images": [
+            {
+                "alt": "Canthenos dashboard showcasing the todays dish and free breakfasts",
+                "src": "/Assets/Images/Projects/Canthenos.png"
+            },
+            {
+                "alt": "Canthenos dashboard showcasing the available dishes",
+                "src": "/Assets/Images/Projects/Canthenos-2.png"
+            }
+        ]
+    },
+    {
+        "name": "VotingSite",
+        "shortDescription": "Voting website for voting on political parties in Norway, made with ASP.NET.",
+        "description": "This website was created due to a school project where the task was to make website where you could vote on different political parties that exists in Norway. The site had to connect to a database where the parties and voting information would be stored. The votes also had to be anonymous. Voters also should not be able to vote more than once, and can only vote for parties in the municipality that they belong to.\n\nThe project was created with ASP.NET Web Application (using .net framework) and Microsoft SQL Server.",
+        "github": "https://github.com/kimlukasmyrvold/votingSite",
+        "visibility": "visible",
+        "frameworks": [
+            "ASP.NET Web Application"
+        ],
+        "languages": [
+            "ASP.NET",
+            "C#",
+            "JavaScript",
+            "SCSS",
+            "SQL Server"
+        ],
+        "images": [
+            {
+                "alt": "Votingsite home page showing results of votes and parties you can choose to vote on",
+                "src": "/Assets/Images/Projects/votingSite.png"
+            },
+            {
+                "alt": "Votingsite home page showing open dropdown of a selected party",
+                "src": "/Assets/Images/Projects/votingSite-2.png"
+            },
+            {
+                "alt": "Votingsite home page showing results of votes in form of a pie chart",
+                "src": "/Assets/Images/Projects/votingSite-3.png"
+            },
+            {
+                "alt": "Votingsite with voting modal open",
+                "src": "/Assets/Images/Projects/votingSite-4.png"
+            }
+        ]
+    },
+    {
+        "name": "Old Personal Site",
+        "shortDescription": "My Personal Site.",
+        "description": "This is my personal site where I show off games that I have made and also about my personality, work experience, education, and what skills I have.",
+        "website": "https://old.kimlukas.com/",
+        "github": "https://github.com/kimlukasmyrvold/old_personal_site",
+        "visibility": "visible",
+        "frameworks": [],
+        "languages": [
+            "HTML",
+            "JavaScript",
+            "SCSS"
+        ],
+        "images": [
+            {
+                "alt": "Home page of old personal site showcasing information about me and skills.",
+                "src": "/Assets/Images/Projects/oldPersonalSite.png"
+            }
+        ]
+    },
+    {
+        "name": "Exercise Counter",
+        "shortDescription": "Website for tracking your exercise progress.",
+        "description": "The website allows you to add a exercise and set a goal. You can also add your progress and also delete exercises.",
+        "website": "https://kimlukasmyrvold.github.io/exerciseCounter/",
+        "github": "https://github.com/kimlukasmyrvold/exerciseCounter",
+        "visibility": "hidden",
+        "frameworks": [],
+        "languages": [
+            "HTML",
+            "JavaScript",
+            "SCSS"
+        ],
+        "images": [
+            {
+                "alt": "Exercise Counter showing amount of each exercise you have done with options to add or remove more and count more done.",
+                "src": "/Assets/Images/Projects/exerciseCounter.png"
+            }
+        ]
+    },
+    {
+        "name": "Real Dark Mode",
+        "shortDescription": "Website where you move your mouse over to reveal the contents as if your mouse is a flashlight.",
+        "website": "https://kimlukasmyrvold.github.io/realDarkMode/",
+        "github": "https://github.com/kimlukasmyrvold/realDarkMode",
+        "visibility": "visible",
+        "frameworks": [],
+        "languages": [
+            "HTML",
+            "JavaScript",
+            "SCSS"
+        ],
+        "images": [
+            {
+                "alt": "Dark image with a yellow circle of light lightning up some text",
+                "src": "/Assets/Images/Projects/realDarkMode.png"
+            }
+        ]
+    },
+    {
+        "name": "Cool Card Hover Effect",
+        "shortDescription": "Attempt at replicating the Windows Security card hover effects.",
+        "website": "https://kimlukasmyrvold.github.io/coolCardHoverEffect/",
+        "github": "https://github.com/kimlukasmyrvold/coolCardHoverEffect",
+        "visibility": "visible",
+        "frameworks": [],
+        "languages": [
+            "HTML",
+            "JavaScript",
+            "SCSS"
+        ],
+        "images": [
+            {
+                "alt": "The app interface showcased prominently against a dark background, highlighting its features and design elements.",
+                "src": "/Assets/Images/Projects/coolCardHoverEffect.png"
+            }
+        ]
+    }
+]
