@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="google" content="notranslate">
+
+    <base href="/"/>
+
+    <title>Kim Lukas Myrvold</title>
+    <meta name="author" content="Kim Lukas Myrvold">
+    <meta name="description" content="Kim Lukas Myrvold's Personal Website">
+    <meta name="keywords"
+          content="personal, website, site, cv, curriculum, vitae, blazor, wasm, blazorwasm, static, standalone, app, web, assembly, kim, lukas, myrvold, norway, norwegian, full, stack, developer, backend, frontend, programming, coding, code, software, development">
+    <link rel="shortcut icon" href="Assets/Images/Favicons/favicon.ico" type="image/x-icon">
+
+    <meta property="og:url" content="https://kimlukas.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Kim Lukas Myrvold">
+    <meta property="og:description" content="Kim Lukas Myrvold's Personal Website">
+    <meta property="og:image" content="Assets/Images/Persons/kimlukasmyrvold.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="kimlukas.com">
+    <meta property="twitter:url" content="https://kimlukas.com/">
+    <meta name="twitter:title" content="Kim Lukas Myrvold">
+    <meta name="twitter:description" content="Kim Lukas Myrvold's Personal Website">
+    <meta name="twitter:image" content="Assets/Images/Persons/kimlukasmyrvold.jpg">
+
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="Assets/CSS/Main.css"/>
+</head>
+<body>
+<div id="app">
+    <noscript>
+        <div class="information information_popup">
+            <p class="heading">JavaScript must be enabled to view this page.</p>
+            <p class="text">
+                Visit <a href="https://old.kimlukas.com/">old.kimlukas.com</a> for old website (works with JavaScript).
+            </p>
+        </div>
+    </noscript>
+
+    <div style="position:fixed;inset:0;display:grid;place-items:center;z-index:999;background:#0005;backdrop-filter:blur(2px);transition:all .3s ease">
+        <svg style="width: 5em;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+            <radialGradient id="loadingGradient" cx=".66" fx=".66" cy=".3125" fy=".3125" gradientTransform="scale(1.5)">
+                <stop offset="0" stop-color="#9cacdf"></stop>
+                <stop offset=".3" stop-color="#9cacdf" stop-opacity=".9"></stop>
+                <stop offset=".6" stop-color="#9cacdf" stop-opacity=".6"></stop>
+                <stop offset=".8" stop-color="#9cacdf" stop-opacity=".3"></stop>
+                <stop offset="1" stop-color="#9cacdf" stop-opacity="0"></stop>
+            </radialGradient>
+            <circle transform-origin="center" fill="none" stroke="url(#loadingGradient)" stroke-width="20"
+                    stroke-linecap="round"
+                    stroke-dasharray="200 1000" stroke-dashoffset="0" cx="100" cy="100" r="70">
+                <animateTransform type="rotate" attributeName="transform" calcMode="spline" dur="2" values="360;0"
+                                  keyTimes="0;1" keySplines="0 0 1 1" repeatCount="indefinite">
+                </animateTransform>
+            </circle>
+            <circle transform-origin="center" fill="none" opacity=".2" stroke="#9cacdf" stroke-width="20"
+                    stroke-linecap="round" cx="100" cy="100" r="70">
+            </circle>
+        </svg>
+    </div>
+</div>
+
+<div id="blazor-error-ui">
+    <div class="blazor_error_ui">
+        <div class="blazor_error_ui__main">
+            <p>
+                An unhandled exception has occurred. See browser dev tools for details.
+                <a href="" class="reload">Reload</a>
+            </p>
+        </div>
+
+        <div class="blazor_error_ui__dismiss">
+            <button class="dismiss button-nofancy">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <title>close</title>
+                    <path fill="currentColor"
+                          d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+</div>
+<script src="_framework/blazor.webassembly.js"></script>
+<script src="Assets/JavaScript/Main.js"></script>
+</body>
+
+</html>
