@@ -1807,7 +1807,7 @@
                 "Title": "Get the Ball Rollin'",
                 "Description": "Complete the first scenario of the first chapter in Truck Driving Basics (Driving Academy)",
                 "Hidden": false,
-                "Unlocked": false
+                "Unlocked": true
             },
             {
                 "Title": "Professional Driver",
@@ -1819,25 +1819,25 @@
                 "Title": "Dedicated Student",
                 "Description": "Complete at least 28 scenarios in Truck Driving Basics including the final exams (Driving Academy)",
                 "Hidden": false,
-                "Unlocked": false
+                "Unlocked": true
             },
             {
                 "Title": "One-Shottin' It",
                 "Description": "Complete any scenario in fourth chapter of Truck Driving Basics in one attempt without correcting by driving forward (Driving Academy)",
                 "Hidden": false,
-                "Unlocked": false
+                "Unlocked": true
             },
             {
                 "Title": "Rowing Through the Gears",
                 "Description": "Complete 20 scenarios in chapters two, three or four of Truck Driving Basics using an H-shifter or sequential transmission (Driving Academy)",
                 "Hidden": false,
-                "Unlocked": false
+                "Unlocked": true
             },
             {
                 "Title": "Failure Is Not an Option",
                 "Description": "Complete any 5 scenarios in a row without failure from the third or fourth chapter in Truck Driving Basics (Driving Academy)",
                 "Hidden": false,
-                "Unlocked": false
+                "Unlocked": true
             },
             {
                 "Title": "Sights and Legends",
