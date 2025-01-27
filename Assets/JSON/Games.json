@@ -1,8 +1,8 @@
 ﻿[
     {
         "Title": "Satisfactory",
-        "PlayTime": "1294.6",
-        "LastUpdate": "2025-01-23",
+        "PlayTime": "1301",
+        "LastUpdate": "2025-01-27",
         "Purchased": "2020-09-05",
         "Platforms": [
             {
@@ -1067,8 +1067,8 @@
     },
     {
         "Title": "Space Engineers",
-        "PlayTime": "397.6",
-        "LastUpdate": "2024-11-20",
+        "PlayTime": "397.7",
+        "LastUpdate": "2025-01-27",
         "Purchased": "2021-08-02",
         "Platforms": [
             {
@@ -1267,6 +1267,21 @@
                 "Unlocked": false
             }
         ]
+    },
+    {
+        "Title": "Space Engineers 2",
+        "PlayTime": "0",
+        "LastUpdate": "2025-01-27",
+        "Purchased": "2025-01-27",
+        "Hidden": true,
+        "Platforms": [
+            {
+                "Title": "Steam",
+                "Link": "https://store.steampowered.com/app/1133870/Space_Engineers_2/"
+            }
+        ],
+        "Banner": "/Assets/Images/Games/SpaceEngineers/space_engineers_2_alpha.jpg",
+        "Achievements": []
     },
     {
         "Title": "Euro Truck Simulator 2",
