@@ -19,7 +19,7 @@
         }
         else
         {
-            foreach (var game in GamesJson)
+            foreach (var game in GamesJson.Where(g => g.Hidden.ToString() != "True"))
             {
                 <Games_Game Data="@game"></Games_Game>
             }
