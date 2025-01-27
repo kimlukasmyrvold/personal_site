@@ -20,6 +20,7 @@ public class GamesModel
     public string? PlayTime { get; set; }
     public string? LastUpdate { get; set; }
     public string? Purchased { get; set; }
+    public bool? Hidden { get; set; }
     public List<Platforms>? Platforms { get; set; }
     public string? Banner { get; set; }
     public List<Achievements>? Achievements { get; set; }
