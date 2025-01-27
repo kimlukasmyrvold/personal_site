@@ -157,7 +157,7 @@
                     <p class="games__container__game__content__stats__purchased">
                         <span class="games__container__game__content__stats__purchased__title">Purchased:</span> <span title="Years owned: @_yearsElapsed">@Data.Purchased</span>
                     </p>
-                    @if (Data.Achievements is not null)
+                    @if (Data.Achievements is not null && Data.Achievements.Count > 0)
                     {
                         <p class="games__container__game__content__stats__achievements">
                             <span class="games__container__game__content__stats__achievements__title">Achievements:</span> @_unlocked <span class="games__container__game__content__stats__achievements__faded">/</span> @_total <span class="games__container__game__content__stats__achievements__percent">(@(((int)_percent).ToString())%)</span>
@@ -167,7 +167,7 @@
             </div>
         </div>
 
-        if (Data.Achievements is not null)
+        if (Data.Achievements is not null && Data.Achievements.Count > 0)
         {
             <div class="games__container__game__achievements">
                 @foreach (var achievement in SortedAchievements.Take(2))
