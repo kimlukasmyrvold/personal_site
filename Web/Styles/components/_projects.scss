@@ -1,0 +1,32 @@
+﻿@use '../base' as *;
+@use '../themes' as *;
+
+.projects {
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1rem;
+    }
+
+}
+
+.projects__project {
+    border: 1px solid #ef3e3e;
+    padding: 1rem;
+    
+    &__title {
+        font-size: $h4;
+    }
+    
+    &__button {
+        padding: .5rem .75rem;
+    }
+    
+    .modal {
+        --_width: 1000px;
+    }
+    
+    svg {
+        fill: currentColor;
+    }
+}
