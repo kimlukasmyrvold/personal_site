@@ -27,7 +27,7 @@
         height: min(var(--_height), 100%);
         width: min(var(--_width), 100%);
 
-        scale: 0;
+        scale: .8;
         transition: scale .2s ease;
 
         &__close {
