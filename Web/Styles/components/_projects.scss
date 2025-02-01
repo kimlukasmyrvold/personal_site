@@ -13,20 +13,66 @@
 .projects__project {
     border: 1px solid #ef3e3e;
     padding: 1rem;
-    
+
     &__title {
         font-size: $h4;
     }
-    
+
     &__button {
         padding: .5rem .75rem;
     }
-    
+
     .modal {
         --_width: 1000px;
     }
-    
+
     svg {
         fill: currentColor;
+    }
+}
+
+.projects__project__stack {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+
+    &__group {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: .75rem;
+
+        &__title {
+            font-size: $p;
+            color: var(--text85);
+        }
+
+        &__icons {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: .75rem;
+        }
+    }
+
+    &__icon {
+        $size: 2.15rem;
+        display: inline-flex;
+
+        span {
+            height: 1px;
+            width: 1px;
+            overflow: hidden;
+            position: absolute;
+            white-space: nowrap;
+            clip: rect(0 0 0 0);
+            clip-path: inset(50%);
+        }
+
+        svg {
+            color: var(--text95);
+            width: $size;
+            height: $size;
+        }
     }
 }
