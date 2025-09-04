@@ -1,11 +1,25 @@
 ﻿@inherits LayoutComponentBase
 
-<div class="page">
+<div class="page" @onmousemove="MouseMoved" @onmouseleave="MouseMovedOut" style="@_mousePosStyling">
     <Header></Header>
-    
+
     <main class="wrapper">
         @Body
     </main>
 </div>
 
 <Footer></Footer>
+
+@code {
+    private string? _mousePosStyling = "--mousePosX: -2000px; --mousePosY: -2000px";
+
+    private void MouseMoved(MouseEventArgs e)
+    {
+        _mousePosStyling = $"--mousePosX: {e.ClientX}px; --mousePosY: {e.ClientY}px";
+    }
+
+    private void MouseMovedOut()
+    {
+        _mousePosStyling = "--mousePosX: -2000px; --mousePosY: -2000px";
+    }
+}

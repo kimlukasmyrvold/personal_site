@@ -1,4 +1,6 @@
-﻿@code {
+﻿@using System.Text.RegularExpressions
+
+@code {
 
     [Parameter] public ProjectsModel? Data { get; set; }
 
@@ -18,56 +20,95 @@
         _projectOpen = closed;
     }
 
+
+    public static string ConvertString(string input)
+    {
+        if (input == null)
+        {
+            input = string.Empty;
+        }
+
+        input = input.Trim().Replace(" ", "-").Replace("-", "-");
+        input = Regex.Replace(input, @"[^a-zA-Z0-9\-_:.]", "");
+
+        return input;
+    }
+
 }
 
 @if (Data is not null && Data.Visibility != "hidden")
 {
     <div class="projects__project">
-        @if (Data.Images is not null && Data.Images.Count > 0)
-        {
-            <div>
-                <img alt="@Data.Images[0].Alt" height="270px" src="@Data.Images[0].Src" width="480px">
-            </div>
-        }
-
-        <p class="projects__project__title">@Data.Name</p>
-        <p>@Data.ShortDescription</p>
-
-        @if (Data.Frameworks is not null || Data.Languages is not null)
-        {
-            <hr>
-            <Projects_Project_Stack Frameworks="Data.Frameworks" Languages="Data.Languages"></Projects_Project_Stack>
-        }
-
-        <button class="projects__project__button button-secondary" @onclick="ToggleProjectOpen">See more</button>
-
-        <Modal Closed="ProjectClosed" Open="@_projectOpen">
-            <div>
-                <p class="projects__project__title"> @Data.Name</p>
-                <p>@(Data.Description ?? Data.ShortDescription)</p>
-                @if (Data.Website is not null)
-                {
-                    <a href="@Data.Website" target="_blank">Website</a>
-                }
-                @if (Data.Github is not null)
-                {
-                    <a href="@Data.Github" target="_blank">GitHub</a>
-                }
-
-                <Projects_Project_Stack Frameworks="Data.Frameworks" Languages="Data.Languages"></Projects_Project_Stack>
-
+        <div class="projects__project__container">
+            <div class="projects__project__container__content">
+                <div class="projects__project__header">
                 @if (Data.Images is not null && Data.Images.Count > 0)
                 {
                     <div>
-                        @foreach (var image in Data.Images)
+                        <img alt="@Data.Images[0].Alt" height="270px" src="@Data.Images[0].Src" width="480px">
+                    </div>
+                }
+                    <div class="projects__project__header__title">
+                        <p class="projects__project__title">@Data.Name</p>
+                        <p class="projects__project__description">@Data.ShortDescription</p>
+
+                        <div class="projects__project__links">
+                            @if (Data.Website is not null) {
+                                <a class="projects__project__links__link" linktype="website" href="@Data.Website" target="_blank" rel="noopener noreferrer">
+                                    <span>Visit the website</span>
+                                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path fill="currentColor" d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"></path></svg>
+                                </a>
+                            }
+                            @if (Data.Github is not null) {
+                                <a class="projects__project__links__link" linktype="github" href="@Data.Github" target="_blank" rel="noopener noreferrer">
+                                    <span>GitHub</span>
+                                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path fill="currentColor" d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"></path></svg>
+                                </a>
+                            }
+                        </div>
+                    </div>
+                </div>
+
+
+                @if (Data.Frameworks is not null || Data.Languages is not null)
+                {
+                    var title = ConvertString(Data.Name!);
+                    <Projects_Project_Stack Title="@title" Frameworks="@Data.Frameworks" Languages="@Data.Languages" Merged="true">
+                    </Projects_Project_Stack>
+                }
+
+                @* <button class="projects__project__button button-secondary" @onclick="ToggleProjectOpen">See more</button> *@
+@* 
+                <Modal Closed="ProjectClosed" Open="@_projectOpen">
+                    <div>
+                        <p class="projects__project__title"> @Data.Name</p>
+                        <p>@(Data.Description ?? Data.ShortDescription)</p>
+                        @if (Data.Website is not null)
+                        {
+                            <a href="@Data.Website" target="_blank">Website</a>
+                        }
+                        @if (Data.Github is not null)
+                        {
+                            <a href="@Data.Github" target="_blank">GitHub</a>
+                        }
+
+                        <Projects_Project_Stack Frameworks="Data.Frameworks" Languages="Data.Languages">
+                        </Projects_Project_Stack>
+
+                        @if (Data.Images is not null && Data.Images.Count > 0)
                         {
                             <div>
-                                <img alt="@image.Alt" height="270px" src="@image.Src" width="480px">
+                                @foreach (var image in Data.Images)
+                                {
+                                    <div>
+                                        <img alt="@image.Alt" height="270px" src="@image.Src" width="480px">
+                                    </div>
+                                }
                             </div>
                         }
                     </div>
-                }
+                </Modal> *@
             </div>
-        </Modal>
+        </div>
     </div>
 }

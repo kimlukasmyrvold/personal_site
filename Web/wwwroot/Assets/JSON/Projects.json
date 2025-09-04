@@ -27,7 +27,7 @@
         "Description": "This project was made so that you can count how much julebrus you drink during a certain period or multiple, it does technicaly allow you to count up any drink you want as well.",
         "Website": "https://julebruscounter.kimlukas.com/",
         "Github": "https://github.com/kimlukasmyrvold/julebrusCounter",
-        "Visibility": "visible",
+        "Visibility": "hidden",
         "Frameworks": [
             "Next.js",
             "shadcn/ui",
@@ -134,7 +134,7 @@
         "Description": "This is my personal site where I show off games that I have made and also about my personality, work experience, education, and what skills I have.",
         "Website": "https://old.kimlukas.com/",
         "Github": "https://github.com/kimlukasmyrvold/old_personal_site",
-        "Visibility": "visible",
+        "Visibility": "hidden",
         "Frameworks": [],
         "Languages": [
             "HTML",

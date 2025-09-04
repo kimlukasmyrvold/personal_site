@@ -1,8 +1,8 @@
 ﻿[
     {
         "Title": "Satisfactory",
-        "PlayTime": "1324.8",
-        "LastUpdate": "2025-05-20",
+        "PlayTime": "1429.1",
+        "LastUpdate": "2025-09-04",
         "Purchased": "2020-09-05",
         "Platforms": [
             {
@@ -128,7 +128,7 @@
                 "Title": "Data driven",
                 "Description": "Gather 100 Hard Drives from Crash Sites.",
                 "Hidden": false,
-                "Unlocked": false
+                "Unlocked": true
             },
             {
                 "Title": "Wheeeee!",
@@ -188,13 +188,13 @@
                 "Title": "Consume",
                 "Description": "Gather 150 Mercer Spheres.",
                 "Hidden": false,
-                "Unlocked": false
+                "Unlocked": true
             },
             {
                 "Title": "My skin feels itchy all of a sudden...",
                 "Description": "Gather 50 Somersloops.",
                 "Hidden": false,
-                "Unlocked": false
+                "Unlocked": true
             },
             {
                 "Title": "Pipe dream",
@@ -284,8 +284,8 @@
     },
     {
         "Title": "Dyson Sphere Program",
-        "PlayTime": "469.8",
-        "LastUpdate": "2025-05-20",
+        "PlayTime": "470.2",
+        "LastUpdate": "2025-09-04",
         "Purchased": "2021-02-22",
         "Platforms": [
             {
@@ -1067,8 +1067,8 @@
     },
     {
         "Title": "Space Engineers",
-        "PlayTime": "399.4",
-        "LastUpdate": "2025-05-20",
+        "PlayTime": "409.2",
+        "LastUpdate": "2025-09-04",
         "Purchased": "2021-08-02",
         "Platforms": [
             {
