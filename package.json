@@ -7,7 +7,8 @@
         "publish": "cd Web && dotnet publish --output ../../new_personalSite_publish/",
         "watch": "cd Web && dotnet watch",
         "sass": "sass -w Web/Styles/:Web/wwwroot/Assets/CSS/ --style=compressed",
-        "start": "concurrently --raw --kill-others \"npm run watch\" \"npm run sass\""
+        "concurrently": "concurrently --raw --kill-others \"$npm_config_run_command run watch\" \"$npm_config_run_command run sass\"",
+        "start": "cross-env npm_config_run_command=bun bun run concurrently"
     },
     "keywords": [
         "personal",
@@ -34,6 +35,7 @@
     "license": "GPL-3.0-only",
     "dependencies": {
         "concurrently": "^8.2.2",
+        "cross-env": "^7.0.3",
         "sass": "^1.75.0"
     }
 }
